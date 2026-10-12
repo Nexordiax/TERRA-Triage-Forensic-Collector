@@ -1,0 +1,1844 @@
+{
+  "version": 1,
+  "researched_on": "2026-10-11",
+  "sources": {
+    "distro_uac": {
+      "title": "UAC file artifact definitions, reviewed commit db563110",
+      "url": "https://github.com/tclahr/uac/tree/db563110cb9d2d3a5ad8aa985c267205d45ce4da/artifacts/files"
+    },
+    "distro_fa": {
+      "title": "ForensicArtifacts Linux definitions",
+      "url": "https://github.com/ForensicArtifacts/artifacts/blob/main/artifacts/data/linux.yaml"
+    },
+    "distro_nikkel": {
+      "title": "Bruce Nikkel: Forensic Artifacts in Modern Linux Systems",
+      "url": "https://digitalforensics.ch/nikkel18.pdf"
+    },
+    "distro_velociraptor": {
+      "title": "Velociraptor Linux artifact definitions, reviewed commit bd3cf159",
+      "url": "https://github.com/Velocidex/velociraptor/tree/bd3cf159a70dd8f6bff7d3fbaa57927792f0dc3b/artifacts/definitions/Linux"
+    },
+    "distro_gentoo": {
+      "title": "Gentoo Portage file layout",
+      "url": "https://dev.gentoo.org/~zmedico/portage/doc/man/portage.5.html"
+    },
+    "distro_slackware": {
+      "title": "Slackware package management",
+      "url": "https://docs.slackware.com/slackware:package_management"
+    },
+    "distro_xbps": {
+      "title": "Void XBPS database layout",
+      "url": "https://man.voidlinux.org/xbps"
+    },
+    "distro_xbps_source": {
+      "title": "XBPS package database implementation",
+      "url": "https://github.com/void-linux/xbps/blob/master/lib/pkgdb.c"
+    },
+    "distro_nix": {
+      "title": "Nix manifest JSON format",
+      "url": "https://nix.dev/manual/nix/2.35/command-ref/files/manifest.json.html"
+    },
+    "distro_nix_source": {
+      "title": "Nix profile manifest versions 1/2/3",
+      "url": "https://github.com/NixOS/nix/blob/master/src/nix/profile.cc"
+    },
+    "distro_zypp": {
+      "title": "libzypp transaction history format",
+      "url": "https://opensuse.github.io/libzypp/group__g__ZyppHistory.html"
+    },
+    "distro_dnf5": {
+      "title": "DNF5 packaged state and history paths",
+      "url": "https://github.com/rpm-software-management/dnf5/blob/main/dnf5.spec"
+    },
+    "distro_openrc": {
+      "title": "OpenRC user guide",
+      "url": "https://github.com/OpenRC/openrc/blob/master/user-guide.md"
+    },
+    "distro_runit": {
+      "title": "Void runit services",
+      "url": "https://docs.voidlinux.org/config/services/index.html"
+    },
+    "distro_systemd": {
+      "title": "systemd unit load paths",
+      "url": "https://github.com/systemd/systemd/blob/main/man/systemd.unit.xml"
+    },
+    "distro_boot": {
+      "title": "Boot Loader Specification",
+      "url": "https://uapi-group.org/specifications/specs/boot_loader_specification/"
+    },
+    "distro_polkit": {
+      "title": "polkit authorization policy",
+      "url": "https://polkit.pages.freedesktop.org/polkit/polkit.8.html"
+    },
+    "distro_nm": {
+      "title": "NetworkManager keyfile locations",
+      "url": "https://networkmanager.pages.freedesktop.org/NetworkManager/NetworkManager/nm-settings-keyfile.html"
+    },
+    "distro_networkd": {
+      "title": "systemd-networkd configuration locations",
+      "url": "https://github.com/systemd/systemd/blob/main/man/systemd.network.xml"
+    },
+    "distro_connman": {
+      "title": "ConnMan configuration format",
+      "url": "https://github.com/sailfishos/connman/blob/master/connman/doc/config-format.txt"
+    },
+    "distro_iwd": {
+      "title": "iwd saved network format",
+      "url": "https://kernel.googlesource.com/pub/scm/network/wireless/iwd/+/e8e9c68deaecec0aa4d7964661e73c885235284c/src/iwd.network.rst"
+    },
+    "distro_flatpak": {
+      "title": "Flatpak XDG path conventions",
+      "url": "https://docs.flatpak.org/en/latest/conventions.html"
+    },
+    "distro_cloudinit": {
+      "title": "cloud-init on-disk layout",
+      "url": "https://docs.cloud-init.io/en/latest/development/internal_files.html"
+    },
+    "distro_podman": {
+      "title": "Rootless Podman storage and configuration",
+      "url": "https://github.com/podman-container-tools/podman/blob/main/docs/tutorials/rootless_tutorial.md"
+    },
+    "distro_libvirt": {
+      "title": "libvirt QEMU state directories",
+      "url": "https://www.libvirt.org/drvqemu.html"
+    },
+    "distro_cups": {
+      "title": "CUPS printer configuration",
+      "url": "https://www.cups.org/doc/man-printers.conf.html"
+    },
+    "distro_usbguard": {
+      "title": "USBGuard default rules location",
+      "url": "https://github.com/USBGuard/usbguard/blob/main/usbguard-daemon.conf.in"
+    },
+    "distro_fwupd": {
+      "title": "fwupd device history implementation",
+      "url": "https://github.com/fwupd/fwupd/blob/main/src/fu-history.c"
+    },
+    "distro_accountsservice": {
+      "title": "AccountsService user metadata directory",
+      "url": "https://sources.debian.org/patches/accountsservice/0.6.21-8/0005-gdm_config_file_path.patch/"
+    },
+    "distro_apk": {
+      "title": "Alpine APK world and package database",
+      "url": "https://docs.alpinelinux.org/user-handbook/0.1a/Working/apk.html"
+    },
+    "distro_suse_network": {
+      "title": "openSUSE network configuration",
+      "url": "https://doc.opensuse.org/documentation/leap/reference/html/book-reference/cha-network.html"
+    },
+    "distro_rhel_network": {
+      "title": "RHEL ifcfg configuration files",
+      "url": "https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/configuring-ip-networking-with-ifcfg-files_configuring-and-managing-networking"
+    },
+    "distro_quadlet": {
+      "title": "Podman Quadlet unit paths and formats",
+      "url": "https://docs.podman.io/en/latest/markdown/podman-systemd.unit.5.html"
+    },
+    "distro_xfce_config": {
+      "title": "Xfconf per-channel XML specification",
+      "url": "https://github.com/xfce-mirror/xfconf/blob/master/docs/spec/perchannel-xml.txt"
+    },
+    "distro_xfce_session": {
+      "title": "Xfce session state locations",
+      "url": "https://man.archlinux.org/man/extra/xfce4-session/xfce4-session.1.en"
+    },
+    "distro_kde_session": {
+      "title": "KDE session manager configuration",
+      "url": "https://github.com/KDE/plasma-desktop/blob/master/kcms/ksmserver/smserversettings.kcfg"
+    }
+  },
+  "artifacts": [
+    {
+      "id": "gentoo_package_metadata",
+      "category": "Installed Applications",
+      "paths": [
+        "/var/db/pkg/*/*/BUILD_TIME",
+        "/var/db/pkg/*/*/COUNTER",
+        "/var/db/pkg/*/*/CHOST",
+        "/var/db/pkg/*/*/repository",
+        "/var/db/pkg/*/*/SLOT",
+        "/var/db/pkg/*/*/USE",
+        "/var/db/pkg/*/*/IUSE",
+        "/var/db/pkg/*/*/EAPI",
+        "/var/db/pkg/*/*/PF"
+      ],
+      "parser": "distro_gentoo",
+      "sources": [
+        "distro_gentoo"
+      ],
+      "notes": "Registered Portage metadata; package/version inferred from VDB directory. BUILD_TIME is a recorded build time, not proof of installation time.",
+      "support": "structured"
+    },
+    {
+      "id": "gentoo_package_payload_metadata",
+      "category": "Installed Applications",
+      "paths": [
+        "/var/db/pkg/*/*/CONTENTS",
+        "/var/db/pkg/*/*/environment.bz2",
+        "/var/db/pkg/*/*/NEEDED",
+        "/var/db/pkg/*/*/NEEDED.ELF.2",
+        "/var/db/pkg/*/*/REQUIRES",
+        "/var/db/pkg/*/*/PROVIDES"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_gentoo"
+      ],
+      "notes": "Preserved as raw evidence for external analysis; configuration presence does not prove execution or current state.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "gentoo_package_policy",
+      "category": "Installed Applications",
+      "paths": [
+        "/etc/portage/**",
+        "/var/lib/portage/world",
+        "/var/lib/portage/world_sets"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_gentoo"
+      ],
+      "notes": "Preserved as raw evidence for external analysis; configuration presence does not prove execution or current state.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "gentoo_transaction_logs",
+      "category": "Installed Applications",
+      "paths": [
+        "/var/log/emerge.log*",
+        "/var/log/portage/**"
+      ],
+      "parser": "package_log",
+      "sources": [
+        "distro_gentoo"
+      ],
+      "notes": "Preserved as raw evidence for external analysis; configuration presence does not prove execution or current state.",
+      "support": "structured"
+    },
+    {
+      "id": "slackware_package_inventory",
+      "category": "Installed Applications",
+      "paths": [
+        "/var/log/packages/*",
+        "/var/lib/pkgtools/packages/*",
+        "/var/log/removed-packages/*",
+        "/var/lib/pkgtools/removed_packages/*"
+      ],
+      "parser": "distro_slackware",
+      "sources": [
+        "distro_slackware"
+      ],
+      "notes": "Package registrations and removed-package records. Removed records are not labelled currently installed; install scripts are never executed.",
+      "support": "structured"
+    },
+    {
+      "id": "slackware_package_scripts",
+      "category": "Installed Applications",
+      "paths": [
+        "/var/lib/pkgtools/scripts/*",
+        "/var/lib/pkgtools/removed_scripts/*",
+        "/var/log/scripts/*",
+        "/var/log/removed-scripts/*",
+        "/etc/slackpkg/**"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_slackware"
+      ],
+      "notes": "Preserved as raw evidence for external analysis; configuration presence does not prove execution or current state.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "void_xbps_inventory",
+      "category": "Installed Applications",
+      "paths": [
+        "/var/db/xbps/pkgdb-*.plist"
+      ],
+      "parser": "distro_xbps",
+      "sources": [
+        "distro_xbps",
+        "distro_xbps_source"
+      ],
+      "notes": "XBPS XML/binary plist or gzip-wrapped plist. Installation state is preserved; registered does not necessarily mean fully installed.",
+      "support": "structured"
+    },
+    {
+      "id": "void_xbps_files",
+      "category": "Installed Applications",
+      "paths": [
+        "/var/db/xbps/.*-files.plist",
+        "/var/db/xbps/keys/*.plist",
+        "/etc/xbps.d/*.conf",
+        "/usr/share/xbps.d/*.conf"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_xbps"
+      ],
+      "notes": "Preserved as raw evidence for external analysis; configuration presence does not prove execution or current state.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "nix_profile_inventory",
+      "category": "Installed Applications",
+      "paths": [
+        "/nix/store/*-profile/manifest.json",
+        "/nix/store/*-user-environment/manifest.json",
+        "/nix/var/nix/profiles/**/manifest.json",
+        "/**/.local/state/nix/profiles/**/manifest.json"
+      ],
+      "parser": "distro_nix",
+      "sources": [
+        "distro_nix",
+        "distro_nix_source"
+      ],
+      "notes": "Manifest versions 1/2/3 parsed without evaluation. Store manifests may describe historical generations; active means active in that profile, not proof of the current system generation.",
+      "support": "structured"
+    },
+    {
+      "id": "nix_package_state",
+      "category": "Installed Applications",
+      "paths": [
+        "/nix/store/*-user-environment/manifest.nix",
+        "/nix/store/*-profile/manifest.nix",
+        "/nix/var/nix/db/db.sqlite*",
+        "/nix/var/log/nix/drvs/**",
+        "/etc/nix/*.conf",
+        "/**/.config/nix/*.conf"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_nix_source"
+      ],
+      "notes": "Preserved as raw evidence for external analysis; configuration presence does not prove execution or current state.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "nixos_configuration",
+      "category": "Device Information",
+      "paths": [
+        "/etc/nixos/**/*.nix",
+        "/etc/nixos/flake.lock",
+        "/nix/store/*-nixos-system-*/nixos-version"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_nix_source",
+        "distro_nikkel"
+      ],
+      "notes": "Preserved as raw evidence for external analysis; configuration presence does not prove execution or current state.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "suse_zypp_history",
+      "category": "Installed Applications",
+      "paths": [
+        "/var/log/zypp/history*"
+      ],
+      "parser": "distro_zypp",
+      "sources": [
+        "distro_zypp"
+      ],
+      "notes": "Pipe-separated transaction records with action-specific fields. Original time retained without inventing a timezone; historical install events do not prove current installation.",
+      "support": "structured"
+    },
+    {
+      "id": "dnf_transaction_state",
+      "category": "Installed Applications",
+      "paths": [
+        "/var/lib/dnf/history.sqlite*",
+        "/var/lib/yum/history/history-*.sqlite*",
+        "/usr/lib/sysimage/libdnf5/transaction_history.sqlite*",
+        "/usr/lib/sysimage/libdnf5/*.toml",
+        "/usr/lib/sysimage/libdnf5/offline/transaction.json",
+        "/usr/lib/sysimage/libdnf5/offline/*.toml"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_dnf5",
+        "distro_uac"
+      ],
+      "notes": "Preserved as raw evidence for external analysis; configuration presence does not prove execution or current state.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "debian_package_extended_state",
+      "category": "Installed Applications",
+      "paths": [
+        "/var/lib/apt/extended_states",
+        "/var/lib/dpkg/updates/*",
+        "/var/lib/dpkg/diversions*",
+        "/var/lib/dpkg/statoverride*",
+        "/var/lib/dpkg/info/*.list",
+        "/var/lib/dpkg/info/*.md5sums",
+        "/var/log/aptitude*"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_fa",
+        "distro_uac"
+      ],
+      "notes": "Preserved as raw evidence for external analysis; configuration presence does not prove execution or current state.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "alpine_package_policy",
+      "category": "Installed Applications",
+      "paths": [
+        "/etc/apk/world",
+        "/etc/apk/repositories",
+        "/lib/apk/db/scripts.tar",
+        "/lib/apk/db/triggers"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_uac",
+        "distro_apk"
+      ],
+      "notes": "APK world/repositories and package scripts/triggers retained raw. Scripts are never executed; installed APK inventory remains separately parsed.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "openrc_configuration",
+      "category": "OS Activity",
+      "paths": [
+        "/etc/rc.conf",
+        "/etc/conf.d/**",
+        "/etc/local.d/*.start",
+        "/etc/local.d/*.stop",
+        "/etc/user/init.d/**",
+        "/**/.config/rc/init.d/**",
+        "/**/.config/rc/conf.d/**"
+      ],
+      "parser": "startup_script",
+      "sources": [
+        "distro_openrc"
+      ],
+      "notes": "Startup/service configuration parsed as source lines. Configured commands are never executed; presence does not establish execution.",
+      "support": "structured"
+    },
+    {
+      "id": "runit_service_scripts",
+      "category": "OS Activity",
+      "paths": [
+        "/etc/sv/*/run",
+        "/etc/sv/*/finish",
+        "/etc/sv/*/log/run",
+        "/etc/sv/*/conf",
+        "/etc/runit/1",
+        "/etc/runit/2",
+        "/etc/runit/3",
+        "/etc/runit/core-services/**",
+        "/etc/rc.shutdown",
+        "/**/.config/service/*/run",
+        "/**/.config/service/*/finish"
+      ],
+      "parser": "startup_script",
+      "sources": [
+        "distro_runit"
+      ],
+      "notes": "Startup/service configuration parsed as source lines. Configured commands are never executed; presence does not establish execution.",
+      "support": "structured"
+    },
+    {
+      "id": "runit_disabled_markers",
+      "category": "OS Activity",
+      "paths": [
+        "/etc/sv/*/down",
+        "/**/.config/service/*/down"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_runit"
+      ],
+      "notes": "Down marker indicates a service configured not to start automatically. Enabled-service symlinks are not followed by filesystem triage.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "upstart_jobs",
+      "category": "OS Activity",
+      "paths": [
+        "/etc/init/*.conf",
+        "/etc/init/*.override",
+        "/etc/xdg/upstart/*.conf",
+        "/usr/share/upstart/sessions/*.conf",
+        "/**/.config/upstart/*.conf",
+        "/**/.config/upstart/*.override"
+      ],
+      "parser": "startup_script",
+      "sources": [
+        "distro_uac"
+      ],
+      "notes": "Startup/service configuration parsed as source lines. Configured commands are never executed; presence does not establish execution.",
+      "support": "structured"
+    },
+    {
+      "id": "systemd_lingering",
+      "category": "OS Activity",
+      "paths": [
+        "/var/lib/systemd/linger/*"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_systemd"
+      ],
+      "notes": "User lingering marker supports persistence review; does not prove a service executed.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "systemd_persistent_failures",
+      "category": "OS Activity",
+      "paths": [
+        "/var/lib/systemd/coredump/**",
+        "/var/lib/systemd/pstore/**",
+        "/etc/systemd/coredump.conf",
+        "/etc/systemd/coredump.conf.d/*.conf"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_systemd",
+        "distro_nikkel"
+      ],
+      "notes": "Crash and persistent kernel failure evidence retained raw. No debugger or code from the target is executed.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "additional_shell_history",
+      "category": "OS Activity",
+      "paths": [
+        "/**/.ash_history*",
+        "/**/.sh_history*",
+        "/**/.ksh_history*",
+        "/**/.local/share/powershell/PSReadLine/ConsoleHost_history.txt*"
+      ],
+      "parser": "line_history",
+      "sources": [
+        "distro_uac"
+      ],
+      "notes": "Recorded command-history lines, without inferred timestamps or proof that a command succeeded; original file retained.",
+      "support": "structured"
+    },
+    {
+      "id": "tcsh_history",
+      "category": "OS Activity",
+      "paths": [
+        "/**/.history",
+        "/**/.history.*"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_uac"
+      ],
+      "notes": "tcsh/csh history can contain timestamp records and multiline commands; retained raw rather than falsely interpreting every line as a command.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "xonsh_history",
+      "category": "OS Activity",
+      "paths": [
+        "/**/.local/share/xonsh/xonsh_history.sqlite*",
+        "/**/.local/share/xonsh/xonsh-*.json"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_uac"
+      ],
+      "notes": "Preserved as raw evidence for external analysis; configuration presence does not prove execution or current state.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "shell_additional_startup",
+      "category": "OS Activity",
+      "paths": [
+        "/**/.cshrc",
+        "/**/.tcshrc",
+        "/**/.login",
+        "/**/.logout",
+        "/**/.xonshrc",
+        "/etc/xonshrc",
+        "/etc/csh.cshrc",
+        "/etc/csh.login",
+        "/etc/csh.logout",
+        "/etc/profile.local",
+        "/**/.config/powershell/profile.ps1",
+        "/etc/powershell/profile.ps1"
+      ],
+      "parser": "startup_script",
+      "sources": [
+        "distro_uac"
+      ],
+      "notes": "Startup/service configuration parsed as source lines. Configured commands are never executed; presence does not establish execution.",
+      "support": "structured"
+    },
+    {
+      "id": "gnome_gvfs_activity",
+      "category": "OS Activity",
+      "paths": [
+        "/**/.local/share/gvfs-metadata/**",
+        "/**/.local/share/gnome-shell/application_state",
+        "/**/.config/dconf/user"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_uac",
+        "distro_fa"
+      ],
+      "notes": "Preserved as raw evidence for external analysis; configuration presence does not prove execution or current state.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "gnome_tracker_indexes",
+      "category": "OS Activity",
+      "paths": [
+        "/**/.cache/tracker3/files/*.db*",
+        "/**/.cache/tracker/*.db*",
+        "/**/.local/share/tracker/data/*.db*"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_uac",
+        "distro_fa"
+      ],
+      "notes": "Preserved as raw evidence for external analysis; configuration presence does not prove execution or current state.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "kde_activity_database",
+      "category": "OS Activity",
+      "paths": [
+        "/**/.local/share/kactivitymanagerd/resources/database*"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_uac"
+      ],
+      "notes": "Preserved as raw evidence for external analysis; configuration presence does not prove execution or current state.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "desktop_session_configuration",
+      "category": "OS Activity",
+      "paths": [
+        "/**/.config/xfce4/xfconf/xfce-perchannel-xml/*.xml",
+        "/**/.cache/sessions/xfce4-session-*",
+        "/**/.config/ksmserverrc",
+        "/**/.xsession-errors*"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_uac",
+        "distro_xfce_config",
+        "distro_xfce_session",
+        "distro_kde_session"
+      ],
+      "notes": "Preserved as raw evidence for external analysis; configuration presence does not prove execution or current state.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "office_recent_configuration",
+      "category": "OS Activity",
+      "paths": [
+        "/**/.config/libreoffice/**/registrymodifications.xcu",
+        "/**/.var/app/org.libreoffice.LibreOffice/**/registrymodifications.xcu",
+        "/**/snap/libreoffice/**/registrymodifications.xcu"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_uac"
+      ],
+      "notes": "Office recent-file/settings data retained without XML expansion or execution. Referenced documents are not followed outside selected targets.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "office_recent_xbel",
+      "category": "OS Activity",
+      "paths": [
+        "/**/.config/libreoffice/**/recently-used.xbel",
+        "/**/.var/app/org.libreoffice.LibreOffice/**/recently-used.xbel",
+        "/**/snap/libreoffice/**/recently-used.xbel"
+      ],
+      "parser": "recent",
+      "sources": [
+        "distro_uac"
+      ],
+      "notes": "Preserved as raw evidence for external analysis; configuration presence does not prove execution or current state.",
+      "support": "structured"
+    },
+    {
+      "id": "locate_file_indexes",
+      "category": "OS Activity",
+      "paths": [
+        "/var/lib/mlocate/mlocate.db",
+        "/var/lib/plocate/plocate.db",
+        "/var/cache/locate/locatedb",
+        "/var/lib/locate/locatedb"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_fa"
+      ],
+      "notes": "Index can retain historical file paths; preserved raw, not proof that indexed files still exist.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "process_accounting_files",
+      "category": "OS Activity",
+      "paths": [
+        "/var/account/pacct*",
+        "/var/log/account/pacct*",
+        "/var/log/pacct*"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_uac"
+      ],
+      "notes": "Binary process accounting varies by architecture/version and is preserved raw for external parsing.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "cloud_init_provisioning",
+      "category": "OS Activity",
+      "paths": [
+        "/etc/cloud/cloud.cfg",
+        "/etc/cloud/cloud.cfg.d/**",
+        "/var/lib/cloud/instances/**",
+        "/var/lib/cloud/data/**",
+        "/var/lib/cloud/scripts/**"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_cloudinit"
+      ],
+      "notes": "Cloud instance identity, provisioning input and executed-script traces retained raw; no cloud connection or script execution is performed.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "cups_print_jobs",
+      "category": "OS Activity",
+      "paths": [
+        "/var/spool/cups/c*",
+        "/var/spool/cups/d*",
+        "/var/cache/cups/job.cache*"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_cups"
+      ],
+      "notes": "Print control/data spool evidence retained as regular files. A spool record does not prove printing completed.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "networkd_profiles",
+      "category": "Network Connections",
+      "paths": [
+        "/etc/systemd/network/*.network",
+        "/etc/systemd/network/*.netdev",
+        "/etc/systemd/network/*.link",
+        "/usr/lib/systemd/network/*.network",
+        "/usr/lib/systemd/network/*.netdev",
+        "/usr/lib/systemd/network/*.link",
+        "/lib/systemd/network/*.network",
+        "/lib/systemd/network/*.netdev",
+        "/lib/systemd/network/*.link"
+      ],
+      "parser": "network_profile",
+      "sources": [
+        "distro_networkd"
+      ],
+      "notes": "Stored network configuration/history parsed as source lines, not proof of a current connection; raw file retained.",
+      "support": "structured"
+    },
+    {
+      "id": "legacy_distribution_network",
+      "category": "Network Connections",
+      "paths": [
+        "/etc/sysconfig/network-scripts/ifcfg-*",
+        "/etc/sysconfig/network-scripts/route-*",
+        "/etc/sysconfig/network/ifcfg-*",
+        "/etc/sysconfig/network/routes",
+        "/etc/network/interfaces.d/**",
+        "/etc/dhcpcd.conf",
+        "/etc/dhcp/*.conf",
+        "/var/lib/dhcp/*.leases*",
+        "/var/lib/dhcpcd/*.lease*",
+        "/etc/netctl/*",
+        "/etc/wicked/*.xml",
+        "/etc/wicked/ifconfig/*.xml"
+      ],
+      "parser": "network_profile",
+      "sources": [
+        "distro_fa",
+        "distro_nm",
+        "distro_suse_network",
+        "distro_rhel_network"
+      ],
+      "notes": "Stored network configuration/history parsed as source lines, not proof of a current connection; raw file retained.",
+      "support": "structured"
+    },
+    {
+      "id": "iwd_networks",
+      "category": "Network Connections",
+      "paths": [
+        "/var/lib/iwd/*.psk",
+        "/var/lib/iwd/*.8021x",
+        "/var/lib/iwd/*.open",
+        "/etc/iwd/main.conf"
+      ],
+      "parser": "network_profile",
+      "sources": [
+        "distro_iwd"
+      ],
+      "notes": "Stored network configuration/history parsed as source lines, not proof of a current connection; raw file retained.",
+      "support": "structured"
+    },
+    {
+      "id": "connman_networks",
+      "category": "Network Connections",
+      "paths": [
+        "/var/lib/connman/**/settings",
+        "/var/lib/connman/settings",
+        "/var/lib/connman/*.config",
+        "/var/lib/connman-vpn/**/*.config",
+        "/etc/connman/*.conf"
+      ],
+      "parser": "network_profile",
+      "sources": [
+        "distro_connman"
+      ],
+      "notes": "Stored network configuration/history parsed as source lines, not proof of a current connection; raw file retained.",
+      "support": "structured"
+    },
+    {
+      "id": "wireless_profiles",
+      "category": "Network Connections",
+      "paths": [
+        "/etc/wpa_supplicant/*.conf",
+        "/etc/wpa_supplicant.conf",
+        "/etc/network/if-pre-up.d/wpasupplicant"
+      ],
+      "parser": "network_profile",
+      "sources": [
+        "distro_fa"
+      ],
+      "notes": "Stored network configuration/history parsed as source lines, not proof of a current connection; raw file retained.",
+      "support": "structured"
+    },
+    {
+      "id": "firewall_configuration",
+      "category": "Network Connections",
+      "paths": [
+        "/etc/nftables.conf",
+        "/etc/nftables.d/**",
+        "/etc/iptables/*.rules",
+        "/etc/sysconfig/iptables*",
+        "/etc/ufw/*.rules",
+        "/etc/ufw/ufw.conf",
+        "/etc/firewalld/**/*.xml",
+        "/etc/firewalld/firewalld.conf"
+      ],
+      "parser": "network_text",
+      "sources": [
+        "distro_fa"
+      ],
+      "notes": "Stored network configuration/history parsed as source lines, not proof of a current connection; raw file retained.",
+      "support": "structured"
+    },
+    {
+      "id": "filezilla_state",
+      "category": "Network Connections",
+      "paths": [
+        "/**/.config/filezilla/*.xml*",
+        "/**/.config/filezilla/*.sqlite3*",
+        "/**/.var/app/org.filezillaproject.Filezilla/**/*.xml*",
+        "/**/.var/app/org.filezillaproject.Filezilla/**/*.sqlite3*"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_uac"
+      ],
+      "notes": "Preserved as raw evidence for external analysis; configuration presence does not prove execution or current state.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "rustdesk_access_logs",
+      "category": "Network Connections",
+      "paths": [
+        "/**/.local/share/logs/RustDesk/**"
+      ],
+      "parser": "remote_trace",
+      "sources": [
+        "distro_uac"
+      ],
+      "notes": "Original remote-access log lines retained without inventing session identities or timestamps.",
+      "support": "structured"
+    },
+    {
+      "id": "teamviewer_access_logs",
+      "category": "Network Connections",
+      "paths": [
+        "/var/log/teamviewer*/**/*.log",
+        "/var/log/teamviewer*/**/Connections_incoming.txt",
+        "/**/.local/share/teamviewer*/logfiles/*.log"
+      ],
+      "parser": "remote_trace",
+      "sources": [
+        "distro_uac"
+      ],
+      "notes": "Original remote-access log lines retained without inventing session identities or timestamps.",
+      "support": "structured"
+    },
+    {
+      "id": "teamviewer_chat_cache",
+      "category": "Communication",
+      "paths": [
+        "/**/.local/share/teamviewer*/**/tvchatfilecache.db*"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_uac"
+      ],
+      "notes": "Preserved as raw evidence for external analysis; configuration presence does not prove execution or current state.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "polkit_authorization",
+      "category": "User Accounts",
+      "paths": [
+        "/etc/polkit-1/rules.d/*.rules",
+        "/usr/share/polkit-1/rules.d/*.rules",
+        "/usr/share/polkit-1/actions/*.policy",
+        "/etc/polkit-1/localauthority/**/*.pkla",
+        "/var/lib/polkit-1/localauthority/**/*.pkla"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_polkit",
+        "distro_uac"
+      ],
+      "notes": "Preserved as raw evidence for external analysis; configuration presence does not prove execution or current state.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "accountsservice_user_state",
+      "category": "User Accounts",
+      "paths": [
+        "/var/lib/AccountsService/users/*"
+      ],
+      "parser": "distro_accountsservice",
+      "sources": [
+        "distro_accountsservice"
+      ],
+      "notes": "Desktop account preferences preserved with username from record filename. Metadata is not a replacement for passwd/SSSD account enumeration.",
+      "support": "structured"
+    },
+    {
+      "id": "kerberos_account_configuration",
+      "category": "User Accounts",
+      "paths": [
+        "/etc/krb5.conf",
+        "/etc/krb5.conf.d/**",
+        "/etc/krb5.keytab",
+        "/etc/realmd.conf",
+        "/etc/ldap/ldap.conf",
+        "/etc/openldap/ldap.conf"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_fa"
+      ],
+      "notes": "Realm configuration and keytab retained raw only where permitted; no authentication or external connection.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "boot_loader_entries",
+      "category": "Device Information",
+      "paths": [
+        "/boot/loader/loader.conf",
+        "/boot/loader/entries/*.conf",
+        "/boot/efi/loader/loader.conf",
+        "/boot/efi/loader/entries/*.conf",
+        "/efi/loader/entries/*.conf",
+        "/etc/kernel/cmdline"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_boot",
+        "distro_nikkel"
+      ],
+      "notes": "Preserved as raw evidence for external analysis; configuration presence does not prove execution or current state.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "system_policy_configuration",
+      "category": "Device Information",
+      "paths": [
+        "/etc/sysctl.conf",
+        "/etc/sysctl.d/*.conf",
+        "/usr/lib/sysctl.d/*.conf",
+        "/etc/adjtime",
+        "/etc/chrony.conf",
+        "/etc/chrony/chrony.conf",
+        "/etc/ntp.conf",
+        "/etc/vconsole.conf",
+        "/etc/default/keyboard"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_fa",
+        "distro_systemd"
+      ],
+      "notes": "Preserved as raw evidence for external analysis; configuration presence does not prove execution or current state.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "lvm_volume_metadata",
+      "category": "Device Information",
+      "paths": [
+        "/etc/lvm/backup/*",
+        "/etc/lvm/archive/*",
+        "/etc/lvm/lvm.conf"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_nikkel"
+      ],
+      "notes": "Stored volume topology metadata retained raw; no volume activation, mounting or modification.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "cups_printer_configuration",
+      "category": "Connected Devices",
+      "paths": [
+        "/etc/cups/printers.conf*",
+        "/etc/cups/classes.conf*",
+        "/**/.cups/lpoptions"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_cups"
+      ],
+      "notes": "Configured printers, including network printers. Configuration presence is not proof of a current connection.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "usbguard_device_policy",
+      "category": "Connected Devices",
+      "paths": [
+        "/etc/usbguard/rules.conf",
+        "/etc/usbguard/rules.d/**",
+        "/etc/usbguard/usbguard-daemon.conf"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_usbguard"
+      ],
+      "notes": "USB authorization policy may contain device identifiers; policy presence does not prove connection or last-logon timing.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "fwupd_device_history",
+      "category": "Connected Devices",
+      "paths": [
+        "/var/lib/fwupd/pending.db",
+        "/var/lib/fwupd/pending.db-wal",
+        "/var/lib/fwupd/pending.db-shm",
+        "/var/lib/fwupd/pending.db-journal"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_fwupd"
+      ],
+      "notes": "Firmware/device history database and SQLite sidecars retained raw. No firmware update, network access or database execution.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "podman_container_metadata",
+      "category": "Virtual Machines",
+      "paths": [
+        "/etc/containers/*.conf",
+        "/etc/containers/*.json",
+        "/**/.config/containers/*.conf",
+        "/**/.config/containers/*.json",
+        "/var/lib/containers/storage/overlay-containers/containers.json",
+        "/var/lib/containers/storage/overlay-containers/*/userdata/config.json",
+        "/var/lib/containers/storage/overlay-containers/*/userdata/ctr.log",
+        "/var/lib/containers/storage/libpod/bolt_state.db",
+        "/var/lib/containers/storage/libpod/db.sql*",
+        "/**/.local/share/containers/storage/overlay-containers/containers.json",
+        "/**/.local/share/containers/storage/overlay-containers/*/userdata/config.json",
+        "/**/.local/share/containers/storage/overlay-containers/*/userdata/ctr.log",
+        "/**/.local/share/containers/storage/libpod/bolt_state.db",
+        "/**/.local/share/containers/storage/libpod/db.sql*"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_podman"
+      ],
+      "notes": "Container definitions/state, not full container filesystems. Preserved under existing Virtual Machines category; no container is started.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "libvirt_additional_state",
+      "category": "Virtual Machines",
+      "paths": [
+        "/etc/libvirt/*.conf",
+        "/var/lib/libvirt/qemu/**/*.xml",
+        "/**/.config/libvirt/*.conf",
+        "/**/.local/share/libvirt/qemu/**/*.xml"
+      ],
+      "parser": null,
+      "sources": [
+        "distro_libvirt"
+      ],
+      "notes": "Preserved as raw evidence for external analysis; configuration presence does not prove execution or current state.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "podman_quadlet_units",
+      "category": "Virtual Machines",
+      "paths": [
+        "/etc/containers/systemd/**/*.container",
+        "/etc/containers/systemd/**/*.volume",
+        "/etc/containers/systemd/**/*.network",
+        "/etc/containers/systemd/**/*.build",
+        "/etc/containers/systemd/**/*.pod",
+        "/etc/containers/systemd/**/*.kube",
+        "/etc/containers/systemd/**/*.image",
+        "/etc/containers/systemd/**/*.artifact",
+        "/usr/share/containers/systemd/**/*.container",
+        "/usr/share/containers/systemd/**/*.volume",
+        "/usr/share/containers/systemd/**/*.network",
+        "/usr/share/containers/systemd/**/*.build",
+        "/usr/share/containers/systemd/**/*.pod",
+        "/usr/share/containers/systemd/**/*.kube",
+        "/usr/share/containers/systemd/**/*.image",
+        "/usr/share/containers/systemd/**/*.artifact",
+        "/**/.config/containers/systemd/**/*.container",
+        "/**/.config/containers/systemd/**/*.volume",
+        "/**/.config/containers/systemd/**/*.network",
+        "/**/.config/containers/systemd/**/*.build",
+        "/**/.config/containers/systemd/**/*.pod",
+        "/**/.config/containers/systemd/**/*.kube",
+        "/**/.config/containers/systemd/**/*.image",
+        "/**/.config/containers/systemd/**/*.artifact"
+      ],
+      "parser": "systemd",
+      "sources": [
+        "distro_quadlet"
+      ],
+      "support": "structured",
+      "notes": "Container startup definitions parsed as configuration only; no generator, image pull, build or container execution occurs."
+    }
+  ],
+  "path_expansions": {
+    "network_profiles": {
+      "paths": [
+        "/usr/lib/NetworkManager/system-connections/**",
+        "/etc/NetworkManager/NetworkManager.conf",
+        "/etc/NetworkManager/conf.d/*.conf"
+      ],
+      "sources": [
+        "distro_nm"
+      ]
+    },
+    "recent_files": {
+      "paths": [
+        "/**/.kde/share/apps/RecentDocuments/*.desktop",
+        "/**/.kde4/share/apps/RecentDocuments/*.desktop"
+      ],
+      "sources": [
+        "distro_uac"
+      ]
+    },
+    "systemd_units": {
+      "paths": [
+        "/etc/systemd/system/*.service",
+        "/etc/systemd/system/*.service.d/*.conf",
+        "/etc/systemd/system/*.timer",
+        "/etc/systemd/system/*.timer.d/*.conf",
+        "/etc/systemd/system/*.socket",
+        "/etc/systemd/system/*.socket.d/*.conf",
+        "/etc/systemd/system/*.path",
+        "/etc/systemd/system/*.path.d/*.conf",
+        "/etc/systemd/system/*.mount",
+        "/etc/systemd/system/*.mount.d/*.conf",
+        "/etc/systemd/system/*.automount",
+        "/etc/systemd/system/*.automount.d/*.conf",
+        "/etc/systemd/system/*.target",
+        "/etc/systemd/system/*.target.d/*.conf",
+        "/etc/systemd/system/*.slice",
+        "/etc/systemd/system/*.slice.d/*.conf",
+        "/etc/systemd/system/*.scope",
+        "/etc/systemd/system/*.scope.d/*.conf",
+        "/etc/systemd/system/*.swap",
+        "/etc/systemd/system/*.swap.d/*.conf",
+        "/usr/lib/systemd/system/*.service",
+        "/usr/lib/systemd/system/*.service.d/*.conf",
+        "/usr/lib/systemd/system/*.timer",
+        "/usr/lib/systemd/system/*.timer.d/*.conf",
+        "/usr/lib/systemd/system/*.socket",
+        "/usr/lib/systemd/system/*.socket.d/*.conf",
+        "/usr/lib/systemd/system/*.path",
+        "/usr/lib/systemd/system/*.path.d/*.conf",
+        "/usr/lib/systemd/system/*.mount",
+        "/usr/lib/systemd/system/*.mount.d/*.conf",
+        "/usr/lib/systemd/system/*.automount",
+        "/usr/lib/systemd/system/*.automount.d/*.conf",
+        "/usr/lib/systemd/system/*.target",
+        "/usr/lib/systemd/system/*.target.d/*.conf",
+        "/usr/lib/systemd/system/*.slice",
+        "/usr/lib/systemd/system/*.slice.d/*.conf",
+        "/usr/lib/systemd/system/*.scope",
+        "/usr/lib/systemd/system/*.scope.d/*.conf",
+        "/usr/lib/systemd/system/*.swap",
+        "/usr/lib/systemd/system/*.swap.d/*.conf",
+        "/lib/systemd/system/*.service",
+        "/lib/systemd/system/*.service.d/*.conf",
+        "/lib/systemd/system/*.timer",
+        "/lib/systemd/system/*.timer.d/*.conf",
+        "/lib/systemd/system/*.socket",
+        "/lib/systemd/system/*.socket.d/*.conf",
+        "/lib/systemd/system/*.path",
+        "/lib/systemd/system/*.path.d/*.conf",
+        "/lib/systemd/system/*.mount",
+        "/lib/systemd/system/*.mount.d/*.conf",
+        "/lib/systemd/system/*.automount",
+        "/lib/systemd/system/*.automount.d/*.conf",
+        "/lib/systemd/system/*.target",
+        "/lib/systemd/system/*.target.d/*.conf",
+        "/lib/systemd/system/*.slice",
+        "/lib/systemd/system/*.slice.d/*.conf",
+        "/lib/systemd/system/*.scope",
+        "/lib/systemd/system/*.scope.d/*.conf",
+        "/lib/systemd/system/*.swap",
+        "/lib/systemd/system/*.swap.d/*.conf",
+        "/usr/local/lib/systemd/system/*.service",
+        "/usr/local/lib/systemd/system/*.service.d/*.conf",
+        "/usr/local/lib/systemd/system/*.timer",
+        "/usr/local/lib/systemd/system/*.timer.d/*.conf",
+        "/usr/local/lib/systemd/system/*.socket",
+        "/usr/local/lib/systemd/system/*.socket.d/*.conf",
+        "/usr/local/lib/systemd/system/*.path",
+        "/usr/local/lib/systemd/system/*.path.d/*.conf",
+        "/usr/local/lib/systemd/system/*.mount",
+        "/usr/local/lib/systemd/system/*.mount.d/*.conf",
+        "/usr/local/lib/systemd/system/*.automount",
+        "/usr/local/lib/systemd/system/*.automount.d/*.conf",
+        "/usr/local/lib/systemd/system/*.target",
+        "/usr/local/lib/systemd/system/*.target.d/*.conf",
+        "/usr/local/lib/systemd/system/*.slice",
+        "/usr/local/lib/systemd/system/*.slice.d/*.conf",
+        "/usr/local/lib/systemd/system/*.scope",
+        "/usr/local/lib/systemd/system/*.scope.d/*.conf",
+        "/usr/local/lib/systemd/system/*.swap",
+        "/usr/local/lib/systemd/system/*.swap.d/*.conf",
+        "/etc/systemd/user/*.service",
+        "/etc/systemd/user/*.service.d/*.conf",
+        "/etc/systemd/user/*.timer",
+        "/etc/systemd/user/*.timer.d/*.conf",
+        "/etc/systemd/user/*.socket",
+        "/etc/systemd/user/*.socket.d/*.conf",
+        "/etc/systemd/user/*.path",
+        "/etc/systemd/user/*.path.d/*.conf",
+        "/etc/systemd/user/*.mount",
+        "/etc/systemd/user/*.mount.d/*.conf",
+        "/etc/systemd/user/*.automount",
+        "/etc/systemd/user/*.automount.d/*.conf",
+        "/etc/systemd/user/*.target",
+        "/etc/systemd/user/*.target.d/*.conf",
+        "/etc/systemd/user/*.slice",
+        "/etc/systemd/user/*.slice.d/*.conf",
+        "/etc/systemd/user/*.scope",
+        "/etc/systemd/user/*.scope.d/*.conf",
+        "/etc/systemd/user/*.swap",
+        "/etc/systemd/user/*.swap.d/*.conf",
+        "/usr/lib/systemd/user/*.service",
+        "/usr/lib/systemd/user/*.service.d/*.conf",
+        "/usr/lib/systemd/user/*.timer",
+        "/usr/lib/systemd/user/*.timer.d/*.conf",
+        "/usr/lib/systemd/user/*.socket",
+        "/usr/lib/systemd/user/*.socket.d/*.conf",
+        "/usr/lib/systemd/user/*.path",
+        "/usr/lib/systemd/user/*.path.d/*.conf",
+        "/usr/lib/systemd/user/*.mount",
+        "/usr/lib/systemd/user/*.mount.d/*.conf",
+        "/usr/lib/systemd/user/*.automount",
+        "/usr/lib/systemd/user/*.automount.d/*.conf",
+        "/usr/lib/systemd/user/*.target",
+        "/usr/lib/systemd/user/*.target.d/*.conf",
+        "/usr/lib/systemd/user/*.slice",
+        "/usr/lib/systemd/user/*.slice.d/*.conf",
+        "/usr/lib/systemd/user/*.scope",
+        "/usr/lib/systemd/user/*.scope.d/*.conf",
+        "/usr/lib/systemd/user/*.swap",
+        "/usr/lib/systemd/user/*.swap.d/*.conf",
+        "/usr/local/lib/systemd/user/*.service",
+        "/usr/local/lib/systemd/user/*.service.d/*.conf",
+        "/usr/local/lib/systemd/user/*.timer",
+        "/usr/local/lib/systemd/user/*.timer.d/*.conf",
+        "/usr/local/lib/systemd/user/*.socket",
+        "/usr/local/lib/systemd/user/*.socket.d/*.conf",
+        "/usr/local/lib/systemd/user/*.path",
+        "/usr/local/lib/systemd/user/*.path.d/*.conf",
+        "/usr/local/lib/systemd/user/*.mount",
+        "/usr/local/lib/systemd/user/*.mount.d/*.conf",
+        "/usr/local/lib/systemd/user/*.automount",
+        "/usr/local/lib/systemd/user/*.automount.d/*.conf",
+        "/usr/local/lib/systemd/user/*.target",
+        "/usr/local/lib/systemd/user/*.target.d/*.conf",
+        "/usr/local/lib/systemd/user/*.slice",
+        "/usr/local/lib/systemd/user/*.slice.d/*.conf",
+        "/usr/local/lib/systemd/user/*.scope",
+        "/usr/local/lib/systemd/user/*.scope.d/*.conf",
+        "/usr/local/lib/systemd/user/*.swap",
+        "/usr/local/lib/systemd/user/*.swap.d/*.conf",
+        "/usr/share/systemd/user/*.service",
+        "/usr/share/systemd/user/*.service.d/*.conf",
+        "/usr/share/systemd/user/*.timer",
+        "/usr/share/systemd/user/*.timer.d/*.conf",
+        "/usr/share/systemd/user/*.socket",
+        "/usr/share/systemd/user/*.socket.d/*.conf",
+        "/usr/share/systemd/user/*.path",
+        "/usr/share/systemd/user/*.path.d/*.conf",
+        "/usr/share/systemd/user/*.mount",
+        "/usr/share/systemd/user/*.mount.d/*.conf",
+        "/usr/share/systemd/user/*.automount",
+        "/usr/share/systemd/user/*.automount.d/*.conf",
+        "/usr/share/systemd/user/*.target",
+        "/usr/share/systemd/user/*.target.d/*.conf",
+        "/usr/share/systemd/user/*.slice",
+        "/usr/share/systemd/user/*.slice.d/*.conf",
+        "/usr/share/systemd/user/*.scope",
+        "/usr/share/systemd/user/*.scope.d/*.conf",
+        "/usr/share/systemd/user/*.swap",
+        "/usr/share/systemd/user/*.swap.d/*.conf",
+        "/usr/local/share/systemd/user/*.service",
+        "/usr/local/share/systemd/user/*.service.d/*.conf",
+        "/usr/local/share/systemd/user/*.timer",
+        "/usr/local/share/systemd/user/*.timer.d/*.conf",
+        "/usr/local/share/systemd/user/*.socket",
+        "/usr/local/share/systemd/user/*.socket.d/*.conf",
+        "/usr/local/share/systemd/user/*.path",
+        "/usr/local/share/systemd/user/*.path.d/*.conf",
+        "/usr/local/share/systemd/user/*.mount",
+        "/usr/local/share/systemd/user/*.mount.d/*.conf",
+        "/usr/local/share/systemd/user/*.automount",
+        "/usr/local/share/systemd/user/*.automount.d/*.conf",
+        "/usr/local/share/systemd/user/*.target",
+        "/usr/local/share/systemd/user/*.target.d/*.conf",
+        "/usr/local/share/systemd/user/*.slice",
+        "/usr/local/share/systemd/user/*.slice.d/*.conf",
+        "/usr/local/share/systemd/user/*.scope",
+        "/usr/local/share/systemd/user/*.scope.d/*.conf",
+        "/usr/local/share/systemd/user/*.swap",
+        "/usr/local/share/systemd/user/*.swap.d/*.conf",
+        "/**/.config/systemd/user/*.service",
+        "/**/.config/systemd/user/*.service.d/*.conf",
+        "/**/.config/systemd/user/*.timer",
+        "/**/.config/systemd/user/*.timer.d/*.conf",
+        "/**/.config/systemd/user/*.socket",
+        "/**/.config/systemd/user/*.socket.d/*.conf",
+        "/**/.config/systemd/user/*.path",
+        "/**/.config/systemd/user/*.path.d/*.conf",
+        "/**/.config/systemd/user/*.mount",
+        "/**/.config/systemd/user/*.mount.d/*.conf",
+        "/**/.config/systemd/user/*.automount",
+        "/**/.config/systemd/user/*.automount.d/*.conf",
+        "/**/.config/systemd/user/*.target",
+        "/**/.config/systemd/user/*.target.d/*.conf",
+        "/**/.config/systemd/user/*.slice",
+        "/**/.config/systemd/user/*.slice.d/*.conf",
+        "/**/.config/systemd/user/*.scope",
+        "/**/.config/systemd/user/*.scope.d/*.conf",
+        "/**/.config/systemd/user/*.swap",
+        "/**/.config/systemd/user/*.swap.d/*.conf",
+        "/**/.local/share/systemd/user/*.service",
+        "/**/.local/share/systemd/user/*.service.d/*.conf",
+        "/**/.local/share/systemd/user/*.timer",
+        "/**/.local/share/systemd/user/*.timer.d/*.conf",
+        "/**/.local/share/systemd/user/*.socket",
+        "/**/.local/share/systemd/user/*.socket.d/*.conf",
+        "/**/.local/share/systemd/user/*.path",
+        "/**/.local/share/systemd/user/*.path.d/*.conf",
+        "/**/.local/share/systemd/user/*.mount",
+        "/**/.local/share/systemd/user/*.mount.d/*.conf",
+        "/**/.local/share/systemd/user/*.automount",
+        "/**/.local/share/systemd/user/*.automount.d/*.conf",
+        "/**/.local/share/systemd/user/*.target",
+        "/**/.local/share/systemd/user/*.target.d/*.conf",
+        "/**/.local/share/systemd/user/*.slice",
+        "/**/.local/share/systemd/user/*.slice.d/*.conf",
+        "/**/.local/share/systemd/user/*.scope",
+        "/**/.local/share/systemd/user/*.scope.d/*.conf",
+        "/**/.local/share/systemd/user/*.swap",
+        "/**/.local/share/systemd/user/*.swap.d/*.conf"
+      ],
+      "sources": [
+        "distro_systemd"
+      ]
+    },
+    "chromium_leveldb_records": {
+      "paths": [
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Local Storage/**/*.log",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Local Storage/**/*.ldb",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Local Storage/**/*.sst",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Session Storage/**/*.log",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Session Storage/**/*.ldb",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Session Storage/**/*.sst",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/IndexedDB/**/*.log",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/IndexedDB/**/*.ldb",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/IndexedDB/**/*.sst",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Service Worker/**/*.log",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Service Worker/**/*.ldb",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Service Worker/**/*.sst",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Local Storage/**/*.log",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Local Storage/**/*.ldb",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Local Storage/**/*.sst",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Session Storage/**/*.log",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Session Storage/**/*.ldb",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Session Storage/**/*.sst",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/IndexedDB/**/*.log",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/IndexedDB/**/*.ldb",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/IndexedDB/**/*.sst",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Service Worker/**/*.log",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Service Worker/**/*.ldb",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Service Worker/**/*.sst",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Local Storage/**/*.log",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Local Storage/**/*.ldb",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Local Storage/**/*.sst",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Session Storage/**/*.log",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Session Storage/**/*.ldb",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Session Storage/**/*.sst",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/IndexedDB/**/*.log",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/IndexedDB/**/*.ldb",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/IndexedDB/**/*.sst",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Service Worker/**/*.log",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Service Worker/**/*.ldb",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Service Worker/**/*.sst",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Local Storage/**/*.log",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Local Storage/**/*.ldb",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Local Storage/**/*.sst",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Session Storage/**/*.log",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Session Storage/**/*.ldb",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Session Storage/**/*.sst",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/IndexedDB/**/*.log",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/IndexedDB/**/*.ldb",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/IndexedDB/**/*.sst",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Service Worker/**/*.log",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Service Worker/**/*.ldb",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Service Worker/**/*.sst",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Local Storage/**/*.log",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Local Storage/**/*.ldb",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Local Storage/**/*.sst",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Session Storage/**/*.log",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Session Storage/**/*.ldb",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Session Storage/**/*.sst",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/IndexedDB/**/*.log",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/IndexedDB/**/*.ldb",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/IndexedDB/**/*.sst",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Service Worker/**/*.log",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Service Worker/**/*.ldb",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Service Worker/**/*.sst",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Local Storage/**/*.log",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Local Storage/**/*.ldb",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Local Storage/**/*.sst",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Session Storage/**/*.log",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Session Storage/**/*.ldb",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Session Storage/**/*.sst",
+        "/**/.var/app/com.opera.Opera/config/opera/*/IndexedDB/**/*.log",
+        "/**/.var/app/com.opera.Opera/config/opera/*/IndexedDB/**/*.ldb",
+        "/**/.var/app/com.opera.Opera/config/opera/*/IndexedDB/**/*.sst",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Service Worker/**/*.log",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Service Worker/**/*.ldb",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Service Worker/**/*.sst",
+        "/**/.var/app/com.opera.Opera/config/opera/Local Storage/**/*.log",
+        "/**/.var/app/com.opera.Opera/config/opera/Local Storage/**/*.ldb",
+        "/**/.var/app/com.opera.Opera/config/opera/Local Storage/**/*.sst",
+        "/**/.var/app/com.opera.Opera/config/opera/Session Storage/**/*.log",
+        "/**/.var/app/com.opera.Opera/config/opera/Session Storage/**/*.ldb",
+        "/**/.var/app/com.opera.Opera/config/opera/Session Storage/**/*.sst",
+        "/**/.var/app/com.opera.Opera/config/opera/IndexedDB/**/*.log",
+        "/**/.var/app/com.opera.Opera/config/opera/IndexedDB/**/*.ldb",
+        "/**/.var/app/com.opera.Opera/config/opera/IndexedDB/**/*.sst",
+        "/**/.var/app/com.opera.Opera/config/opera/Service Worker/**/*.log",
+        "/**/.var/app/com.opera.Opera/config/opera/Service Worker/**/*.ldb",
+        "/**/.var/app/com.opera.Opera/config/opera/Service Worker/**/*.sst"
+      ],
+      "sources": [
+        "distro_flatpak"
+      ]
+    },
+    "electron_leveldb_records": {
+      "paths": [
+        "/**/.var/app/com.discordapp.Discord/config/discord/Local Storage/**/*.log",
+        "/**/.var/app/com.discordapp.Discord/config/discord/Local Storage/**/*.ldb",
+        "/**/.var/app/com.discordapp.Discord/config/discord/Local Storage/**/*.sst",
+        "/**/.var/app/com.discordapp.Discord/config/discord/Session Storage/**/*.log",
+        "/**/.var/app/com.discordapp.Discord/config/discord/Session Storage/**/*.ldb",
+        "/**/.var/app/com.discordapp.Discord/config/discord/Session Storage/**/*.sst",
+        "/**/.var/app/com.discordapp.Discord/config/discord/IndexedDB/**/*.log",
+        "/**/.var/app/com.discordapp.Discord/config/discord/IndexedDB/**/*.ldb",
+        "/**/.var/app/com.discordapp.Discord/config/discord/IndexedDB/**/*.sst",
+        "/**/.var/app/com.slack.Slack/config/Slack/Local Storage/**/*.log",
+        "/**/.var/app/com.slack.Slack/config/Slack/Local Storage/**/*.ldb",
+        "/**/.var/app/com.slack.Slack/config/Slack/Local Storage/**/*.sst",
+        "/**/.var/app/com.slack.Slack/config/Slack/Session Storage/**/*.log",
+        "/**/.var/app/com.slack.Slack/config/Slack/Session Storage/**/*.ldb",
+        "/**/.var/app/com.slack.Slack/config/Slack/Session Storage/**/*.sst",
+        "/**/.var/app/com.slack.Slack/config/Slack/IndexedDB/**/*.log",
+        "/**/.var/app/com.slack.Slack/config/Slack/IndexedDB/**/*.ldb",
+        "/**/.var/app/com.slack.Slack/config/Slack/IndexedDB/**/*.sst"
+      ],
+      "sources": [
+        "distro_flatpak"
+      ]
+    },
+    "chromium_extension_manifests": {
+      "paths": [
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Extensions/**/manifest.json",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Extensions/**/manifest.json",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Extensions/**/manifest.json",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Extensions/**/manifest.json",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Extensions/**/manifest.json",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Extensions/**/manifest.json",
+        "/**/.var/app/com.opera.Opera/config/opera/Extensions/**/manifest.json"
+      ],
+      "sources": [
+        "distro_flatpak"
+      ]
+    },
+    "chromium_history": {
+      "paths": [
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/History",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Archived History",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/History",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Archived History",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/History",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Archived History",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/History",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Archived History",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/History",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Archived History",
+        "/**/.var/app/com.opera.Opera/config/opera/*/History",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Archived History",
+        "/**/.var/app/com.opera.Opera/config/opera/History",
+        "/**/.var/app/com.opera.Opera/config/opera/Archived History"
+      ],
+      "sources": [
+        "distro_flatpak"
+      ]
+    },
+    "chromium_cookies": {
+      "paths": [
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Cookies",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Network/Cookies",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Cookies",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Network/Cookies",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Cookies",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Network/Cookies",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Cookies",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Network/Cookies",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Cookies",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Network/Cookies",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Cookies",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Network/Cookies",
+        "/**/.var/app/com.opera.Opera/config/opera/Cookies",
+        "/**/.var/app/com.opera.Opera/config/opera/Network/Cookies"
+      ],
+      "sources": [
+        "distro_flatpak"
+      ]
+    },
+    "chromium_logins": {
+      "paths": [
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Login Data",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Login Data",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Login Data",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Login Data",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Login Data",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Login Data",
+        "/**/.var/app/com.opera.Opera/config/opera/Login Data"
+      ],
+      "sources": [
+        "distro_flatpak"
+      ]
+    },
+    "chromium_autofill": {
+      "paths": [
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Web Data",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Web Data",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Web Data",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Web Data",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Web Data",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Web Data",
+        "/**/.var/app/com.opera.Opera/config/opera/Web Data"
+      ],
+      "sources": [
+        "distro_flatpak"
+      ]
+    },
+    "chromium_bookmarks": {
+      "paths": [
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Bookmarks",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Bookmarks",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Bookmarks",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Bookmarks",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Bookmarks",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Bookmarks",
+        "/**/.var/app/com.opera.Opera/config/opera/Bookmarks"
+      ],
+      "sources": [
+        "distro_flatpak"
+      ]
+    },
+    "chromium_preferences": {
+      "paths": [
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Preferences",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Preferences",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Preferences",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Preferences",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Preferences",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Preferences",
+        "/**/.var/app/com.opera.Opera/config/opera/Preferences"
+      ],
+      "sources": [
+        "distro_flatpak"
+      ]
+    },
+    "chromium_stores": {
+      "paths": [
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Secure Preferences",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Local Storage/**",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Session Storage/**",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/IndexedDB/**",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Sessions/**",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Extensions/**",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Service Worker/**",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Cache/**",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Secure Preferences",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Local Storage/**",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Session Storage/**",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/IndexedDB/**",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Sessions/**",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Extensions/**",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Service Worker/**",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Cache/**",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Secure Preferences",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Local Storage/**",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Session Storage/**",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/IndexedDB/**",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Sessions/**",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Extensions/**",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Service Worker/**",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Cache/**",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Secure Preferences",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Local Storage/**",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Session Storage/**",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/IndexedDB/**",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Sessions/**",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Extensions/**",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Service Worker/**",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Cache/**",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Secure Preferences",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Local Storage/**",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Session Storage/**",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/IndexedDB/**",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Sessions/**",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Extensions/**",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Service Worker/**",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Cache/**",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Secure Preferences",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Local Storage/**",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Session Storage/**",
+        "/**/.var/app/com.opera.Opera/config/opera/*/IndexedDB/**",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Sessions/**",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Extensions/**",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Service Worker/**",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Cache/**",
+        "/**/.var/app/com.opera.Opera/config/opera/Secure Preferences",
+        "/**/.var/app/com.opera.Opera/config/opera/Local Storage/**",
+        "/**/.var/app/com.opera.Opera/config/opera/Session Storage/**",
+        "/**/.var/app/com.opera.Opera/config/opera/IndexedDB/**",
+        "/**/.var/app/com.opera.Opera/config/opera/Sessions/**",
+        "/**/.var/app/com.opera.Opera/config/opera/Extensions/**",
+        "/**/.var/app/com.opera.Opera/config/opera/Service Worker/**",
+        "/**/.var/app/com.opera.Opera/config/opera/Cache/**"
+      ],
+      "sources": [
+        "distro_flatpak"
+      ]
+    },
+    "discord_native": {
+      "paths": [
+        "/**/.var/app/com.discordapp.Discord/config/discord/**"
+      ],
+      "sources": [
+        "distro_flatpak"
+      ]
+    },
+    "other_chat": {
+      "paths": [
+        "/**/.var/app/com.slack.Slack/config/Slack/**",
+        "/**/.var/app/im.riot.Riot/config/Element/**"
+      ],
+      "sources": [
+        "distro_flatpak"
+      ]
+    },
+    "chromium_history_sidecars": {
+      "paths": [
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/History-wal",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/History-shm",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/History-journal",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Archived History-wal",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Archived History-shm",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Archived History-journal",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/History-wal",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/History-shm",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/History-journal",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Archived History-wal",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Archived History-shm",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Archived History-journal",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/History-wal",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/History-shm",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/History-journal",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Archived History-wal",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Archived History-shm",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Archived History-journal",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/History-wal",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/History-shm",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/History-journal",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Archived History-wal",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Archived History-shm",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Archived History-journal",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/History-wal",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/History-shm",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/History-journal",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Archived History-wal",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Archived History-shm",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Archived History-journal",
+        "/**/.var/app/com.opera.Opera/config/opera/*/History-wal",
+        "/**/.var/app/com.opera.Opera/config/opera/*/History-shm",
+        "/**/.var/app/com.opera.Opera/config/opera/*/History-journal",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Archived History-wal",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Archived History-shm",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Archived History-journal",
+        "/**/.var/app/com.opera.Opera/config/opera/History-wal",
+        "/**/.var/app/com.opera.Opera/config/opera/History-shm",
+        "/**/.var/app/com.opera.Opera/config/opera/History-journal",
+        "/**/.var/app/com.opera.Opera/config/opera/Archived History-wal",
+        "/**/.var/app/com.opera.Opera/config/opera/Archived History-shm",
+        "/**/.var/app/com.opera.Opera/config/opera/Archived History-journal"
+      ],
+      "sources": [
+        "distro_flatpak"
+      ]
+    },
+    "chromium_cookies_sidecars": {
+      "paths": [
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Cookies-wal",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Cookies-shm",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Cookies-journal",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Network/Cookies-wal",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Network/Cookies-shm",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Network/Cookies-journal",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Cookies-wal",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Cookies-shm",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Cookies-journal",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Network/Cookies-wal",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Network/Cookies-shm",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Network/Cookies-journal",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Cookies-wal",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Cookies-shm",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Cookies-journal",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Network/Cookies-wal",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Network/Cookies-shm",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Network/Cookies-journal",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Cookies-wal",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Cookies-shm",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Cookies-journal",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Network/Cookies-wal",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Network/Cookies-shm",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Network/Cookies-journal",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Cookies-wal",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Cookies-shm",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Cookies-journal",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Network/Cookies-wal",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Network/Cookies-shm",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Network/Cookies-journal",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Cookies-wal",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Cookies-shm",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Cookies-journal",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Network/Cookies-wal",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Network/Cookies-shm",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Network/Cookies-journal",
+        "/**/.var/app/com.opera.Opera/config/opera/Cookies-wal",
+        "/**/.var/app/com.opera.Opera/config/opera/Cookies-shm",
+        "/**/.var/app/com.opera.Opera/config/opera/Cookies-journal",
+        "/**/.var/app/com.opera.Opera/config/opera/Network/Cookies-wal",
+        "/**/.var/app/com.opera.Opera/config/opera/Network/Cookies-shm",
+        "/**/.var/app/com.opera.Opera/config/opera/Network/Cookies-journal"
+      ],
+      "sources": [
+        "distro_flatpak"
+      ]
+    },
+    "chromium_logins_sidecars": {
+      "paths": [
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Login Data-wal",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Login Data-shm",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Login Data-journal",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Login Data-wal",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Login Data-shm",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Login Data-journal",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Login Data-wal",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Login Data-shm",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Login Data-journal",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Login Data-wal",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Login Data-shm",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Login Data-journal",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Login Data-wal",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Login Data-shm",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Login Data-journal",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Login Data-wal",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Login Data-shm",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Login Data-journal",
+        "/**/.var/app/com.opera.Opera/config/opera/Login Data-wal",
+        "/**/.var/app/com.opera.Opera/config/opera/Login Data-shm",
+        "/**/.var/app/com.opera.Opera/config/opera/Login Data-journal"
+      ],
+      "sources": [
+        "distro_flatpak"
+      ]
+    },
+    "chromium_autofill_sidecars": {
+      "paths": [
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Web Data-wal",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Web Data-shm",
+        "/**/.var/app/org.chromium.Chromium/config/chromium/*/Web Data-journal",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Web Data-wal",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Web Data-shm",
+        "/**/.var/app/com.google.Chrome/config/google-chrome/*/Web Data-journal",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Web Data-wal",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Web Data-shm",
+        "/**/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/*/Web Data-journal",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Web Data-wal",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Web Data-shm",
+        "/**/.var/app/com.microsoft.Edge/config/microsoft-edge/*/Web Data-journal",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Web Data-wal",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Web Data-shm",
+        "/**/.var/app/com.vivaldi.Vivaldi/config/vivaldi/*/Web Data-journal",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Web Data-wal",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Web Data-shm",
+        "/**/.var/app/com.opera.Opera/config/opera/*/Web Data-journal",
+        "/**/.var/app/com.opera.Opera/config/opera/Web Data-wal",
+        "/**/.var/app/com.opera.Opera/config/opera/Web Data-shm",
+        "/**/.var/app/com.opera.Opera/config/opera/Web Data-journal"
+      ],
+      "sources": [
+        "distro_flatpak"
+      ]
+    }
+  }
+}

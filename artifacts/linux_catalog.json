@@ -1,0 +1,2801 @@
+{
+  "version": 2,
+  "researched_on": "2026-10-10",
+  "sources": {
+    "gnome_keyring_format": {
+      "title": "GNOME binary keyring implementation",
+      "url": "https://github.com/GNOME/gnome-keyring/blob/main/pkcs11/secret-store/gkm-secret-binary.c"
+    },
+    "kwallet_format": {
+      "title": "KDE classic wallet implementation",
+      "url": "https://github.com/KDE/kwallet/tree/v6.18.0/src/runtime/kwalletbackend"
+    },
+    "uac": {
+      "title": "UAC artifact definitions",
+      "url": "https://github.com/tclahr/uac/tree/main/artifacts/files"
+    },
+    "linux": {
+      "title": "ForensicArtifacts Linux definitions",
+      "url": "https://github.com/ForensicArtifacts/artifacts/blob/main/artifacts/data/linux.yaml"
+    },
+    "browser": {
+      "title": "ForensicArtifacts browser definitions",
+      "url": "https://github.com/ForensicArtifacts/artifacts/blob/main/artifacts/data/webbrowser.yaml"
+    },
+    "plaso": {
+      "title": "Plaso parser inventory",
+      "url": "https://github.com/log2timeline/plaso/blob/main/docs/sources/user/Parsers-and-plugins.md"
+    },
+    "users": {
+      "title": "Velociraptor Linux.Sys.Users",
+      "url": "https://github.com/Velocidex/velociraptor/blob/master/artifacts/definitions/Linux/Sys/Users.yaml"
+    },
+    "passwd": {
+      "title": "Linux passwd format",
+      "url": "https://man7.org/linux/man-pages/man5/passwd.5.html"
+    },
+    "shadow": {
+      "title": "Linux shadow format",
+      "url": "https://man7.org/linux/man-pages/man5/shadow.5.html"
+    },
+    "utmp": {
+      "title": "Linux utmp/wtmp format",
+      "url": "https://man7.org/linux/man-pages/man5/utmp.5.html"
+    },
+    "dpkg": {
+      "title": "Debian control fields",
+      "url": "https://www.debian.org/doc/debian-policy/ch-controlfields.html"
+    },
+    "desktop": {
+      "title": "freedesktop desktop entries",
+      "url": "https://specifications.freedesktop.org/desktop-entry/latest/"
+    },
+    "sqlite": {
+      "title": "SQLite database and WAL format",
+      "url": "https://www.sqlite.org/fileformat.html"
+    },
+    "firefox": {
+      "title": "Mozilla Places implementation",
+      "url": "https://searchfox.org/firefox-main/source/toolkit/components/places/History.sys.mjs"
+    },
+    "chrome": {
+      "title": "Plaso Chromium history schemas",
+      "url": "https://github.com/log2timeline/plaso/blob/main/plaso/parsers/sqlite_plugins/chrome_history.py"
+    },
+    "skype": {
+      "title": "Plaso legacy Skype schemas",
+      "url": "https://github.com/log2timeline/plaso/blob/main/plaso/parsers/sqlite_plugins/skype.py"
+    },
+    "thunderbird": {
+      "title": "Mozilla Thunderbird global database",
+      "url": "https://support.mozilla.org/en-US/kb/rebuilding-global-database"
+    },
+    "mail": {
+      "title": "Python email parsing",
+      "url": "https://docs.python.org/3/library/email.parser.html"
+    },
+    "zsh": {
+      "title": "Zsh history format",
+      "url": "https://zsh.sourceforge.io/Doc/Release/Options.html#History"
+    },
+    "bash": {
+      "title": "GNU Bash history",
+      "url": "https://www.gnu.org/software/bash/manual/html_node/Bash-History-Facilities.html"
+    },
+    "trash": {
+      "title": "freedesktop trash specification",
+      "url": "https://specifications.freedesktop.org/trash-spec/1.0/"
+    },
+    "telegram": {
+      "title": "Telegram Desktop JSON export implementation",
+      "url": "https://github.com/telegramdesktop/tdesktop/blob/dev/Telegram/SourceFiles/export/output/export_output_json.cpp"
+    },
+    "dissect": {
+      "title": "Dissect Linux plugin inventory",
+      "url": "https://github.com/fox-it/dissect.target/tree/main/dissect/target/plugins/os/unix/linux"
+    },
+    "autofill": {
+      "title": "Plaso Chromium autofill timestamp schema",
+      "url": "https://github.com/log2timeline/plaso/blob/main/plaso/parsers/sqlite_plugins/chrome_autofill.py"
+    },
+    "signal": {
+      "title": "UAC Signal native, Flatpak and Snap paths",
+      "url": "https://github.com/tclahr/uac/blob/main/artifacts/files/applications/signal.yaml"
+    },
+    "bluez": {
+      "title": "BlueZ settings storage specification",
+      "url": "https://github.com/bluez/bluez/blob/master/doc/settings-storage.txt"
+    },
+    "sans_linux": {
+      "title": "SANS FOR577 Linux Incident Response and Threat Hunting poster",
+      "url": "https://www.sans.org/posters/linux-incident-response-threat-hunting-poster"
+    },
+    "cylr": {
+      "title": "CyLR Linux collection paths",
+      "url": "https://github.com/orlikoski/CyLR#linux"
+    },
+    "catscale": {
+      "title": "WithSecure Linux CatScale collector",
+      "url": "https://github.com/WithSecureLabs/LinuxCatScale/blob/master/Cat-Scale.sh"
+    },
+    "fastir_linux": {
+      "title": "Sekoia FastIR Linux collector",
+      "url": "https://github.com/SekoiaLab/Fastir_Collector_Linux/blob/master/fastIR_collector_linux.py"
+    },
+    "kape_browser": {
+      "title": "KAPE Firefox target (Windows paths; browser artifact cross-check)",
+      "url": "https://github.com/EricZimmerman/KapeFiles/blob/master/Targets/Browsers/Firefox.tkape"
+    },
+    "kape_remote": {
+      "title": "KAPE AnyDesk target (Windows paths; Linux locations verified separately)",
+      "url": "https://github.com/EricZimmerman/KapeFiles/blob/master/Targets/Apps/AnyDesk.tkape"
+    },
+    "anydesk": {
+      "title": "AnyDesk Linux trace file locations",
+      "url": "https://support.anydesk.com/what-are-trace-files"
+    },
+    "extension_manifest": {
+      "title": "Chromium extension manifest format",
+      "url": "https://developer.chrome.com/docs/extensions/reference/manifest"
+    },
+    "journal_api": {
+      "title": "systemd journal read API",
+      "url": "https://github.com/systemd/systemd/blob/main/man/sd_journal_open.xml"
+    },
+    "journal_fields": {
+      "title": "systemd journal field enumeration API",
+      "url": "https://github.com/systemd/systemd/blob/main/man/sd_journal_get_data.xml"
+    },
+    "loader": {
+      "title": "Linux dynamic loader configuration",
+      "url": "https://man7.org/linux/man-pages/man5/ld.so.conf.5.html"
+    },
+    "apt": {
+      "title": "Debian repository configuration",
+      "url": "https://www.debian.org/doc/manuals/debian-reference/ch02.en.html"
+    },
+    "lastlog_format": {
+      "title": "Linux PAM lastlog implementation",
+      "url": "https://github.com/linux-pam/linux-pam/blob/master/modules/pam_lastlog/pam_lastlog.c"
+    },
+    "lastlog2_format": {
+      "title": "util-linux lastlog2 schema",
+      "url": "https://github.com/util-linux/util-linux/blob/master/liblastlog2/src/lastlog2.c"
+    },
+    "rpm_sqlite_format": {
+      "title": "RPM SQLite backend",
+      "url": "https://github.com/rpm-software-management/rpm/blob/master/lib/backend/sqlite.cc"
+    },
+    "rpm_header_format": {
+      "title": "RPM header encoding",
+      "url": "https://github.com/rpm-software-management/rpm/blob/master/lib/header.cc"
+    },
+    "rpm_tags": {
+      "title": "RPM tag definitions",
+      "url": "https://github.com/rpm-software-management/rpm/blob/master/include/rpm/rpmtag.h"
+    },
+    "leveldb_log": {
+      "title": "Google LevelDB log format",
+      "url": "https://github.com/google/leveldb/blob/main/doc/log_format.md"
+    },
+    "leveldb_table": {
+      "title": "Google LevelDB table format",
+      "url": "https://github.com/google/leveldb/blob/main/doc/table_format.md"
+    },
+    "leveldb_manifest": {
+      "title": "LevelDB VersionEdit manifest format",
+      "url": "https://github.com/google/leveldb/blob/main/db/version_edit.cc"
+    },
+    "signal_attachment_format": {
+      "title": "Signal Desktop local attachment cryptography",
+      "url": "https://github.com/signalapp/Signal-Desktop/blob/main/ts/AttachmentCrypto.node.ts"
+    },
+    "leveldb_batch": {
+      "title": "Google LevelDB write batches",
+      "url": "https://github.com/google/leveldb/blob/main/db/write_batch.cc"
+    },
+    "snappy_format": {
+      "title": "Google Snappy block format",
+      "url": "https://github.com/google/snappy/blob/main/format_description.txt"
+    },
+    "firefox_sessions": {
+      "title": "Mozilla session store schema",
+      "url": "https://github.com/mozilla/gecko-dev/blob/master/browser/components/sessionstore/SessionStore.sys.mjs"
+    },
+    "lz4_format": {
+      "title": "LZ4 block specification",
+      "url": "https://github.com/lz4/lz4/blob/dev/doc/lz4_Block_format.md"
+    },
+    "pff_format": {
+      "title": "libpff PST/OST format",
+      "url": "https://github.com/libyal/libpff/blob/main/documentation/Personal%20Folder%20File%20(PFF)%20format.asciidoc"
+    },
+    "pypff": {
+      "title": "libpff Python API",
+      "url": "https://github.com/libyal/libpff/wiki/Python-development"
+    },
+    "local_storage": {
+      "title": "Chromium local storage implementation",
+      "url": "https://github.com/chromium/chromium/blob/main/components/services/storage/dom_storage/local_storage_impl.cc"
+    },
+    "snap_state": {
+      "title": "Snap persisted state",
+      "url": "https://github.com/snapcore/snapd/blob/master/overlord/snapstate/snapstate.go"
+    },
+    "flatpak_metadata": {
+      "title": "Flatpak metadata specification",
+      "url": "https://docs.flatpak.org/en/latest/flatpak-command-reference.html#flatpak-metadata"
+    },
+    "telegram_storage": {
+      "title": "Telegram Desktop storage wrapper",
+      "url": "https://github.com/telegramdesktop/tdesktop/blob/dev/Telegram/SourceFiles/storage/details/storage_file_utilities.cpp"
+    },
+    "signal_schema": {
+      "title": "Signal Desktop database schema",
+      "url": "https://github.com/signalapp/Signal-Desktop/blob/main/DATABASE_SCHEMA.md"
+    },
+    "rpm_ndb_format": {
+      "title": "RPM NDB package database implementation",
+      "url": "https://github.com/rpm-software-management/rpm/blob/master/lib/backend/ndb/rpmpkg.c"
+    },
+    "ccl_storage": {
+      "title": "CCL Chromium storage format research",
+      "url": "https://github.com/cclgroupltd/ccl_chromium_reader/blob/master/ccl_chromium_reader/ccl_chromium_localstorage.py"
+    },
+    "firefox_bookmark_format": {
+      "title": "Mozilla bookmark JSON snapshot implementation",
+      "url": "https://github.com/mozilla/gecko-dev/blob/master/toolkit/components/places/BookmarkJSONUtils.sys.mjs"
+    },
+    "rpm_bdb_format": {
+      "title": "Dissect read-only Berkeley DB reader",
+      "url": "https://github.com/fox-it/dissect.database/blob/main/dissect/database/bsd/db.py"
+    },
+    "nss_passwords": {
+      "title": "Mozilla NSS password-based key storage",
+      "url": "https://github.com/nss-dev/nss/blob/master/lib/softoken/sftkpwd.c"
+    },
+    "chromium_linux_crypto": {
+      "title": "Chromium Linux OSCrypt",
+      "url": "https://chromium.googlesource.com/chromium/src/+/ff58622d23a1de5/components/os_crypt/os_crypt_linux.cc"
+    },
+    "sqlcipher_format": {
+      "title": "SQLCipher page encryption and authentication",
+      "url": "https://www.zetetic.net/sqlcipher/design/"
+    },
+    "dfindexeddb": {
+      "title": "Google IndexedDB forensic decoder",
+      "url": "https://github.com/google/dfindexeddb"
+    },
+    "telegram_drafts": {
+      "title": "Telegram Desktop local drafts and storage",
+      "url": "https://github.com/telegramdesktop/tdesktop/blob/dev/Telegram/SourceFiles/storage/storage_account.cpp"
+    },
+    "gecko_indexeddb": {
+      "title": "Mozilla IndexedDB storage and overflow clones",
+      "url": "https://github.com/mozilla/gecko-dev/blob/master/dom/indexedDB/ActorsParent.cpp"
+    }
+  },
+  "artifacts": [
+    {
+      "id": "rpm_bdb_inventory",
+      "category": "Installed Applications",
+      "paths": [
+        "/var/lib/rpm/Packages",
+        "/usr/lib/sysimage/rpm/Packages"
+      ],
+      "parser": "rpm_bdb",
+      "sources": [
+        "rpm_bdb_format",
+        "rpm_header_format",
+        "rpm_tags"
+      ],
+      "notes": "BDB hash/B-tree RPM headers from verified RAM bytes. Encrypted/checksummed BDB variants and transaction-log recovery are unsupported.",
+      "support": "structured"
+    },
+    {
+      "id": "firefox_indexeddb_objects",
+      "category": "Browsers",
+      "paths": [
+        "/**/.mozilla/firefox/*/storage/default/*/idb/*.sqlite",
+        "/**/.mozilla/firefox/*/storage/permanent/*/idb/*.sqlite",
+        "/**/.var/app/org.mozilla.firefox/.mozilla/firefox/*/storage/default/*/idb/*.sqlite",
+        "/**/snap/firefox/common/.mozilla/firefox/*/storage/default/*/idb/*.sqlite"
+      ],
+      "parser": "firefox_indexeddb",
+      "sources": [
+        "dfindexeddb",
+        "sqlite",
+        "gecko_indexeddb"
+      ],
+      "notes": "Gecko keys and inline/external Snappy structured clones decoded from verified RAM SQLite and scoped companion snapshots. Unsupported tags/object forms remain partial.",
+      "support": "structured"
+    },
+    {
+      "id": "rpm_ndb_inventory",
+      "category": "Installed Applications",
+      "paths": [
+        "/var/lib/rpm/Packages.db",
+        "/usr/lib/sysimage/rpm/Packages.db"
+      ],
+      "parser": "rpm_ndb",
+      "sources": [
+        "rpm_ndb_format",
+        "rpm_header_format",
+        "rpm_tags"
+      ],
+      "notes": "NDB version 0 only; validates indexed blobs and Adler32. No unreferenced/deleted package recovery.",
+      "support": "structured"
+    },
+    {
+      "id": "rpm_sqlite_inventory",
+      "category": "Installed Applications",
+      "paths": [
+        "/var/lib/rpm/rpmdb.sqlite",
+        "/usr/lib/sysimage/rpm/rpmdb.sqlite"
+      ],
+      "parser": "rpm_sqlite",
+      "sources": [
+        "rpm_sqlite_format",
+        "rpm_header_format",
+        "rpm_tags"
+      ],
+      "notes": "SQLite Packages headers only; BDB remains raw. Inventory is not proof of execution.",
+      "support": "structured"
+    },
+    {
+      "id": "lastlog2_records",
+      "category": "OS Activity",
+      "paths": [
+        "/var/lib/lastlog/lastlog2.db",
+        "/var/log/lastlog2.db"
+      ],
+      "parser": "lastlog2",
+      "sources": [
+        "lastlog2_format"
+      ],
+      "notes": "Latest recorded login per username, not full session history.",
+      "support": "structured"
+    },
+    {
+      "id": "snap_inventory",
+      "category": "Installed Applications",
+      "paths": [
+        "/var/lib/snapd/state.json"
+      ],
+      "parser": "snap_state",
+      "sources": [
+        "snap_state"
+      ],
+      "notes": "Persisted snap state; stored revision and active flags are not execution evidence.",
+      "support": "structured"
+    },
+    {
+      "id": "flatpak_inventory",
+      "category": "Installed Applications",
+      "paths": [
+        "/var/lib/flatpak/app/**/metadata",
+        "/**/.local/share/flatpak/app/**/metadata"
+      ],
+      "parser": "flatpak_metadata",
+      "sources": [
+        "flatpak_metadata"
+      ],
+      "notes": "Deployment metadata; active deployment cannot be inferred from metadata presence alone.",
+      "support": "structured"
+    },
+    {
+      "id": "firefox_session_snapshots",
+      "category": "Browsers",
+      "paths": [
+        "/**/.mozilla/firefox/*/sessionstore.jsonlz4",
+        "/**/.mozilla/firefox/**/sessionstore.jsonlz4",
+        "/**/tor-browser/**/profile.default/sessionstore.jsonlz4",
+        "/**/.mozilla/firefox/*/sessionstore-backups/*.jsonlz4",
+        "/**/.mozilla/firefox/*/sessionstore-backups/*.baklz4",
+        "/**/.mozilla/firefox/*/sessionstore-backups/*.json",
+        "/**/.mozilla/firefox/**/sessionstore-backups/*.jsonlz4",
+        "/**/.mozilla/firefox/**/sessionstore-backups/*.baklz4",
+        "/**/.mozilla/firefox/**/sessionstore-backups/*.json",
+        "/**/tor-browser/**/profile.default/sessionstore-backups/*.jsonlz4",
+        "/**/tor-browser/**/profile.default/sessionstore-backups/*.baklz4",
+        "/**/tor-browser/**/profile.default/sessionstore-backups/*.json",
+        "/**/.mozilla/firefox/**/sessionstore-backups/upgrade.jsonlz4-*",
+        "/**/.mozilla/firefox/*/sessionstore-backups/upgrade.jsonlz4-*",
+        "/**/tor-browser/**/profile.default/sessionstore-backups/upgrade.jsonlz4-*"
+      ],
+      "parser": "firefox_session",
+      "sources": [
+        "firefox_sessions",
+        "lz4_format"
+      ],
+      "notes": "Open/closed tab history and tab lastAccessed; no visit time inferred per entry. Decoded LZ4 safety limit is 64 MiB.",
+      "support": "structured"
+    },
+    {
+      "id": "firefox_bookmark_backups",
+      "category": "Browsers",
+      "paths": [
+        "/**/.mozilla/firefox/*/bookmarkbackups/*.jsonlz4",
+        "/**/.mozilla/firefox/*/bookmarkbackups/*.json",
+        "/**/.mozilla/firefox/**/bookmarkbackups/*.jsonlz4",
+        "/**/.mozilla/firefox/**/bookmarkbackups/*.json",
+        "/**/tor-browser/**/profile.default/bookmarkbackups/*.jsonlz4",
+        "/**/tor-browser/**/profile.default/bookmarkbackups/*.json"
+      ],
+      "parser": "firefox_bookmark_backup",
+      "sources": [
+        "firefox_sessions",
+        "lz4_format",
+        "firefox_bookmark_format"
+      ],
+      "notes": "Bookmark snapshots, not evidence that a bookmarked URL was visited.",
+      "support": "structured"
+    },
+    {
+      "id": "firefox_site_permissions",
+      "category": "Browsers",
+      "paths": [
+        "/**/.mozilla/firefox/*/permissions.sqlite",
+        "/**/.mozilla/firefox/**/permissions.sqlite",
+        "/**/tor-browser/**/profile.default/permissions.sqlite"
+      ],
+      "parser": "firefox_permissions",
+      "sources": [
+        "firefox",
+        "sqlite"
+      ],
+      "notes": "Stored permissions, not site-access evidence.",
+      "support": "structured"
+    },
+    {
+      "id": "chromium_leveldb_records",
+      "category": "Browsers",
+      "paths": [
+        "/**/.config/chromium/*/Local Storage/**/*.log",
+        "/**/.config/chromium/*/Local Storage/**/*.ldb",
+        "/**/.config/chromium/*/Local Storage/**/*.sst",
+        "/**/.config/chromium/*/Session Storage/**/*.log",
+        "/**/.config/chromium/*/Session Storage/**/*.ldb",
+        "/**/.config/chromium/*/Session Storage/**/*.sst",
+        "/**/.config/chromium/*/IndexedDB/**/*.log",
+        "/**/.config/chromium/*/IndexedDB/**/*.ldb",
+        "/**/.config/chromium/*/IndexedDB/**/*.sst",
+        "/**/.config/chromium/*/Service Worker/**/*.log",
+        "/**/.config/chromium/*/Service Worker/**/*.ldb",
+        "/**/.config/chromium/*/Service Worker/**/*.sst",
+        "/**/.config/google-chrome/*/Local Storage/**/*.log",
+        "/**/.config/google-chrome/*/Local Storage/**/*.ldb",
+        "/**/.config/google-chrome/*/Local Storage/**/*.sst",
+        "/**/.config/google-chrome/*/Session Storage/**/*.log",
+        "/**/.config/google-chrome/*/Session Storage/**/*.ldb",
+        "/**/.config/google-chrome/*/Session Storage/**/*.sst",
+        "/**/.config/google-chrome/*/IndexedDB/**/*.log",
+        "/**/.config/google-chrome/*/IndexedDB/**/*.ldb",
+        "/**/.config/google-chrome/*/IndexedDB/**/*.sst",
+        "/**/.config/google-chrome/*/Service Worker/**/*.log",
+        "/**/.config/google-chrome/*/Service Worker/**/*.ldb",
+        "/**/.config/google-chrome/*/Service Worker/**/*.sst",
+        "/**/.config/google-chrome-beta/*/Local Storage/**/*.log",
+        "/**/.config/google-chrome-beta/*/Local Storage/**/*.ldb",
+        "/**/.config/google-chrome-beta/*/Local Storage/**/*.sst",
+        "/**/.config/google-chrome-beta/*/Session Storage/**/*.log",
+        "/**/.config/google-chrome-beta/*/Session Storage/**/*.ldb",
+        "/**/.config/google-chrome-beta/*/Session Storage/**/*.sst",
+        "/**/.config/google-chrome-beta/*/IndexedDB/**/*.log",
+        "/**/.config/google-chrome-beta/*/IndexedDB/**/*.ldb",
+        "/**/.config/google-chrome-beta/*/IndexedDB/**/*.sst",
+        "/**/.config/google-chrome-beta/*/Service Worker/**/*.log",
+        "/**/.config/google-chrome-beta/*/Service Worker/**/*.ldb",
+        "/**/.config/google-chrome-beta/*/Service Worker/**/*.sst",
+        "/**/.config/google-chrome-unstable/*/Local Storage/**/*.log",
+        "/**/.config/google-chrome-unstable/*/Local Storage/**/*.ldb",
+        "/**/.config/google-chrome-unstable/*/Local Storage/**/*.sst",
+        "/**/.config/google-chrome-unstable/*/Session Storage/**/*.log",
+        "/**/.config/google-chrome-unstable/*/Session Storage/**/*.ldb",
+        "/**/.config/google-chrome-unstable/*/Session Storage/**/*.sst",
+        "/**/.config/google-chrome-unstable/*/IndexedDB/**/*.log",
+        "/**/.config/google-chrome-unstable/*/IndexedDB/**/*.ldb",
+        "/**/.config/google-chrome-unstable/*/IndexedDB/**/*.sst",
+        "/**/.config/google-chrome-unstable/*/Service Worker/**/*.log",
+        "/**/.config/google-chrome-unstable/*/Service Worker/**/*.ldb",
+        "/**/.config/google-chrome-unstable/*/Service Worker/**/*.sst",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Local Storage/**/*.log",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Local Storage/**/*.ldb",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Local Storage/**/*.sst",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Session Storage/**/*.log",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Session Storage/**/*.ldb",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Session Storage/**/*.sst",
+        "/**/.config/BraveSoftware/Brave-Browser/*/IndexedDB/**/*.log",
+        "/**/.config/BraveSoftware/Brave-Browser/*/IndexedDB/**/*.ldb",
+        "/**/.config/BraveSoftware/Brave-Browser/*/IndexedDB/**/*.sst",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Service Worker/**/*.log",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Service Worker/**/*.ldb",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Service Worker/**/*.sst",
+        "/**/.config/microsoft-edge/*/Local Storage/**/*.log",
+        "/**/.config/microsoft-edge/*/Local Storage/**/*.ldb",
+        "/**/.config/microsoft-edge/*/Local Storage/**/*.sst",
+        "/**/.config/microsoft-edge/*/Session Storage/**/*.log",
+        "/**/.config/microsoft-edge/*/Session Storage/**/*.ldb",
+        "/**/.config/microsoft-edge/*/Session Storage/**/*.sst",
+        "/**/.config/microsoft-edge/*/IndexedDB/**/*.log",
+        "/**/.config/microsoft-edge/*/IndexedDB/**/*.ldb",
+        "/**/.config/microsoft-edge/*/IndexedDB/**/*.sst",
+        "/**/.config/microsoft-edge/*/Service Worker/**/*.log",
+        "/**/.config/microsoft-edge/*/Service Worker/**/*.ldb",
+        "/**/.config/microsoft-edge/*/Service Worker/**/*.sst",
+        "/**/.config/microsoft-edge-beta/*/Local Storage/**/*.log",
+        "/**/.config/microsoft-edge-beta/*/Local Storage/**/*.ldb",
+        "/**/.config/microsoft-edge-beta/*/Local Storage/**/*.sst",
+        "/**/.config/microsoft-edge-beta/*/Session Storage/**/*.log",
+        "/**/.config/microsoft-edge-beta/*/Session Storage/**/*.ldb",
+        "/**/.config/microsoft-edge-beta/*/Session Storage/**/*.sst",
+        "/**/.config/microsoft-edge-beta/*/IndexedDB/**/*.log",
+        "/**/.config/microsoft-edge-beta/*/IndexedDB/**/*.ldb",
+        "/**/.config/microsoft-edge-beta/*/IndexedDB/**/*.sst",
+        "/**/.config/microsoft-edge-beta/*/Service Worker/**/*.log",
+        "/**/.config/microsoft-edge-beta/*/Service Worker/**/*.ldb",
+        "/**/.config/microsoft-edge-beta/*/Service Worker/**/*.sst",
+        "/**/.config/vivaldi/*/Local Storage/**/*.log",
+        "/**/.config/vivaldi/*/Local Storage/**/*.ldb",
+        "/**/.config/vivaldi/*/Local Storage/**/*.sst",
+        "/**/.config/vivaldi/*/Session Storage/**/*.log",
+        "/**/.config/vivaldi/*/Session Storage/**/*.ldb",
+        "/**/.config/vivaldi/*/Session Storage/**/*.sst",
+        "/**/.config/vivaldi/*/IndexedDB/**/*.log",
+        "/**/.config/vivaldi/*/IndexedDB/**/*.ldb",
+        "/**/.config/vivaldi/*/IndexedDB/**/*.sst",
+        "/**/.config/vivaldi/*/Service Worker/**/*.log",
+        "/**/.config/vivaldi/*/Service Worker/**/*.ldb",
+        "/**/.config/vivaldi/*/Service Worker/**/*.sst",
+        "/**/.config/opera/*/Local Storage/**/*.log",
+        "/**/.config/opera/*/Local Storage/**/*.ldb",
+        "/**/.config/opera/*/Local Storage/**/*.sst",
+        "/**/.config/opera/*/Session Storage/**/*.log",
+        "/**/.config/opera/*/Session Storage/**/*.ldb",
+        "/**/.config/opera/*/Session Storage/**/*.sst",
+        "/**/.config/opera/*/IndexedDB/**/*.log",
+        "/**/.config/opera/*/IndexedDB/**/*.ldb",
+        "/**/.config/opera/*/IndexedDB/**/*.sst",
+        "/**/.config/opera/*/Service Worker/**/*.log",
+        "/**/.config/opera/*/Service Worker/**/*.ldb",
+        "/**/.config/opera/*/Service Worker/**/*.sst",
+        "/**/snap/chromium/common/chromium/*/Local Storage/**/*.log",
+        "/**/snap/chromium/common/chromium/*/Local Storage/**/*.ldb",
+        "/**/snap/chromium/common/chromium/*/Local Storage/**/*.sst",
+        "/**/snap/chromium/common/chromium/*/Session Storage/**/*.log",
+        "/**/snap/chromium/common/chromium/*/Session Storage/**/*.ldb",
+        "/**/snap/chromium/common/chromium/*/Session Storage/**/*.sst",
+        "/**/snap/chromium/common/chromium/*/IndexedDB/**/*.log",
+        "/**/snap/chromium/common/chromium/*/IndexedDB/**/*.ldb",
+        "/**/snap/chromium/common/chromium/*/IndexedDB/**/*.sst",
+        "/**/snap/chromium/common/chromium/*/Service Worker/**/*.log",
+        "/**/snap/chromium/common/chromium/*/Service Worker/**/*.ldb",
+        "/**/snap/chromium/common/chromium/*/Service Worker/**/*.sst",
+        "/**/.config/opera/Local Storage/**/*.log",
+        "/**/.config/opera/Local Storage/**/*.ldb",
+        "/**/.config/opera/Local Storage/**/*.sst",
+        "/**/.config/opera/Session Storage/**/*.log",
+        "/**/.config/opera/Session Storage/**/*.ldb",
+        "/**/.config/opera/Session Storage/**/*.sst",
+        "/**/.config/opera/IndexedDB/**/*.log",
+        "/**/.config/opera/IndexedDB/**/*.ldb",
+        "/**/.config/opera/IndexedDB/**/*.sst",
+        "/**/.config/opera/Service Worker/**/*.log",
+        "/**/.config/opera/Service Worker/**/*.ldb",
+        "/**/.config/opera/Service Worker/**/*.sst"
+      ],
+      "parser": "leveldb",
+      "sources": [
+        "leveldb_log",
+        "leveldb_table",
+        "leveldb_batch",
+        "leveldb_manifest",
+        "snappy_format",
+        "local_storage",
+        "ccl_storage",
+        "dfindexeddb"
+      ],
+      "notes": "Verified physical LevelDB records, with Local/Session Storage fields and Chromium IndexedDB key/Blink/V8 object decoding. Unsupported tags and missing external blobs remain partial. Selected CURRENT/MANIFEST sets annotate latest acquired IndexedDB observations when validated; missing/changing sets remain unverified. No atomic live-process view.",
+      "support": "structured"
+    },
+    {
+      "id": "electron_leveldb_records",
+      "category": "Communication",
+      "paths": [
+        "/**/.config/discord/Local Storage/**/*.log",
+        "/**/.config/discord/Local Storage/**/*.ldb",
+        "/**/.config/discord/Local Storage/**/*.sst",
+        "/**/.config/discord/Session Storage/**/*.log",
+        "/**/.config/discord/Session Storage/**/*.ldb",
+        "/**/.config/discord/Session Storage/**/*.sst",
+        "/**/.config/discord/IndexedDB/**/*.log",
+        "/**/.config/discord/IndexedDB/**/*.ldb",
+        "/**/.config/discord/IndexedDB/**/*.sst",
+        "/**/.config/Slack/Local Storage/**/*.log",
+        "/**/.config/Slack/Local Storage/**/*.ldb",
+        "/**/.config/Slack/Local Storage/**/*.sst",
+        "/**/.config/Slack/Session Storage/**/*.log",
+        "/**/.config/Slack/Session Storage/**/*.ldb",
+        "/**/.config/Slack/Session Storage/**/*.sst",
+        "/**/.config/Slack/IndexedDB/**/*.log",
+        "/**/.config/Slack/IndexedDB/**/*.ldb",
+        "/**/.config/Slack/IndexedDB/**/*.sst",
+        "/**/.config/skypeforlinux/Local Storage/**/*.log",
+        "/**/.config/skypeforlinux/Local Storage/**/*.ldb",
+        "/**/.config/skypeforlinux/Local Storage/**/*.sst",
+        "/**/.config/skypeforlinux/Session Storage/**/*.log",
+        "/**/.config/skypeforlinux/Session Storage/**/*.ldb",
+        "/**/.config/skypeforlinux/Session Storage/**/*.sst",
+        "/**/.config/skypeforlinux/IndexedDB/**/*.log",
+        "/**/.config/skypeforlinux/IndexedDB/**/*.ldb",
+        "/**/.config/skypeforlinux/IndexedDB/**/*.sst",
+        "/**/.config/teams/Local Storage/**/*.log",
+        "/**/.config/teams/Local Storage/**/*.ldb",
+        "/**/.config/teams/Local Storage/**/*.sst",
+        "/**/.config/teams/Session Storage/**/*.log",
+        "/**/.config/teams/Session Storage/**/*.ldb",
+        "/**/.config/teams/Session Storage/**/*.sst",
+        "/**/.config/teams/IndexedDB/**/*.log",
+        "/**/.config/teams/IndexedDB/**/*.ldb",
+        "/**/.config/teams/IndexedDB/**/*.sst",
+        "/**/.config/discordcanary/Local Storage/**/*.log",
+        "/**/.config/discordcanary/Local Storage/**/*.ldb",
+        "/**/.config/discordcanary/Local Storage/**/*.sst",
+        "/**/.config/discordcanary/Session Storage/**/*.log",
+        "/**/.config/discordcanary/Session Storage/**/*.ldb",
+        "/**/.config/discordcanary/Session Storage/**/*.sst",
+        "/**/.config/discordcanary/IndexedDB/**/*.log",
+        "/**/.config/discordcanary/IndexedDB/**/*.ldb",
+        "/**/.config/discordcanary/IndexedDB/**/*.sst"
+      ],
+      "parser": "leveldb",
+      "sources": [
+        "leveldb_log",
+        "leveldb_table",
+        "leveldb_batch",
+        "leveldb_manifest",
+        "snappy_format",
+        "dfindexeddb"
+      ],
+      "notes": "Verified physical LevelDB records, with Local/Session Storage fields and Chromium IndexedDB key/Blink/V8 object decoding. Unsupported tags and missing external blobs remain partial. Selected CURRENT/MANIFEST sets annotate latest acquired IndexedDB observations when validated; missing/changing sets remain unverified. No atomic live-process view.",
+      "support": "structured"
+    },
+    {
+      "id": "telegram_container_metadata",
+      "category": "Communication",
+      "paths": [
+        "/**/TelegramDesktop/tdata/key_*",
+        "/**/TelegramDesktop/tdata/settings*",
+        "/**/TelegramDesktop/tdata/*s",
+        "/**/TelegramDesktop/tdata/*0",
+        "/**/TelegramDesktop/tdata/*1",
+        "/**/TelegramDesktop/tdata/*/*s",
+        "/**/TelegramDesktop/tdata/*/*0",
+        "/**/TelegramDesktop/tdata/*/*1"
+      ],
+      "parser": "telegram_native_metadata",
+      "sources": [
+        "telegram_storage",
+        "telegram_drafts"
+      ],
+      "notes": "Local AES-IGE block decoding with selected key_data or supplied local key; recognized tagged draft schemas decoded. Unsupported inner schemas remain partial, never reported as sent chat history.",
+      "support": "structured"
+    },
+    {
+      "id": "gnome_binary_keyring",
+      "category": "User Accounts",
+      "paths": ["/**/.local/share/keyrings/*.keyring", "/**/.gnome2/keyrings/*.keyring"],
+      "parser": "gnome_keyring",
+      "sources": ["gnome_keyring_format"],
+      "notes": "RAM-only binary keyring decoding with an empty or supplied known password. Wrong/missing passwords remain explicitly locked; no host keyring calls.",
+      "support": "structured"
+    },
+    {
+      "id": "kde_classic_wallet",
+      "category": "User Accounts",
+      "paths": ["/**/.local/share/kwalletd/*.kwl", "/**/.kde/share/apps/kwallet/*.kwl", "/**/.kde4/share/apps/kwallet/*.kwl"],
+      "parser": "kwallet",
+      "sources": ["kwallet_format"],
+      "notes": "Classic Blowfish ECB/CBC and SHA1/PBKDF2 wallets. Modern wallets require their selected .salt companion. GPG wallets remain locked.",
+      "support": "structured"
+    },
+    {
+      "id": "signal_configuration_metadata",
+      "category": "Communication",
+      "paths": [
+        "/**/.config/Signal/config.json",
+        "/**/.var/app/org.signal.Signal/config/Signal/config.json",
+        "/**/snap/signal-desktop/*/.config/Signal/config.json"
+      ],
+      "parser": "signal_config",
+      "sources": [
+        "signal_schema"
+      ],
+      "notes": "Key availability metadata only; selected configuration can provide a database key to the Signal message collector.",
+      "support": "structured"
+    },
+    {
+      "id": "signal_sqlite_messages",
+      "category": "Communication",
+      "paths": [
+        "/**/.config/Signal/sql/db.sqlite",
+        "/**/.var/app/org.signal.Signal/config/Signal/sql/db.sqlite",
+        "/**/snap/signal-desktop/*/.config/Signal/sql/db.sqlite"
+      ],
+      "parser": "signal_messages",
+      "sources": [
+        "signal_schema",
+        "sqlite",
+        "sqlcipher_format",
+        "signal_attachment_format"
+      ],
+      "notes": "Read-only RAM parsing of plaintext SQLite or authenticated SQLCipher v3/v4 defaults, using the supplied raw key or a selected config.json key. Local version-2 authenticated attachments and legacy plaintext attachments are extracted within a 32 MiB aggregate payload budget. No host keyring or cloud access.",
+      "support": "structured"
+    },
+    {
+      "id": "rpm_sqlite_inventory_sidecars",
+      "category": "Installed Applications",
+      "paths": [
+        "/var/lib/rpm/rpmdb.sqlite-wal",
+        "/var/lib/rpm/rpmdb.sqlite-shm",
+        "/var/lib/rpm/rpmdb.sqlite-journal",
+        "/usr/lib/sysimage/rpm/rpmdb.sqlite-wal",
+        "/usr/lib/sysimage/rpm/rpmdb.sqlite-shm",
+        "/usr/lib/sysimage/rpm/rpmdb.sqlite-journal"
+      ],
+      "parser": null,
+      "sources": [
+        "sqlite"
+      ],
+      "notes": "Raw SQLite companion; verified committed WAL pages are replayed in RAM.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "lastlog2_records_sidecars",
+      "category": "OS Activity",
+      "paths": [
+        "/var/lib/lastlog/lastlog2.db-wal",
+        "/var/lib/lastlog/lastlog2.db-shm",
+        "/var/lib/lastlog/lastlog2.db-journal",
+        "/var/log/lastlog2.db-wal",
+        "/var/log/lastlog2.db-shm",
+        "/var/log/lastlog2.db-journal"
+      ],
+      "parser": null,
+      "sources": [
+        "sqlite"
+      ],
+      "notes": "Raw SQLite companion; verified committed WAL pages are replayed in RAM.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "firefox_site_permissions_sidecars",
+      "category": "Browsers",
+      "paths": [
+        "/**/.mozilla/firefox/*/permissions.sqlite-wal",
+        "/**/.mozilla/firefox/*/permissions.sqlite-shm",
+        "/**/.mozilla/firefox/*/permissions.sqlite-journal",
+        "/**/.mozilla/firefox/**/permissions.sqlite-wal",
+        "/**/.mozilla/firefox/**/permissions.sqlite-shm",
+        "/**/.mozilla/firefox/**/permissions.sqlite-journal",
+        "/**/tor-browser/**/profile.default/permissions.sqlite-wal",
+        "/**/tor-browser/**/profile.default/permissions.sqlite-shm",
+        "/**/tor-browser/**/profile.default/permissions.sqlite-journal"
+      ],
+      "parser": null,
+      "sources": [
+        "sqlite"
+      ],
+      "notes": "Raw SQLite companion; verified committed WAL pages are replayed in RAM.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "signal_sqlite_messages_sidecars",
+      "category": "Communication",
+      "paths": [
+        "/**/.config/Signal/sql/db.sqlite-wal",
+        "/**/.config/Signal/sql/db.sqlite-shm",
+        "/**/.config/Signal/sql/db.sqlite-journal",
+        "/**/.var/app/org.signal.Signal/config/Signal/sql/db.sqlite-wal",
+        "/**/.var/app/org.signal.Signal/config/Signal/sql/db.sqlite-shm",
+        "/**/.var/app/org.signal.Signal/config/Signal/sql/db.sqlite-journal",
+        "/**/snap/signal-desktop/*/.config/Signal/sql/db.sqlite-wal",
+        "/**/snap/signal-desktop/*/.config/Signal/sql/db.sqlite-shm",
+        "/**/snap/signal-desktop/*/.config/Signal/sql/db.sqlite-journal"
+      ],
+      "parser": null,
+      "sources": [
+        "sqlite"
+      ],
+      "notes": "Raw SQLite companion; verified committed WAL pages are replayed in RAM.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "sudo_policy",
+      "category": "User Accounts",
+      "paths": [
+        "/etc/sudoers",
+        "/etc/sudoers.d/**"
+      ],
+      "parser": "sudoers",
+      "sources": [
+        "sans_linux",
+        "cylr"
+      ],
+      "notes": "Physical policy lines only; effective privilege policy and include paths are not evaluated.",
+      "support": "structured"
+    },
+    {
+      "id": "authorized_ssh_keys",
+      "category": "Network Connections",
+      "paths": [
+        "/**/.ssh/authorized_keys*"
+      ],
+      "parser": "authorized_keys",
+      "sources": [
+        "users",
+        "sans_linux"
+      ],
+      "notes": "Public authorization keys; does not prove login. Unrecognized lines retained explicitly.",
+      "support": "structured"
+    },
+    {
+      "id": "known_ssh_hosts",
+      "category": "Network Connections",
+      "paths": [
+        "/**/.ssh/known_hosts*",
+        "/etc/ssh/ssh_known_hosts*"
+      ],
+      "parser": "known_hosts",
+      "sources": [
+        "users",
+        "sans_linux"
+      ],
+      "notes": "Stored trust entries can be added manually; hashed hosts are not resolved.",
+      "support": "structured"
+    },
+    {
+      "id": "loader_persistence",
+      "category": "OS Activity",
+      "paths": [
+        "/etc/ld.so.preload",
+        "/etc/ld.so.conf",
+        "/etc/ld.so.conf.d/**",
+        "/etc/modules",
+        "/etc/modules-load.d/**",
+        "/usr/lib/modules-load.d/**",
+        "/lib/modules-load.d/**",
+        "/etc/modprobe.d/**"
+      ],
+      "parser": "loader_config",
+      "sources": [
+        "loader",
+        "catscale",
+        "cylr"
+      ],
+      "notes": "Stored configuration, not proof that a module or library loaded.",
+      "support": "structured"
+    },
+    {
+      "id": "autostart_launchers",
+      "category": "OS Activity",
+      "paths": [
+        "/**/.config/autostart/*.desktop",
+        "/etc/xdg/autostart/*.desktop"
+      ],
+      "parser": "desktop",
+      "sources": [
+        "desktop",
+        "cylr"
+      ],
+      "notes": "Autostart configuration; referenced commands are not run.",
+      "support": "structured"
+    },
+    {
+      "id": "apt_repositories",
+      "category": "Installed Applications",
+      "paths": [
+        "/etc/apt/sources.list",
+        "/etc/apt/sources.list.d/*.list",
+        "/etc/apt/sources.list.d/*.sources"
+      ],
+      "parser": "apt_sources",
+      "sources": [
+        "apt",
+        "cylr"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "other_package_repositories",
+      "category": "Installed Applications",
+      "paths": [
+        "/etc/yum.conf",
+        "/etc/yum.repos.d/**",
+        "/etc/dnf/dnf.conf",
+        "/etc/zypp/repos.d/**",
+        "/etc/pacman.conf",
+        "/etc/pacman.d/mirrorlist"
+      ],
+      "parser": "repository_config",
+      "sources": [
+        "cylr",
+        "catscale"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "anacron_execution_dates",
+      "category": "OS Activity",
+      "paths": [
+        "/var/spool/anacron/*"
+      ],
+      "parser": "anacron_state",
+      "sources": [
+        "cylr"
+      ],
+      "notes": "Stored scheduler dates, not a reliable session/execution boundary.",
+      "support": "structured"
+    },
+    {
+      "id": "logging_configuration",
+      "category": "OS Activity",
+      "paths": [
+        "/etc/logrotate.conf",
+        "/etc/logrotate.d/**",
+        "/etc/rsyslog.conf",
+        "/etc/rsyslog.d/**",
+        "/etc/syslog-ng/**",
+        "/etc/systemd/journald.conf",
+        "/etc/systemd/journald.conf.d/**"
+      ],
+      "parser": "logging_config",
+      "sources": [
+        "sans_linux",
+        "cylr"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "anydesk_traces",
+      "category": "Network Connections",
+      "paths": [
+        "/**/.anydesk*/anydesk*.trace",
+        "/**/.anydesk*/connection_trace.txt",
+        "/var/log/anydesk*.trace",
+        "/etc/anydesk/connection_trace.txt"
+      ],
+      "parser": "remote_trace",
+      "sources": [
+        "anydesk",
+        "kape_remote"
+      ],
+      "notes": "Application log lines retained without inferring connection success or interpreting undocumented timestamps.",
+      "support": "structured"
+    },
+    {
+      "id": "anydesk_configuration",
+      "category": "Network Connections",
+      "paths": [
+        "/**/.anydesk*/**",
+        "/etc/anydesk/**"
+      ],
+      "parser": null,
+      "sources": [
+        "anydesk",
+        "kape_remote"
+      ],
+      "notes": "Remote access configuration is not proof of an active connection.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "chromium_extension_manifests",
+      "category": "Browsers",
+      "paths": [
+        "/**/.config/chromium/*/Extensions/**/manifest.json",
+        "/**/.config/google-chrome/*/Extensions/**/manifest.json",
+        "/**/.config/google-chrome-beta/*/Extensions/**/manifest.json",
+        "/**/.config/google-chrome-unstable/*/Extensions/**/manifest.json",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Extensions/**/manifest.json",
+        "/**/.config/microsoft-edge/*/Extensions/**/manifest.json",
+        "/**/.config/microsoft-edge-beta/*/Extensions/**/manifest.json",
+        "/**/.config/vivaldi/*/Extensions/**/manifest.json",
+        "/**/.config/opera/*/Extensions/**/manifest.json",
+        "/**/snap/chromium/common/chromium/*/Extensions/**/manifest.json",
+        "/**/.config/opera/Extensions/**/manifest.json"
+      ],
+      "parser": "extension_manifest",
+      "sources": [
+        "extension_manifest",
+        "cylr"
+      ],
+      "notes": "Manifest presence is not proof the extension was enabled.",
+      "support": "structured"
+    },
+    {
+      "id": "firefox_extension_state",
+      "category": "Browsers",
+      "paths": [
+        "/**/.mozilla/firefox/*/extensions.json",
+        "/**/.mozilla/firefox/**/extensions.json",
+        "/**/tor-browser/**/profile.default/extensions.json"
+      ],
+      "parser": "firefox_extensions",
+      "sources": [
+        "kape_browser",
+        "browser"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "bluez_devices",
+      "category": "Connected Devices",
+      "paths": [
+        "/var/lib/bluetooth/*/*/info"
+      ],
+      "parser": "bluez_info",
+      "sources": [
+        "bluez"
+      ],
+      "notes": "Persisted pairing/configuration metadata does not establish connection time or current presence.",
+      "support": "structured"
+    },
+    {
+      "id": "local_accounts",
+      "category": "User Accounts",
+      "paths": [
+        "/etc/passwd",
+        "/etc/passwd-",
+        "/etc/passwd.cache"
+      ],
+      "parser": "passwd",
+      "sources": [
+        "passwd",
+        "users",
+        "linux",
+        "dissect"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "local_groups",
+      "category": "User Accounts",
+      "paths": [
+        "/etc/group",
+        "/etc/group-"
+      ],
+      "parser": "group",
+      "sources": [
+        "passwd",
+        "linux"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "shadow_accounts",
+      "category": "User Accounts",
+      "paths": [
+        "/etc/shadow",
+        "/etc/shadow-"
+      ],
+      "parser": "shadow",
+      "sources": [
+        "shadow",
+        "linux"
+      ],
+      "notes": "Protected; only readable files are acquired. Password hashes remain in raw evidence.",
+      "support": "structured"
+    },
+    {
+      "id": "subordinate_ids",
+      "category": "User Accounts",
+      "paths": [
+        "/etc/subuid",
+        "/etc/subgid"
+      ],
+      "parser": "subids",
+      "sources": [
+        "linux",
+        "uac"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "account_policy",
+      "category": "User Accounts",
+      "paths": [
+        "/etc/gshadow",
+        "/etc/login.defs",
+        "/etc/nsswitch.conf",
+        "/etc/security/**",
+        "/etc/pam.d/**",
+        "/etc/sudoers",
+        "/etc/sudoers.d/**"
+      ],
+      "parser": null,
+      "sources": [
+        "linux",
+        "uac"
+      ],
+      "notes": "",
+      "support": "raw_collection"
+    },
+    {
+      "id": "sssd_accounts",
+      "category": "User Accounts",
+      "paths": [
+        "/var/lib/sss/db/**",
+        "/etc/sssd/**"
+      ],
+      "parser": null,
+      "sources": [
+        "linux",
+        "uac"
+      ],
+      "notes": "Directory-service caches require specialized parsers; do not equate local passwd with all accounts.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "os_release",
+      "category": "Device Information",
+      "paths": [
+        "/etc/os-release",
+        "/usr/lib/os-release",
+        "/etc/lsb-release"
+      ],
+      "parser": "os_release",
+      "sources": [
+        "linux",
+        "uac"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "host_identity",
+      "category": "Device Information",
+      "paths": [
+        "/etc/hostname",
+        "/etc/machine-id",
+        "/etc/debian_version",
+        "/etc/issue",
+        "/etc/*-release",
+        "/etc/rocky-release",
+        "/etc/system-release",
+        "/etc/oracle-release",
+        "/etc/centos-release",
+        "/etc/fedora-release",
+        "/etc/SuSE-release",
+        "/etc/timezone",
+        "/etc/issue",
+        "/etc/issue.net"
+      ],
+      "parser": "identity",
+      "sources": [
+        "linux",
+        "uac"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "mounts",
+      "category": "Device Information",
+      "paths": [
+        "/etc/fstab"
+      ],
+      "parser": "fstab",
+      "sources": [
+        "linux",
+        "uac"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "boot_configuration",
+      "category": "Device Information",
+      "paths": [
+        "/boot/grub*/grub.cfg",
+        "/etc/default/grub",
+        "/etc/modprobe.d/**",
+        "/etc/modules*"
+      ],
+      "parser": null,
+      "sources": [
+        "linux",
+        "uac"
+      ],
+      "notes": "",
+      "support": "raw_collection"
+    },
+    {
+      "id": "debian_packages",
+      "category": "Installed Applications",
+      "paths": [
+        "/var/lib/dpkg/status",
+        "/var/lib/dpkg/status-old"
+      ],
+      "parser": "dpkg",
+      "sources": [
+        "dpkg",
+        "linux",
+        "uac",
+        "dissect"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "arch_packages",
+      "category": "Installed Applications",
+      "paths": [
+        "/var/lib/pacman/local/*/desc"
+      ],
+      "parser": "pacman",
+      "sources": [
+        "uac",
+        "dissect"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "alpine_packages",
+      "category": "Installed Applications",
+      "paths": [
+        "/lib/apk/db/installed"
+      ],
+      "parser": "apk",
+      "sources": [
+        "uac",
+        "dissect"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "desktop_apps",
+      "category": "Installed Applications",
+      "paths": [
+        "/usr/share/applications/*.desktop",
+        "/usr/local/share/applications/*.desktop",
+        "/**/.local/share/applications/*.desktop",
+        "/var/lib/flatpak/exports/share/applications/*.desktop"
+      ],
+      "parser": "desktop",
+      "sources": [
+        "desktop",
+        "uac"
+      ],
+      "notes": "Launch commands are recorded, never executed.",
+      "support": "structured"
+    },
+    {
+      "id": "rpm_packages",
+      "category": "Installed Applications",
+      "paths": [
+        "/var/lib/rpm/**",
+        "/usr/lib/sysimage/rpm/**"
+      ],
+      "parser": null,
+      "sources": [
+        "linux",
+        "uac",
+        "dissect"
+      ],
+      "notes": "BDB and ancillary RPM files retained raw; recognized SQLite/NDB inventories have narrower parser-backed definitions.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "snap_flatpak",
+      "category": "Installed Applications",
+      "paths": [
+        "/var/lib/snapd/state.json",
+        "/var/lib/snapd/assertions/**",
+        "/var/lib/flatpak/app/**/metadata",
+        "/**/.local/share/flatpak/app/**/metadata"
+      ],
+      "parser": null,
+      "sources": [
+        "linux",
+        "uac"
+      ],
+      "notes": "",
+      "support": "raw_collection"
+    },
+    {
+      "id": "package_transactions",
+      "category": "Installed Applications",
+      "paths": [
+        "/var/log/dpkg.log*",
+        "/var/log/apt/history.log*",
+        "/var/log/apt/term.log*",
+        "/var/log/pacman.log*",
+        "/var/log/dnf*",
+        "/var/log/yum.log*"
+      ],
+      "parser": "package_log",
+      "sources": [
+        "dpkg",
+        "plaso",
+        "uac"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "firefox_places",
+      "category": "Browsers",
+      "paths": [
+        "/**/.mozilla/firefox/*/places.sqlite",
+        "/**/.mozilla/firefox/**/places.sqlite",
+        "/**/tor-browser/**/profile.default/places.sqlite"
+      ],
+      "parser": "firefox_places",
+      "sources": [
+        "browser",
+        "firefox",
+        "plaso",
+        "sqlite"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "firefox_cookies",
+      "category": "Browsers",
+      "paths": [
+        "/**/.mozilla/firefox/*/cookies.sqlite",
+        "/**/.mozilla/firefox/**/cookies.sqlite",
+        "/**/tor-browser/**/profile.default/cookies.sqlite"
+      ],
+      "parser": "firefox_cookies",
+      "sources": [
+        "browser",
+        "plaso",
+        "sqlite"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "firefox_forms",
+      "category": "Browsers",
+      "paths": [
+        "/**/.mozilla/firefox/*/formhistory.sqlite",
+        "/**/.mozilla/firefox/**/formhistory.sqlite",
+        "/**/tor-browser/**/profile.default/formhistory.sqlite"
+      ],
+      "parser": "firefox_forms",
+      "sources": [
+        "browser",
+        "plaso",
+        "sqlite"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "firefox_downloads_legacy",
+      "category": "Browsers",
+      "paths": [
+        "/**/.mozilla/firefox/*/downloads.sqlite",
+        "/**/.mozilla/firefox/**/downloads.sqlite",
+        "/**/tor-browser/**/profile.default/downloads.sqlite"
+      ],
+      "parser": "firefox_downloads",
+      "sources": [
+        "browser",
+        "plaso",
+        "sqlite"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "firefox_logins",
+      "category": "Browsers",
+      "paths": [
+        "/**/.mozilla/firefox/*/logins.json",
+        "/**/.mozilla/firefox/**/logins.json",
+        "/**/tor-browser/**/profile.default/logins.json"
+      ],
+      "parser": "firefox_logins",
+      "sources": [
+        "browser",
+        "nss_passwords"
+      ],
+      "notes": "Offline key4 or legacy key3 NSS credential decoding with available profile keys and optional primary password. Unsupported/missing keys leave explicit locked records.",
+      "support": "structured"
+    },
+    {
+      "id": "firefox_keys_sessions",
+      "category": "Browsers",
+      "paths": [
+        "/**/.mozilla/firefox/*/key4.db",
+        "/**/.mozilla/firefox/*/key3.db",
+        "/**/.mozilla/firefox/*/cert9.db",
+        "/**/.mozilla/firefox/*/permissions.sqlite",
+        "/**/.mozilla/firefox/*/favicons.sqlite",
+        "/**/.mozilla/firefox/*/prefs.js",
+        "/**/.mozilla/firefox/*/sessionstore.jsonlz4",
+        "/**/.mozilla/firefox/*/sessionstore-backups/**",
+        "/**/.mozilla/firefox/*/bookmarkbackups/**",
+        "/**/.mozilla/firefox/*/extensions.json",
+        "/**/.mozilla/firefox/**/key4.db",
+        "/**/.mozilla/firefox/**/key3.db",
+        "/**/.mozilla/firefox/**/cert9.db",
+        "/**/.mozilla/firefox/**/permissions.sqlite",
+        "/**/.mozilla/firefox/**/favicons.sqlite",
+        "/**/.mozilla/firefox/**/prefs.js",
+        "/**/.mozilla/firefox/**/sessionstore.jsonlz4",
+        "/**/.mozilla/firefox/**/sessionstore-backups/**",
+        "/**/.mozilla/firefox/**/bookmarkbackups/**",
+        "/**/.mozilla/firefox/**/extensions.json",
+        "/**/tor-browser/**/profile.default/key4.db",
+        "/**/tor-browser/**/profile.default/key3.db",
+        "/**/tor-browser/**/profile.default/cert9.db",
+        "/**/tor-browser/**/profile.default/permissions.sqlite",
+        "/**/tor-browser/**/profile.default/favicons.sqlite",
+        "/**/tor-browser/**/profile.default/prefs.js",
+        "/**/tor-browser/**/profile.default/sessionstore.jsonlz4",
+        "/**/tor-browser/**/profile.default/sessionstore-backups/**",
+        "/**/tor-browser/**/profile.default/bookmarkbackups/**",
+        "/**/tor-browser/**/profile.default/extensions.json"
+      ],
+      "parser": null,
+      "sources": [
+        "browser",
+        "uac"
+      ],
+      "notes": "",
+      "support": "raw_collection"
+    },
+    {
+      "id": "firefox_cache",
+      "category": "Browsers",
+      "paths": [
+        "/**/.cache/mozilla/firefox/**",
+        "/**/.mozilla/firefox/*/cache2/**"
+      ],
+      "parser": null,
+      "sources": [
+        "browser",
+        "uac"
+      ],
+      "notes": "",
+      "support": "raw_collection"
+    },
+    {
+      "id": "chromium_history",
+      "category": "Browsers",
+      "paths": [
+        "/**/.config/chromium/*/History",
+        "/**/.config/chromium/*/Archived History",
+        "/**/.config/google-chrome/*/History",
+        "/**/.config/google-chrome/*/Archived History",
+        "/**/.config/google-chrome-beta/*/History",
+        "/**/.config/google-chrome-beta/*/Archived History",
+        "/**/.config/google-chrome-unstable/*/History",
+        "/**/.config/google-chrome-unstable/*/Archived History",
+        "/**/.config/BraveSoftware/Brave-Browser/*/History",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Archived History",
+        "/**/.config/microsoft-edge/*/History",
+        "/**/.config/microsoft-edge/*/Archived History",
+        "/**/.config/microsoft-edge-beta/*/History",
+        "/**/.config/microsoft-edge-beta/*/Archived History",
+        "/**/.config/vivaldi/*/History",
+        "/**/.config/vivaldi/*/Archived History",
+        "/**/.config/opera/*/History",
+        "/**/.config/opera/*/Archived History",
+        "/**/snap/chromium/common/chromium/*/History",
+        "/**/snap/chromium/common/chromium/*/Archived History",
+        "/**/.config/opera/History",
+        "/**/.config/opera/Archived History"
+      ],
+      "parser": "chromium_history",
+      "sources": [
+        "browser",
+        "chrome",
+        "sqlite"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "chromium_cookies",
+      "category": "Browsers",
+      "paths": [
+        "/**/.config/chromium/*/Cookies",
+        "/**/.config/chromium/*/Network/Cookies",
+        "/**/.config/google-chrome/*/Cookies",
+        "/**/.config/google-chrome/*/Network/Cookies",
+        "/**/.config/google-chrome-beta/*/Cookies",
+        "/**/.config/google-chrome-beta/*/Network/Cookies",
+        "/**/.config/google-chrome-unstable/*/Cookies",
+        "/**/.config/google-chrome-unstable/*/Network/Cookies",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Cookies",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Network/Cookies",
+        "/**/.config/microsoft-edge/*/Cookies",
+        "/**/.config/microsoft-edge/*/Network/Cookies",
+        "/**/.config/microsoft-edge-beta/*/Cookies",
+        "/**/.config/microsoft-edge-beta/*/Network/Cookies",
+        "/**/.config/vivaldi/*/Cookies",
+        "/**/.config/vivaldi/*/Network/Cookies",
+        "/**/.config/opera/*/Cookies",
+        "/**/.config/opera/*/Network/Cookies",
+        "/**/snap/chromium/common/chromium/*/Cookies",
+        "/**/snap/chromium/common/chromium/*/Network/Cookies",
+        "/**/.config/opera/Cookies",
+        "/**/.config/opera/Network/Cookies"
+      ],
+      "parser": "chromium_cookies",
+      "sources": [
+        "browser",
+        "plaso",
+        "sqlite",
+        "chromium_linux_crypto"
+      ],
+      "notes": "Linux v10/v11 CBC values decoded offline; v11 requires the supplied SafeStorage secret. Newer host-bound cookies require matching SHA-256 host prefix. Other platform encryption remains locked.",
+      "support": "structured"
+    },
+    {
+      "id": "chromium_logins",
+      "category": "Browsers",
+      "paths": [
+        "/**/.config/chromium/*/Login Data",
+        "/**/.config/google-chrome/*/Login Data",
+        "/**/.config/google-chrome-beta/*/Login Data",
+        "/**/.config/google-chrome-unstable/*/Login Data",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Login Data",
+        "/**/.config/microsoft-edge/*/Login Data",
+        "/**/.config/microsoft-edge-beta/*/Login Data",
+        "/**/.config/vivaldi/*/Login Data",
+        "/**/.config/opera/*/Login Data",
+        "/**/snap/chromium/common/chromium/*/Login Data",
+        "/**/.config/opera/Login Data"
+      ],
+      "parser": "chromium_logins",
+      "sources": [
+        "browser",
+        "plaso",
+        "sqlite",
+        "chromium_linux_crypto"
+      ],
+      "notes": "Linux v10/v11 CBC values decoded offline; v11 requires the supplied SafeStorage secret. Newer host-bound cookies require matching SHA-256 host prefix. Other platform encryption remains locked.",
+      "support": "structured"
+    },
+    {
+      "id": "chromium_autofill",
+      "category": "Browsers",
+      "paths": [
+        "/**/.config/chromium/*/Web Data",
+        "/**/.config/google-chrome/*/Web Data",
+        "/**/.config/google-chrome-beta/*/Web Data",
+        "/**/.config/google-chrome-unstable/*/Web Data",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Web Data",
+        "/**/.config/microsoft-edge/*/Web Data",
+        "/**/.config/microsoft-edge-beta/*/Web Data",
+        "/**/.config/vivaldi/*/Web Data",
+        "/**/.config/opera/*/Web Data",
+        "/**/snap/chromium/common/chromium/*/Web Data",
+        "/**/.config/opera/Web Data"
+      ],
+      "parser": "chromium_autofill",
+      "sources": [
+        "browser",
+        "plaso",
+        "sqlite",
+        "autofill"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "chromium_bookmarks",
+      "category": "Browsers",
+      "paths": [
+        "/**/.config/chromium/*/Bookmarks",
+        "/**/.config/google-chrome/*/Bookmarks",
+        "/**/.config/google-chrome-beta/*/Bookmarks",
+        "/**/.config/google-chrome-unstable/*/Bookmarks",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Bookmarks",
+        "/**/.config/microsoft-edge/*/Bookmarks",
+        "/**/.config/microsoft-edge-beta/*/Bookmarks",
+        "/**/.config/vivaldi/*/Bookmarks",
+        "/**/.config/opera/*/Bookmarks",
+        "/**/snap/chromium/common/chromium/*/Bookmarks",
+        "/**/.config/opera/Bookmarks"
+      ],
+      "parser": "chromium_bookmarks",
+      "sources": [
+        "browser"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "chromium_preferences",
+      "category": "Browsers",
+      "paths": [
+        "/**/.config/chromium/*/Preferences",
+        "/**/.config/google-chrome/*/Preferences",
+        "/**/.config/google-chrome-beta/*/Preferences",
+        "/**/.config/google-chrome-unstable/*/Preferences",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Preferences",
+        "/**/.config/microsoft-edge/*/Preferences",
+        "/**/.config/microsoft-edge-beta/*/Preferences",
+        "/**/.config/vivaldi/*/Preferences",
+        "/**/.config/opera/*/Preferences",
+        "/**/snap/chromium/common/chromium/*/Preferences",
+        "/**/.config/opera/Preferences"
+      ],
+      "parser": "chromium_preferences",
+      "sources": [
+        "browser"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "chromium_stores",
+      "category": "Browsers",
+      "paths": [
+        "/**/.config/chromium/*/Secure Preferences",
+        "/**/.config/chromium/*/Local Storage/**",
+        "/**/.config/chromium/*/Session Storage/**",
+        "/**/.config/chromium/*/IndexedDB/**",
+        "/**/.config/chromium/*/Sessions/**",
+        "/**/.config/chromium/*/Extensions/**",
+        "/**/.config/chromium/*/Service Worker/**",
+        "/**/.config/chromium/*/Cache/**",
+        "/**/.config/google-chrome/*/Secure Preferences",
+        "/**/.config/google-chrome/*/Local Storage/**",
+        "/**/.config/google-chrome/*/Session Storage/**",
+        "/**/.config/google-chrome/*/IndexedDB/**",
+        "/**/.config/google-chrome/*/Sessions/**",
+        "/**/.config/google-chrome/*/Extensions/**",
+        "/**/.config/google-chrome/*/Service Worker/**",
+        "/**/.config/google-chrome/*/Cache/**",
+        "/**/.config/google-chrome-beta/*/Secure Preferences",
+        "/**/.config/google-chrome-beta/*/Local Storage/**",
+        "/**/.config/google-chrome-beta/*/Session Storage/**",
+        "/**/.config/google-chrome-beta/*/IndexedDB/**",
+        "/**/.config/google-chrome-beta/*/Sessions/**",
+        "/**/.config/google-chrome-beta/*/Extensions/**",
+        "/**/.config/google-chrome-beta/*/Service Worker/**",
+        "/**/.config/google-chrome-beta/*/Cache/**",
+        "/**/.config/google-chrome-unstable/*/Secure Preferences",
+        "/**/.config/google-chrome-unstable/*/Local Storage/**",
+        "/**/.config/google-chrome-unstable/*/Session Storage/**",
+        "/**/.config/google-chrome-unstable/*/IndexedDB/**",
+        "/**/.config/google-chrome-unstable/*/Sessions/**",
+        "/**/.config/google-chrome-unstable/*/Extensions/**",
+        "/**/.config/google-chrome-unstable/*/Service Worker/**",
+        "/**/.config/google-chrome-unstable/*/Cache/**",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Secure Preferences",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Local Storage/**",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Session Storage/**",
+        "/**/.config/BraveSoftware/Brave-Browser/*/IndexedDB/**",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Sessions/**",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Extensions/**",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Service Worker/**",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Cache/**",
+        "/**/.config/microsoft-edge/*/Secure Preferences",
+        "/**/.config/microsoft-edge/*/Local Storage/**",
+        "/**/.config/microsoft-edge/*/Session Storage/**",
+        "/**/.config/microsoft-edge/*/IndexedDB/**",
+        "/**/.config/microsoft-edge/*/Sessions/**",
+        "/**/.config/microsoft-edge/*/Extensions/**",
+        "/**/.config/microsoft-edge/*/Service Worker/**",
+        "/**/.config/microsoft-edge/*/Cache/**",
+        "/**/.config/microsoft-edge-beta/*/Secure Preferences",
+        "/**/.config/microsoft-edge-beta/*/Local Storage/**",
+        "/**/.config/microsoft-edge-beta/*/Session Storage/**",
+        "/**/.config/microsoft-edge-beta/*/IndexedDB/**",
+        "/**/.config/microsoft-edge-beta/*/Sessions/**",
+        "/**/.config/microsoft-edge-beta/*/Extensions/**",
+        "/**/.config/microsoft-edge-beta/*/Service Worker/**",
+        "/**/.config/microsoft-edge-beta/*/Cache/**",
+        "/**/.config/vivaldi/*/Secure Preferences",
+        "/**/.config/vivaldi/*/Local Storage/**",
+        "/**/.config/vivaldi/*/Session Storage/**",
+        "/**/.config/vivaldi/*/IndexedDB/**",
+        "/**/.config/vivaldi/*/Sessions/**",
+        "/**/.config/vivaldi/*/Extensions/**",
+        "/**/.config/vivaldi/*/Service Worker/**",
+        "/**/.config/vivaldi/*/Cache/**",
+        "/**/.config/opera/*/Secure Preferences",
+        "/**/.config/opera/*/Local Storage/**",
+        "/**/.config/opera/*/Session Storage/**",
+        "/**/.config/opera/*/IndexedDB/**",
+        "/**/.config/opera/*/Sessions/**",
+        "/**/.config/opera/*/Extensions/**",
+        "/**/.config/opera/*/Service Worker/**",
+        "/**/.config/opera/*/Cache/**",
+        "/**/snap/chromium/common/chromium/*/Secure Preferences",
+        "/**/snap/chromium/common/chromium/*/Local Storage/**",
+        "/**/snap/chromium/common/chromium/*/Session Storage/**",
+        "/**/snap/chromium/common/chromium/*/IndexedDB/**",
+        "/**/snap/chromium/common/chromium/*/Sessions/**",
+        "/**/snap/chromium/common/chromium/*/Extensions/**",
+        "/**/snap/chromium/common/chromium/*/Service Worker/**",
+        "/**/snap/chromium/common/chromium/*/Cache/**",
+        "/**/.config/opera/Secure Preferences",
+        "/**/.config/opera/Local Storage/**",
+        "/**/.config/opera/Session Storage/**",
+        "/**/.config/opera/IndexedDB/**",
+        "/**/.config/opera/Sessions/**",
+        "/**/.config/opera/Extensions/**",
+        "/**/.config/opera/Service Worker/**",
+        "/**/.config/opera/Cache/**"
+      ],
+      "parser": null,
+      "sources": [
+        "browser",
+        "uac"
+      ],
+      "notes": "LevelDB, cache and session formats remain raw.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "authentication_logs",
+      "category": "OS Activity",
+      "paths": [
+        "/var/log/auth.log*",
+        "/var/log/secure*"
+      ],
+      "parser": "syslog",
+      "sources": [
+        "linux",
+        "plaso",
+        "uac"
+      ],
+      "notes": "Traditional syslog dates lack a year/timezone; TERRA preserves them without inventing either.",
+      "support": "structured"
+    },
+    {
+      "id": "system_logs",
+      "category": "OS Activity",
+      "paths": [
+        "/var/log/syslog*",
+        "/var/log/messages*",
+        "/var/log/kern.log*",
+        "/var/log/daemon.log*",
+        "/var/log/cron*",
+        "/var/log/dmesg*",
+        "/var/log/boot.log*"
+      ],
+      "parser": "syslog",
+      "sources": [
+        "linux",
+        "plaso",
+        "uac"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "audit_records",
+      "category": "OS Activity",
+      "paths": [
+        "/var/log/audit/audit.log*"
+      ],
+      "parser": "audit",
+      "sources": [
+        "linux",
+        "plaso",
+        "uac"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "journal_files",
+      "category": "OS Activity",
+      "paths": [
+        "/var/log/journal/**/*.journal",
+        "/var/log/journal/**/*.journal~",
+        "/run/log/journal/**/*.journal",
+        "/run/log/journal/**/*.journal~"
+      ],
+      "parser": "journal",
+      "sources": [
+        "linux",
+        "uac",
+        "journal_api",
+        "journal_fields",
+        "sans_linux"
+      ],
+      "notes": "Host libsystemd required. RAM snapshot preferred; if rejected, original source read-only and fully reverified. Sealing/integrity is not verified; unsupported/corrupt input retains raw evidence.",
+      "support": "structured"
+    },
+    {
+      "id": "login_records",
+      "category": "OS Activity",
+      "paths": [
+        "/var/log/wtmp*",
+        "/var/log/btmp*"
+      ],
+      "parser": "utmp",
+      "sources": [
+        "utmp",
+        "plaso",
+        "linux"
+      ],
+      "notes": "Supported layout: Linux little-endian 384-byte utmp. Other layouts fail explicitly.",
+      "support": "structured"
+    },
+    {
+      "id": "last_login",
+      "category": "OS Activity",
+      "paths": [
+        "/var/log/lastlog"
+      ],
+      "parser": "lastlog",
+      "sources": [
+        "lastlog_format"
+      ],
+      "notes": "Linux LE 292-byte layout only; other ABIs/byte orders are not guessed. UID comes from record offset, not host passwd. Latest login only.",
+      "support": "structured"
+    },
+    {
+      "id": "lastlog_other_formats",
+      "category": "OS Activity",
+      "paths": [
+        "/var/lib/lastlog/**"
+      ],
+      "parser": null,
+      "sources": [
+        "lastlog2_format"
+      ],
+      "notes": "Additional lastlog store variants retained raw; narrower recognized lastlog2 definitions take priority.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "bash_history",
+      "category": "OS Activity",
+      "paths": [
+        "/**/.bash_history"
+      ],
+      "parser": "bash_history",
+      "sources": [
+        "bash",
+        "plaso",
+        "uac"
+      ],
+      "notes": "Timestamped multi-line entries are reconstructed; untimestamped history does not reliably preserve command boundaries.",
+      "support": "structured"
+    },
+    {
+      "id": "zsh_history",
+      "category": "OS Activity",
+      "paths": [
+        "/**/.zsh_history"
+      ],
+      "parser": "zsh_history",
+      "sources": [
+        "zsh",
+        "plaso",
+        "uac"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "fish_history",
+      "category": "OS Activity",
+      "paths": [
+        "/**/.local/share/fish/fish_history"
+      ],
+      "parser": "fish_history",
+      "sources": [
+        "uac",
+        "plaso"
+      ],
+      "notes": "Commands retain original fish escape sequences; no YAML tags or expressions are evaluated.",
+      "support": "structured"
+    },
+    {
+      "id": "other_history",
+      "category": "OS Activity",
+      "paths": [
+        "/**/.python_history",
+        "/**/.mysql_history",
+        "/**/.psql_history",
+        "/**/.sqlite_history"
+      ],
+      "parser": "line_history",
+      "sources": [
+        "linux",
+        "uac"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "editor_history",
+      "category": "OS Activity",
+      "paths": [
+        "/**/.viminfo",
+        "/**/.lesshst",
+        "/**/.nano_history",
+        "/**/.local/share/nano/search_history",
+        "/**/.local/share/zeitgeist/**"
+      ],
+      "parser": null,
+      "sources": [
+        "linux",
+        "uac"
+      ],
+      "notes": "",
+      "support": "raw_collection"
+    },
+    {
+      "id": "recent_files",
+      "category": "OS Activity",
+      "paths": [
+        "/**/.local/share/recently-used.xbel",
+        "/**/.recently-used.xbel",
+        "/**/.local/share/RecentDocuments/*.desktop"
+      ],
+      "parser": "recent",
+      "sources": [
+        "linux",
+        "desktop"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "trash_info",
+      "category": "OS Activity",
+      "paths": [
+        "/**/.local/share/Trash/info/*.trashinfo",
+        "/**/.Trash-*/info/*.trashinfo",
+        "/**/.Trash/*/info/*.trashinfo"
+      ],
+      "parser": "trash",
+      "sources": [
+        "trash",
+        "linux"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "trash_contents",
+      "category": "OS Activity",
+      "paths": [
+        "/**/.local/share/Trash/files/**",
+        "/**/.Trash-*/files/**"
+      ],
+      "parser": null,
+      "sources": [
+        "trash",
+        "linux"
+      ],
+      "notes": "",
+      "support": "raw_collection"
+    },
+    {
+      "id": "scheduled_jobs",
+      "category": "OS Activity",
+      "paths": [
+        "/etc/crontab",
+        "/etc/anacrontab",
+        "/etc/cron.d/**",
+        "/var/spool/cron/**",
+        "/var/spool/crontabs/**"
+      ],
+      "parser": "cron",
+      "sources": [
+        "linux",
+        "uac"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "periodic_jobs",
+      "category": "OS Activity",
+      "paths": [
+        "/etc/cron.daily/**",
+        "/etc/cron.hourly/**",
+        "/etc/cron.weekly/**",
+        "/etc/cron.monthly/**",
+        "/var/spool/at/**"
+      ],
+      "parser": null,
+      "sources": [
+        "linux",
+        "uac"
+      ],
+      "notes": "",
+      "support": "raw_collection"
+    },
+    {
+      "id": "systemd_units",
+      "category": "OS Activity",
+      "paths": [
+        "/etc/systemd/system/*.service",
+        "/etc/systemd/system/*.timer",
+        "/usr/lib/systemd/system/*.service",
+        "/lib/systemd/system/*.service",
+        "/**/.config/systemd/user/*.service",
+        "/usr/lib/systemd/system/*.timer",
+        "/lib/systemd/system/*.timer",
+        "/**/.config/systemd/user/*.timer",
+        "/**/.local/share/systemd/user/*.service",
+        "/**/.local/share/systemd/user/*.timer",
+        "/etc/systemd/system/*.service.d/*.conf",
+        "/etc/systemd/system/*.timer.d/*.conf",
+        "/**/.config/systemd/user/*.service.d/*.conf",
+        "/**/.config/systemd/user/*.timer.d/*.conf"
+      ],
+      "parser": "systemd",
+      "sources": [
+        "linux",
+        "uac"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "startup_entries",
+      "category": "OS Activity",
+      "paths": [
+        "/etc/rc.local",
+        "/etc/init.d/**",
+        "/etc/profile",
+        "/etc/profile.d/**",
+        "/**/.bashrc",
+        "/**/.zshrc",
+        "/**/.config/autostart/*.desktop",
+        "/etc/bash.bashrc",
+        "/etc/bashrc",
+        "/etc/zsh/**",
+        "/etc/rc.d/**",
+        "/**/.bash_aliases",
+        "/**/.bash_profile",
+        "/**/.bash_login",
+        "/**/.bash_logout",
+        "/**/.profile",
+        "/**/.zprofile",
+        "/**/.zlogin",
+        "/**/.zlogout",
+        "/**/.zshenv",
+        "/etc/environment"
+      ],
+      "parser": "startup_script",
+      "sources": [
+        "linux",
+        "uac",
+        "sans_linux",
+        "catscale"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "mail_messages",
+      "category": "Email",
+      "paths": [
+        "/**/*.eml",
+        "/**/*.mbox",
+        "/**/Maildir/cur/*",
+        "/**/Maildir/new/*"
+      ],
+      "parser": "mail",
+      "sources": [
+        "mail",
+        "thunderbird",
+        "uac"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "thunderbird_mail",
+      "category": "Email",
+      "paths": [
+        "/**/.thunderbird/*/Mail/**",
+        "/**/.thunderbird/*/ImapMail/**"
+      ],
+      "parser": "thunderbird_mail",
+      "sources": [
+        "thunderbird",
+        "uac"
+      ],
+      "notes": "Only actual RFC mail/mbox stores are parsed; .msf indexes remain raw.",
+      "support": "structured"
+    },
+    {
+      "id": "thunderbird_index",
+      "category": "Email",
+      "paths": [
+        "/**/.thunderbird/*/global-messages-db.sqlite"
+      ],
+      "parser": "thunderbird_index",
+      "sources": [
+        "thunderbird",
+        "sqlite"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "thunderbird_settings",
+      "category": "Email",
+      "paths": [
+        "/**/.thunderbird/*/prefs.js",
+        "/**/.thunderbird/*/logins.json",
+        "/**/.thunderbird/*/key4.db",
+        "/**/.thunderbird/*/abook.sqlite"
+      ],
+      "parser": null,
+      "sources": [
+        "thunderbird",
+        "uac"
+      ],
+      "notes": "",
+      "support": "raw_collection"
+    },
+    {
+      "id": "outlook_mail",
+      "category": "Email",
+      "paths": [
+        "/**/*.pst",
+        "/**/*.ost"
+      ],
+      "parser": "pff",
+      "sources": [
+        "pff_format",
+        "pypff"
+      ],
+      "notes": "Optional pypff/libpff reads a RAM snapshot and extracts supported attachment bytes within a 32 MiB per-store derived budget. Without it, header metadata only. Deleted-item recovery and nested embedded-message interpretation remain unsupported.",
+      "support": "structured"
+    },
+    {
+      "id": "skype_legacy",
+      "category": "Communication",
+      "paths": [
+        "/**/.Skype/*/main.db",
+        "/**/skype/*/main.db"
+      ],
+      "parser": "skype",
+      "sources": [
+        "skype",
+        "uac",
+        "sqlite"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "telegram_exports",
+      "category": "Communication",
+      "paths": [
+        "/**/ChatExport*/result.json",
+        "/**/Telegram*/result.json"
+      ],
+      "parser": "telegram_export",
+      "sources": [
+        "uac",
+        "telegram"
+      ],
+      "notes": "Explicit exported JSON only. Native Telegram tdata remains raw.",
+      "support": "structured"
+    },
+    {
+      "id": "telegram_native",
+      "category": "Communication",
+      "paths": [
+        "/**/TelegramDesktop/tdata/**",
+        "/**/.local/share/TelegramDesktop/tdata/**"
+      ],
+      "parser": null,
+      "sources": [
+        "uac"
+      ],
+      "notes": "",
+      "support": "raw_collection"
+    },
+    {
+      "id": "signal_native",
+      "category": "Communication",
+      "paths": [
+        "/**/.config/Signal/**",
+        "/**/.var/app/org.signal.Signal/**",
+        "/**/snap/signal-desktop/**"
+      ],
+      "parser": null,
+      "sources": [
+        "uac",
+        "signal"
+      ],
+      "notes": "SQLCipher and attachment formats remain raw; no decryption claimed.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "discord_native",
+      "category": "Communication",
+      "paths": [
+        "/**/.config/discord/**",
+        "/**/.config/discordcanary/**"
+      ],
+      "parser": null,
+      "sources": [
+        "uac"
+      ],
+      "notes": "Cached/LevelDB data, not a complete chat transcript.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "other_chat",
+      "category": "Communication",
+      "paths": [
+        "/**/.config/teams/**",
+        "/**/.config/Slack/**",
+        "/**/.purple/logs/**",
+        "/**/.config/Element/**"
+      ],
+      "parser": null,
+      "sources": [
+        "uac"
+      ],
+      "notes": "",
+      "support": "raw_collection"
+    },
+    {
+      "id": "ssh_metadata",
+      "category": "Network Connections",
+      "paths": [
+        "/**/.ssh/config",
+        "/**/.ssh/known_hosts",
+        "/**/.ssh/authorized_keys",
+        "/etc/ssh/sshd_config",
+        "/etc/ssh/sshd_config.d/**",
+        "/etc/ssh/ssh_config"
+      ],
+      "parser": "ssh",
+      "sources": [
+        "linux",
+        "uac"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "network_profiles",
+      "category": "Network Connections",
+      "paths": [
+        "/etc/NetworkManager/system-connections/**",
+        "/var/lib/NetworkManager/**",
+        "/etc/network/interfaces",
+        "/etc/netplan/*.yaml"
+      ],
+      "parser": "network_profile",
+      "sources": [
+        "linux",
+        "uac"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "dns_hosts",
+      "category": "Network Connections",
+      "paths": [
+        "/etc/hosts",
+        "/etc/resolv.conf",
+        "/etc/hosts.allow",
+        "/etc/hosts.deny"
+      ],
+      "parser": "network_text",
+      "sources": [
+        "linux",
+        "uac"
+      ],
+      "notes": "",
+      "support": "structured"
+    },
+    {
+      "id": "vpn_remote_cloud",
+      "category": "Network Connections",
+      "paths": [
+        "/etc/openvpn/**",
+        "/etc/wireguard/**",
+        "/**/.config/remmina/**",
+        "/**/.remmina/**",
+        "/**/.config/rclone/**",
+        "/**/.dropbox/**",
+        "/**/.config/Nextcloud/**",
+        "/var/log/samba/**"
+      ],
+      "parser": null,
+      "sources": [
+        "linux",
+        "uac"
+      ],
+      "notes": "Configuration/history is not evidence of a currently active connection.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "device_rules",
+      "category": "Connected Devices",
+      "paths": [
+        "/etc/udev/rules.d/**",
+        "/usr/lib/udev/rules.d/**",
+        "/var/lib/bluetooth/**",
+        "/var/lib/upower/**"
+      ],
+      "parser": null,
+      "sources": [
+        "linux",
+        "uac"
+      ],
+      "notes": "Historical configuration only; live devices and since-logon correlation require separate collection.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "encryption_config",
+      "category": "Encrypted Containers",
+      "paths": [
+        "/etc/crypttab",
+        "/**/.config/keepassxc/**",
+        "/**/*.kdbx",
+        "/**/*.hc",
+        "/**/*.tc"
+      ],
+      "parser": null,
+      "sources": [
+        "linux",
+        "uac"
+      ],
+      "notes": "Extension/configuration recognition only, not confirmed encryption or decrypted content.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "server_logs",
+      "category": "OS Activity",
+      "paths": [
+        "/var/log/apache2/**",
+        "/var/log/nginx/**",
+        "/var/log/mysql/**",
+        "/var/log/postgresql/**",
+        "/var/log/sudo-io/**"
+      ],
+      "parser": null,
+      "sources": [
+        "linux",
+        "uac"
+      ],
+      "notes": "",
+      "support": "raw_collection"
+    },
+    {
+      "id": "container_metadata",
+      "category": "OS Activity",
+      "paths": [
+        "/etc/docker/**",
+        "/var/lib/docker/containers/*/config.v2.json",
+        "/var/lib/docker/containers/*/*-json.log",
+        "/**/.kube/config",
+        "/etc/kubernetes/**"
+      ],
+      "parser": null,
+      "sources": [
+        "linux",
+        "uac"
+      ],
+      "notes": "Raw container/Kubernetes metadata; no workload execution.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "firefox_places_sidecars",
+      "category": "Browsers",
+      "paths": [
+        "/**/.mozilla/firefox/*/places.sqlite-wal",
+        "/**/.mozilla/firefox/*/places.sqlite-shm",
+        "/**/.mozilla/firefox/*/places.sqlite-journal",
+        "/**/.mozilla/firefox/**/places.sqlite-wal",
+        "/**/.mozilla/firefox/**/places.sqlite-shm",
+        "/**/.mozilla/firefox/**/places.sqlite-journal",
+        "/**/tor-browser/**/profile.default/places.sqlite-wal",
+        "/**/tor-browser/**/profile.default/places.sqlite-shm",
+        "/**/tor-browser/**/profile.default/places.sqlite-journal"
+      ],
+      "parser": null,
+      "sources": [
+        "browser",
+        "firefox",
+        "plaso",
+        "sqlite"
+      ],
+      "notes": "Companion raw SQLite files. WAL is used only after checksum and snapshot validation.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "firefox_cookies_sidecars",
+      "category": "Browsers",
+      "paths": [
+        "/**/.mozilla/firefox/*/cookies.sqlite-wal",
+        "/**/.mozilla/firefox/*/cookies.sqlite-shm",
+        "/**/.mozilla/firefox/*/cookies.sqlite-journal",
+        "/**/.mozilla/firefox/**/cookies.sqlite-wal",
+        "/**/.mozilla/firefox/**/cookies.sqlite-shm",
+        "/**/.mozilla/firefox/**/cookies.sqlite-journal",
+        "/**/tor-browser/**/profile.default/cookies.sqlite-wal",
+        "/**/tor-browser/**/profile.default/cookies.sqlite-shm",
+        "/**/tor-browser/**/profile.default/cookies.sqlite-journal"
+      ],
+      "parser": null,
+      "sources": [
+        "browser",
+        "plaso",
+        "sqlite"
+      ],
+      "notes": "Companion raw SQLite files. WAL is used only after checksum and snapshot validation.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "firefox_forms_sidecars",
+      "category": "Browsers",
+      "paths": [
+        "/**/.mozilla/firefox/*/formhistory.sqlite-wal",
+        "/**/.mozilla/firefox/*/formhistory.sqlite-shm",
+        "/**/.mozilla/firefox/*/formhistory.sqlite-journal",
+        "/**/.mozilla/firefox/**/formhistory.sqlite-wal",
+        "/**/.mozilla/firefox/**/formhistory.sqlite-shm",
+        "/**/.mozilla/firefox/**/formhistory.sqlite-journal",
+        "/**/tor-browser/**/profile.default/formhistory.sqlite-wal",
+        "/**/tor-browser/**/profile.default/formhistory.sqlite-shm",
+        "/**/tor-browser/**/profile.default/formhistory.sqlite-journal"
+      ],
+      "parser": null,
+      "sources": [
+        "browser",
+        "plaso",
+        "sqlite"
+      ],
+      "notes": "Companion raw SQLite files. WAL is used only after checksum and snapshot validation.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "firefox_downloads_legacy_sidecars",
+      "category": "Browsers",
+      "paths": [
+        "/**/.mozilla/firefox/*/downloads.sqlite-wal",
+        "/**/.mozilla/firefox/*/downloads.sqlite-shm",
+        "/**/.mozilla/firefox/*/downloads.sqlite-journal",
+        "/**/.mozilla/firefox/**/downloads.sqlite-wal",
+        "/**/.mozilla/firefox/**/downloads.sqlite-shm",
+        "/**/.mozilla/firefox/**/downloads.sqlite-journal",
+        "/**/tor-browser/**/profile.default/downloads.sqlite-wal",
+        "/**/tor-browser/**/profile.default/downloads.sqlite-shm",
+        "/**/tor-browser/**/profile.default/downloads.sqlite-journal"
+      ],
+      "parser": null,
+      "sources": [
+        "browser",
+        "plaso",
+        "sqlite"
+      ],
+      "notes": "Companion raw SQLite files. WAL is used only after checksum and snapshot validation.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "chromium_history_sidecars",
+      "category": "Browsers",
+      "paths": [
+        "/**/.config/chromium/*/History-wal",
+        "/**/.config/chromium/*/History-shm",
+        "/**/.config/chromium/*/History-journal",
+        "/**/.config/chromium/*/Archived History-wal",
+        "/**/.config/chromium/*/Archived History-shm",
+        "/**/.config/chromium/*/Archived History-journal",
+        "/**/.config/google-chrome/*/History-wal",
+        "/**/.config/google-chrome/*/History-shm",
+        "/**/.config/google-chrome/*/History-journal",
+        "/**/.config/google-chrome/*/Archived History-wal",
+        "/**/.config/google-chrome/*/Archived History-shm",
+        "/**/.config/google-chrome/*/Archived History-journal",
+        "/**/.config/google-chrome-beta/*/History-wal",
+        "/**/.config/google-chrome-beta/*/History-shm",
+        "/**/.config/google-chrome-beta/*/History-journal",
+        "/**/.config/google-chrome-beta/*/Archived History-wal",
+        "/**/.config/google-chrome-beta/*/Archived History-shm",
+        "/**/.config/google-chrome-beta/*/Archived History-journal",
+        "/**/.config/google-chrome-unstable/*/History-wal",
+        "/**/.config/google-chrome-unstable/*/History-shm",
+        "/**/.config/google-chrome-unstable/*/History-journal",
+        "/**/.config/google-chrome-unstable/*/Archived History-wal",
+        "/**/.config/google-chrome-unstable/*/Archived History-shm",
+        "/**/.config/google-chrome-unstable/*/Archived History-journal",
+        "/**/.config/BraveSoftware/Brave-Browser/*/History-wal",
+        "/**/.config/BraveSoftware/Brave-Browser/*/History-shm",
+        "/**/.config/BraveSoftware/Brave-Browser/*/History-journal",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Archived History-wal",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Archived History-shm",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Archived History-journal",
+        "/**/.config/microsoft-edge/*/History-wal",
+        "/**/.config/microsoft-edge/*/History-shm",
+        "/**/.config/microsoft-edge/*/History-journal",
+        "/**/.config/microsoft-edge/*/Archived History-wal",
+        "/**/.config/microsoft-edge/*/Archived History-shm",
+        "/**/.config/microsoft-edge/*/Archived History-journal",
+        "/**/.config/microsoft-edge-beta/*/History-wal",
+        "/**/.config/microsoft-edge-beta/*/History-shm",
+        "/**/.config/microsoft-edge-beta/*/History-journal",
+        "/**/.config/microsoft-edge-beta/*/Archived History-wal",
+        "/**/.config/microsoft-edge-beta/*/Archived History-shm",
+        "/**/.config/microsoft-edge-beta/*/Archived History-journal",
+        "/**/.config/vivaldi/*/History-wal",
+        "/**/.config/vivaldi/*/History-shm",
+        "/**/.config/vivaldi/*/History-journal",
+        "/**/.config/vivaldi/*/Archived History-wal",
+        "/**/.config/vivaldi/*/Archived History-shm",
+        "/**/.config/vivaldi/*/Archived History-journal",
+        "/**/.config/opera/*/History-wal",
+        "/**/.config/opera/*/History-shm",
+        "/**/.config/opera/*/History-journal",
+        "/**/.config/opera/*/Archived History-wal",
+        "/**/.config/opera/*/Archived History-shm",
+        "/**/.config/opera/*/Archived History-journal",
+        "/**/snap/chromium/common/chromium/*/History-wal",
+        "/**/snap/chromium/common/chromium/*/History-shm",
+        "/**/snap/chromium/common/chromium/*/History-journal",
+        "/**/snap/chromium/common/chromium/*/Archived History-wal",
+        "/**/snap/chromium/common/chromium/*/Archived History-shm",
+        "/**/snap/chromium/common/chromium/*/Archived History-journal",
+        "/**/.config/opera/History-wal",
+        "/**/.config/opera/History-shm",
+        "/**/.config/opera/History-journal",
+        "/**/.config/opera/Archived History-wal",
+        "/**/.config/opera/Archived History-shm",
+        "/**/.config/opera/Archived History-journal"
+      ],
+      "parser": null,
+      "sources": [
+        "browser",
+        "chrome",
+        "sqlite"
+      ],
+      "notes": "Companion raw SQLite files. WAL is used only after checksum and snapshot validation.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "chromium_cookies_sidecars",
+      "category": "Browsers",
+      "paths": [
+        "/**/.config/chromium/*/Cookies-wal",
+        "/**/.config/chromium/*/Cookies-shm",
+        "/**/.config/chromium/*/Cookies-journal",
+        "/**/.config/chromium/*/Network/Cookies-wal",
+        "/**/.config/chromium/*/Network/Cookies-shm",
+        "/**/.config/chromium/*/Network/Cookies-journal",
+        "/**/.config/google-chrome/*/Cookies-wal",
+        "/**/.config/google-chrome/*/Cookies-shm",
+        "/**/.config/google-chrome/*/Cookies-journal",
+        "/**/.config/google-chrome/*/Network/Cookies-wal",
+        "/**/.config/google-chrome/*/Network/Cookies-shm",
+        "/**/.config/google-chrome/*/Network/Cookies-journal",
+        "/**/.config/google-chrome-beta/*/Cookies-wal",
+        "/**/.config/google-chrome-beta/*/Cookies-shm",
+        "/**/.config/google-chrome-beta/*/Cookies-journal",
+        "/**/.config/google-chrome-beta/*/Network/Cookies-wal",
+        "/**/.config/google-chrome-beta/*/Network/Cookies-shm",
+        "/**/.config/google-chrome-beta/*/Network/Cookies-journal",
+        "/**/.config/google-chrome-unstable/*/Cookies-wal",
+        "/**/.config/google-chrome-unstable/*/Cookies-shm",
+        "/**/.config/google-chrome-unstable/*/Cookies-journal",
+        "/**/.config/google-chrome-unstable/*/Network/Cookies-wal",
+        "/**/.config/google-chrome-unstable/*/Network/Cookies-shm",
+        "/**/.config/google-chrome-unstable/*/Network/Cookies-journal",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Cookies-wal",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Cookies-shm",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Cookies-journal",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Network/Cookies-wal",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Network/Cookies-shm",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Network/Cookies-journal",
+        "/**/.config/microsoft-edge/*/Cookies-wal",
+        "/**/.config/microsoft-edge/*/Cookies-shm",
+        "/**/.config/microsoft-edge/*/Cookies-journal",
+        "/**/.config/microsoft-edge/*/Network/Cookies-wal",
+        "/**/.config/microsoft-edge/*/Network/Cookies-shm",
+        "/**/.config/microsoft-edge/*/Network/Cookies-journal",
+        "/**/.config/microsoft-edge-beta/*/Cookies-wal",
+        "/**/.config/microsoft-edge-beta/*/Cookies-shm",
+        "/**/.config/microsoft-edge-beta/*/Cookies-journal",
+        "/**/.config/microsoft-edge-beta/*/Network/Cookies-wal",
+        "/**/.config/microsoft-edge-beta/*/Network/Cookies-shm",
+        "/**/.config/microsoft-edge-beta/*/Network/Cookies-journal",
+        "/**/.config/vivaldi/*/Cookies-wal",
+        "/**/.config/vivaldi/*/Cookies-shm",
+        "/**/.config/vivaldi/*/Cookies-journal",
+        "/**/.config/vivaldi/*/Network/Cookies-wal",
+        "/**/.config/vivaldi/*/Network/Cookies-shm",
+        "/**/.config/vivaldi/*/Network/Cookies-journal",
+        "/**/.config/opera/*/Cookies-wal",
+        "/**/.config/opera/*/Cookies-shm",
+        "/**/.config/opera/*/Cookies-journal",
+        "/**/.config/opera/*/Network/Cookies-wal",
+        "/**/.config/opera/*/Network/Cookies-shm",
+        "/**/.config/opera/*/Network/Cookies-journal",
+        "/**/snap/chromium/common/chromium/*/Cookies-wal",
+        "/**/snap/chromium/common/chromium/*/Cookies-shm",
+        "/**/snap/chromium/common/chromium/*/Cookies-journal",
+        "/**/snap/chromium/common/chromium/*/Network/Cookies-wal",
+        "/**/snap/chromium/common/chromium/*/Network/Cookies-shm",
+        "/**/snap/chromium/common/chromium/*/Network/Cookies-journal",
+        "/**/.config/opera/Cookies-wal",
+        "/**/.config/opera/Cookies-shm",
+        "/**/.config/opera/Cookies-journal",
+        "/**/.config/opera/Network/Cookies-wal",
+        "/**/.config/opera/Network/Cookies-shm",
+        "/**/.config/opera/Network/Cookies-journal"
+      ],
+      "parser": null,
+      "sources": [
+        "browser",
+        "plaso",
+        "sqlite"
+      ],
+      "notes": "Companion raw SQLite files. WAL is used only after checksum and snapshot validation.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "chromium_logins_sidecars",
+      "category": "Browsers",
+      "paths": [
+        "/**/.config/chromium/*/Login Data-wal",
+        "/**/.config/chromium/*/Login Data-shm",
+        "/**/.config/chromium/*/Login Data-journal",
+        "/**/.config/google-chrome/*/Login Data-wal",
+        "/**/.config/google-chrome/*/Login Data-shm",
+        "/**/.config/google-chrome/*/Login Data-journal",
+        "/**/.config/google-chrome-beta/*/Login Data-wal",
+        "/**/.config/google-chrome-beta/*/Login Data-shm",
+        "/**/.config/google-chrome-beta/*/Login Data-journal",
+        "/**/.config/google-chrome-unstable/*/Login Data-wal",
+        "/**/.config/google-chrome-unstable/*/Login Data-shm",
+        "/**/.config/google-chrome-unstable/*/Login Data-journal",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Login Data-wal",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Login Data-shm",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Login Data-journal",
+        "/**/.config/microsoft-edge/*/Login Data-wal",
+        "/**/.config/microsoft-edge/*/Login Data-shm",
+        "/**/.config/microsoft-edge/*/Login Data-journal",
+        "/**/.config/microsoft-edge-beta/*/Login Data-wal",
+        "/**/.config/microsoft-edge-beta/*/Login Data-shm",
+        "/**/.config/microsoft-edge-beta/*/Login Data-journal",
+        "/**/.config/vivaldi/*/Login Data-wal",
+        "/**/.config/vivaldi/*/Login Data-shm",
+        "/**/.config/vivaldi/*/Login Data-journal",
+        "/**/.config/opera/*/Login Data-wal",
+        "/**/.config/opera/*/Login Data-shm",
+        "/**/.config/opera/*/Login Data-journal",
+        "/**/snap/chromium/common/chromium/*/Login Data-wal",
+        "/**/snap/chromium/common/chromium/*/Login Data-shm",
+        "/**/snap/chromium/common/chromium/*/Login Data-journal",
+        "/**/.config/opera/Login Data-wal",
+        "/**/.config/opera/Login Data-shm",
+        "/**/.config/opera/Login Data-journal"
+      ],
+      "parser": null,
+      "sources": [
+        "browser",
+        "plaso",
+        "sqlite"
+      ],
+      "notes": "Companion raw SQLite files. WAL is used only after checksum and snapshot validation.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "chromium_autofill_sidecars",
+      "category": "Browsers",
+      "paths": [
+        "/**/.config/chromium/*/Web Data-wal",
+        "/**/.config/chromium/*/Web Data-shm",
+        "/**/.config/chromium/*/Web Data-journal",
+        "/**/.config/google-chrome/*/Web Data-wal",
+        "/**/.config/google-chrome/*/Web Data-shm",
+        "/**/.config/google-chrome/*/Web Data-journal",
+        "/**/.config/google-chrome-beta/*/Web Data-wal",
+        "/**/.config/google-chrome-beta/*/Web Data-shm",
+        "/**/.config/google-chrome-beta/*/Web Data-journal",
+        "/**/.config/google-chrome-unstable/*/Web Data-wal",
+        "/**/.config/google-chrome-unstable/*/Web Data-shm",
+        "/**/.config/google-chrome-unstable/*/Web Data-journal",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Web Data-wal",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Web Data-shm",
+        "/**/.config/BraveSoftware/Brave-Browser/*/Web Data-journal",
+        "/**/.config/microsoft-edge/*/Web Data-wal",
+        "/**/.config/microsoft-edge/*/Web Data-shm",
+        "/**/.config/microsoft-edge/*/Web Data-journal",
+        "/**/.config/microsoft-edge-beta/*/Web Data-wal",
+        "/**/.config/microsoft-edge-beta/*/Web Data-shm",
+        "/**/.config/microsoft-edge-beta/*/Web Data-journal",
+        "/**/.config/vivaldi/*/Web Data-wal",
+        "/**/.config/vivaldi/*/Web Data-shm",
+        "/**/.config/vivaldi/*/Web Data-journal",
+        "/**/.config/opera/*/Web Data-wal",
+        "/**/.config/opera/*/Web Data-shm",
+        "/**/.config/opera/*/Web Data-journal",
+        "/**/snap/chromium/common/chromium/*/Web Data-wal",
+        "/**/snap/chromium/common/chromium/*/Web Data-shm",
+        "/**/snap/chromium/common/chromium/*/Web Data-journal",
+        "/**/.config/opera/Web Data-wal",
+        "/**/.config/opera/Web Data-shm",
+        "/**/.config/opera/Web Data-journal"
+      ],
+      "parser": null,
+      "sources": [
+        "browser",
+        "plaso",
+        "sqlite"
+      ],
+      "notes": "Companion raw SQLite files. WAL is used only after checksum and snapshot validation.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "thunderbird_index_sidecars",
+      "category": "Email",
+      "paths": [
+        "/**/.thunderbird/*/global-messages-db.sqlite-wal",
+        "/**/.thunderbird/*/global-messages-db.sqlite-shm",
+        "/**/.thunderbird/*/global-messages-db.sqlite-journal"
+      ],
+      "parser": null,
+      "sources": [
+        "thunderbird",
+        "sqlite"
+      ],
+      "notes": "Companion raw SQLite files. WAL is used only after checksum and snapshot validation.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "skype_legacy_sidecars",
+      "category": "Communication",
+      "paths": [
+        "/**/.Skype/*/main.db-wal",
+        "/**/.Skype/*/main.db-shm",
+        "/**/.Skype/*/main.db-journal",
+        "/**/skype/*/main.db-wal",
+        "/**/skype/*/main.db-shm",
+        "/**/skype/*/main.db-journal"
+      ],
+      "parser": null,
+      "sources": [
+        "skype",
+        "uac",
+        "sqlite"
+      ],
+      "notes": "Companion raw SQLite files. WAL is used only after checksum and snapshot validation.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "remaining_system_logs",
+      "category": "OS Activity",
+      "paths": [
+        "/var/log/**"
+      ],
+      "parser": null,
+      "sources": [
+        "catscale",
+        "cylr"
+      ],
+      "notes": "Additional log formats preserved raw; narrower recognized definitions take priority.",
+      "support": "raw_collection"
+    }
+  ]
+}

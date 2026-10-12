@@ -1,0 +1,233 @@
+{
+  "version": 1,
+  "researched_on": "2026-10-10",
+  "sources": {
+    "apps_rclone": {
+      "title": "rclone",
+      "url": "https://rclone.org/docs/"
+    },
+    "apps_dropbox": {
+      "title": "dropbox",
+      "url": "https://help.dropbox.com/installs/locate-dropbox-folder"
+    },
+    "apps_uac_dropbox": {
+      "title": "uac dropbox",
+      "url": "https://github.com/tclahr/uac/blob/main/artifacts/files/applications/dropbox.yaml"
+    },
+    "apps_nextcloud": {
+      "title": "nextcloud",
+      "url": "https://docs.nextcloud.com/server/latest/user_manual/en/desktop/configfile.html"
+    },
+    "apps_onedrive_config": {
+      "title": "onedrive config",
+      "url": "https://github.com/abraunegg/onedrive/blob/master/docs/USAGE.md"
+    },
+    "apps_onedrive_schema": {
+      "title": "onedrive schema",
+      "url": "https://github.com/abraunegg/onedrive/blob/master/src/itemdb.d"
+    },
+    "apps_nextcloud_schema": {
+      "title": "nextcloud schema",
+      "url": "https://github.com/nextcloud/desktop/blob/master/src/common/syncjournaldb.cpp"
+    },
+    "apps_syncthing": {
+      "title": "syncthing",
+      "url": "https://docs.syncthing.net/users/config.html"
+    },
+    "apps_mega_config": {
+      "title": "MEGAsync configuration reader",
+      "url": "https://github.com/meganz/MEGAsync/blob/master/src/MEGASync/control/Preferences/Preferences.cpp"
+    },
+    "apps_mega_state": {
+      "title": "MEGAsync configuration reader",
+      "url": "https://github.com/meganz/MEGAsync/blob/master/src/MEGASync/control/Preferences/Preferences.cpp"
+    },
+    "apps_seafile": {
+      "title": "Seafile applet configuration",
+      "url": "https://github.com/haiwen/seafile-client/blob/master/src/seafile-applet.cpp"
+    },
+    "apps_seafile_pointer": {
+      "title": "Seafile data directory pointer",
+      "url": "https://github.com/haiwen/seafile-client/blob/master/src/configurator.cpp"
+    }
+  },
+  "artifacts": [
+    {
+      "id": "apps_seafile_state",
+      "category": "Cloud Storage",
+      "paths": [
+        "/**/Seafile/.seafile-data/**",
+        "/**/.ccnet/ccnet.conf"
+      ],
+      "parser": null,
+      "sources": [
+        "apps_seafile_pointer"
+      ],
+      "notes": "Local library state retained raw; encrypted libraries and remote contents not decoded.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "apps_seafile",
+      "category": "Cloud Storage",
+      "paths": [
+        "/**/.ccnet/seafile.ini"
+      ],
+      "parser": "app_path",
+      "sources": [
+        "apps_seafile_pointer"
+      ],
+      "notes": "Local configuration does not establish acquisition of server or encrypted library contents.",
+      "support": "structured"
+    },
+    {
+      "id": "apps_mega_state",
+      "category": "Cloud Storage",
+      "paths": [
+        "/**/.local/share/data/Mega Limited/MEGAsync/**",
+        "/**/.local/share/Mega Limited/MEGAsync/**"
+      ],
+      "parser": null,
+      "sources": [
+        "apps_mega_state"
+      ],
+      "notes": "Proprietary local cache and state retained raw under existing storage limits.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "apps_mega_config",
+      "category": "Cloud Storage",
+      "paths": [
+        "/**/MEGAsync/MEGAsync.cfg",
+        "/**/MEGAsync/MEGAsync.cfg.bak"
+      ],
+      "parser": "app_ini",
+      "sources": [
+        "apps_mega_config"
+      ],
+      "notes": "Qt INI configuration only; protected values and cloud contents are not decrypted or fetched.",
+      "support": "structured"
+    },
+    {
+      "id": "apps_rclone",
+      "category": "Cloud Storage",
+      "paths": [
+        "/**/.config/rclone/rclone.conf",
+        "/**/.rclone.conf",
+        "/**/rclone.conf"
+      ],
+      "parser": "app_ini",
+      "sources": [
+        "apps_rclone"
+      ],
+      "notes": "Configuration or installation evidence does not prove execution or intent.",
+      "support": "structured"
+    },
+    {
+      "id": "apps_dropbox_info",
+      "category": "Cloud Storage",
+      "paths": [
+        "/**/.dropbox/info.json"
+      ],
+      "parser": "app_dropbox",
+      "sources": [
+        "apps_dropbox"
+      ],
+      "notes": "Configuration or installation evidence does not prove execution or intent.",
+      "support": "structured"
+    },
+    {
+      "id": "apps_dropbox_state",
+      "category": "Cloud Storage",
+      "paths": [
+        "/**/.dropbox/**"
+      ],
+      "parser": null,
+      "sources": [
+        "apps_uac_dropbox"
+      ],
+      "notes": "Encrypted/proprietary Dropbox state retained without claiming decryption or cloud contents.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "apps_nextcloud",
+      "category": "Cloud Storage",
+      "paths": [
+        "/**/Nextcloud/nextcloud.cfg",
+        "/**/ownCloud/owncloud.cfg"
+      ],
+      "parser": "app_ini",
+      "sources": [
+        "apps_nextcloud"
+      ],
+      "notes": "Configuration or installation evidence does not prove execution or intent.",
+      "support": "structured"
+    },
+    {
+      "id": "apps_onedrive_config",
+      "category": "Cloud Storage",
+      "paths": [
+        "/**/.config/onedrive/config",
+        "/etc/onedrive/config"
+      ],
+      "parser": "app_pairs",
+      "sources": [
+        "apps_onedrive_config"
+      ],
+      "notes": "Configuration or installation evidence does not prove execution or intent.",
+      "support": "structured"
+    },
+    {
+      "id": "apps_onedrive_items",
+      "category": "Cloud Storage",
+      "paths": [
+        "/**/.config/onedrive/items.sqlite3"
+      ],
+      "parser": "app_onedrive_db",
+      "sources": [
+        "apps_onedrive_schema"
+      ],
+      "notes": "Local synchronization inventory; a row does not establish that remote bytes were acquired.",
+      "support": "structured"
+    },
+    {
+      "id": "apps_onedrive_state",
+      "category": "Cloud Storage",
+      "paths": [
+        "/**/.config/onedrive/**"
+      ],
+      "parser": null,
+      "sources": [
+        "apps_onedrive_config"
+      ],
+      "notes": "Configuration or installation evidence does not prove execution or intent.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "apps_sync_journal",
+      "category": "Cloud Storage",
+      "paths": [
+        "/**/.sync_*.db",
+        "/**/.csync_journal.db"
+      ],
+      "parser": "app_sync_db",
+      "sources": [
+        "apps_nextcloud_schema"
+      ],
+      "notes": "Local journal inventory only; unsupported schemas reported, remote contents not fetched.",
+      "support": "structured"
+    },
+    {
+      "id": "apps_syncthing",
+      "category": "Cloud Storage",
+      "paths": [
+        "/**/syncthing/config.xml"
+      ],
+      "parser": "app_xml",
+      "sources": [
+        "apps_syncthing"
+      ],
+      "notes": "Peer-to-peer synchronization configuration, not proof of cloud-provider use.",
+      "support": "structured"
+    }
+  ]
+}

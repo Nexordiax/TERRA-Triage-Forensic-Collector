@@ -1,0 +1,17 @@
+# Physical RAM validation and failure preservation
+
+TERRA uses checksum-pinned AVML minimal 0.20.0. Its LiME output need not have one header per `/proc/iomem` entry: it splits blocks, can omit all-zero blocks, and `/proc/kcore` acquisition intersects RAM ranges with readable ELF segments. Exact header-to-iomem equality therefore rejected valid images after acquisition.
+
+The validator now checks magic, version, reserved fields, ordered non-overlapping blocks, containment within expected System RAM, and every declared payload length. It hashes the exact original stream. Top-level System RAM ranges are normalized by merging overlapping/adjacent ranges; nested resource entries are ignored, consistent with AVML's parser.
+
+Valid split blocks covering the entire expected address union are marked complete. Structurally valid images with gaps are saved as incomplete physical RAM images. Metadata records expected bytes/ranges, captured bytes/ranges, missing bytes/ranges, validation status and limitations. No gap—including differing range endpoints—is treated as captured or silently filled with zeros. The stream alone cannot establish that omitted addresses contained zeros rather than inaccessible data.
+
+On cancellation or backend/validation failure after bytes have been written, the original stream is retained and packaged into the destination ZIP with acquisition metadata, backend output, diagnostic logs and a JSON sidecar. `acquisition_failed`, `validation_error`, and `complete_physical_ram=false` distinguish a failed/unvalidated capture from a successful image. `acquisition_stopped` identifies user cancellation separately. Hash verification proves file integrity, not RAM completeness or image validity.
+
+If publishing or packaging fails (for example, the destination fills), captured bytes and available logs remain in a private `.terra-ram-*` directory beside the selected destination, and the GUI error identifies that location. Existing destination files are never overwritten. Failures before any bytes are acquired do not produce an empty evidence ZIP. Capacity estimates account for split-block headers and simultaneous image/ZIP storage. The RAM GUI shows Finish after saved, stopped, or failed attempts, hides it during acquisition, and labels incomplete/unvalidated output explicitly. RAM-only runs still skip file triage.
+
+Changed files: `artifacts/memory/collector.py`, new `artifacts/memory/coverage.py`, `artifacts/memory/partial.py`, `artifacts/memory/archive.py`, `interface/pages/ram.py`, `tests/test_ram.py`, and this document. Unprivileged process acquisition is unchanged.
+
+Tests cover full split-block acquisition/ZIP export, sparse coverage and missing endpoints, truncated/invalid/overlapping/outside blocks, stopped split blocks, backend errors after capture, preservation on publishing/packaging failures, private file permissions, no overwrite, capacity checks and RAM-only navigation/Finish.
+
+Sources: [AVML image implementation](https://github.com/microsoft/avml/blob/v0.20.0/src/image.rs), [AVML memory-source implementation](https://github.com/microsoft/avml/blob/v0.20.0/src/snapshot.rs), [AVML iomem parser](https://github.com/microsoft/avml/blob/v0.20.0/src/iomem.rs). A real root acquisition on the user's machine remains necessary to verify its kernel-specific memory-source behavior; automated tests use controlled backend fixtures without reading host physical RAM.

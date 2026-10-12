@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "researched_on": "2026-10-10",
+  "sources": {
+    "apps_bleachbit": {
+      "title": "bleachbit",
+      "url": "https://github.com/bleachbit/bleachbit/blob/master/bleachbit/Options.py"
+    },
+    "apps_cleanerml": {
+      "title": "cleanerml",
+      "url": "https://docs.bleachbit.org/doc/cleanerml/"
+    },
+    "apps_shred": {
+      "title": "shred",
+      "url": "https://www.gnu.org/software/coreutils/manual/html_node/shred-invocation.html"
+    },
+    "apps_sweeper": {
+      "title": "KDE Sweeper cleaning preferences",
+      "url": "https://github.com/KDE/sweeper/blob/master/sweeper.cpp"
+    }
+  },
+  "artifacts": [
+    {
+      "id": "apps_sweeper",
+      "category": "Anti-forensics Apps",
+      "paths": [
+        "/**/.config/kprivacyrc"
+      ],
+      "parser": "app_ini",
+      "sources": [
+        "apps_sweeper"
+      ],
+      "notes": "Cleaning selections are preferences; no claim that cleaning was performed or successful.",
+      "support": "structured"
+    },
+    {
+      "id": "apps_bleachbit",
+      "category": "Anti-forensics Apps",
+      "paths": [
+        "/**/bleachbit/bleachbit.ini"
+      ],
+      "parser": "app_ini",
+      "sources": [
+        "apps_bleachbit"
+      ],
+      "notes": "Cleaner selections and preferences are not evidence that cleaning completed.",
+      "support": "structured"
+    },
+    {
+      "id": "apps_cleanerml",
+      "category": "Anti-forensics Apps",
+      "paths": [
+        "/**/bleachbit/cleaners/*.xml"
+      ],
+      "parser": "app_xml",
+      "sources": [
+        "apps_cleanerml"
+      ],
+      "notes": "Cleaner definitions describe potential actions; never executed by TERRA.",
+      "support": "structured"
+    },
+    {
+      "id": "apps_eraser_binaries",
+      "category": "Anti-forensics Apps",
+      "paths": [
+        "/usr/bin/shred",
+        "/usr/bin/wipe",
+        "/usr/bin/srm",
+        "/usr/bin/sfill",
+        "/usr/bin/sswap",
+        "/usr/bin/smem",
+        "/usr/bin/bleachbit",
+        "/usr/local/bin/wipe",
+        "/usr/local/bin/srm"
+      ],
+      "parser": null,
+      "sources": [
+        "apps_shred"
+      ],
+      "notes": "Installed file only; presence does not prove use, successful erasure or criminal intent.",
+      "support": "raw_collection"
+    }
+  ]
+}

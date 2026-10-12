@@ -1,0 +1,51 @@
+.venv/
+__pycache__/
+*.py[cod]
+cases/
+
+# Python generated files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# Build outputs
+build/
+dist/
+*.AppImage
+*.exe
+*.dmg
+
+# Local forensic evidence and case data
+cases/
+*.lime
+*.mem
+
+# Backups
+*.tar.gz
+*.bak
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Generated AppImage directories and temporary files
+appimage/test-tmp/
+appimage/TERRA.AppDir/
+appimage/*.AppImage
+appimage/*.squashfs
+appimage/*.log
+
+# Include the UnRAR source archive required for redistribution
+!assets/tools/unrar/unrarsrc-7.3.1.tar.gz
+
+# Downloaded and extracted AppImage packaging tools
+appimage/tools/
+appimage/output/
+
+# Generated build reports and logs
+appimage/*-log.txt
+appimage/build-manifest.json
+appimage/validation-results.json

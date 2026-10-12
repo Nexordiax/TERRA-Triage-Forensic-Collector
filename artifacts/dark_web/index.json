@@ -1,0 +1,165 @@
+{
+  "version": 1,
+  "researched_on": "2026-10-10",
+  "sources": {
+    "apps_tor": {
+      "title": "tor",
+      "url": "https://manpages.debian.org/bookworm/tor/tor.1.en.html"
+    },
+    "apps_i2p": {
+      "title": "i2p",
+      "url": "https://github.com/i2p/i2p.i2p/blob/master/router/java/src/net/i2p/router/Router.java"
+    },
+    "apps_i2pd": {
+      "title": "i2pd",
+      "url": "https://docs.i2pd.website/en/latest/user-guide/configuration/"
+    },
+    "apps_onionshare": {
+      "title": "onionshare",
+      "url": "https://docs.onionshare.org/2.6.3/en/advanced.html"
+    },
+    "apps_hyphanet": {
+      "title": "hyphanet",
+      "url": "https://www.hyphanet.org/pages/help.html"
+    },
+    "apps_tor_browser": {
+      "title": "Tor Browser forensic audit",
+      "url": "https://arxiv.org/abs/1907.10279"
+    }
+  },
+  "artifacts": [
+    {
+      "id": "apps_tor_config",
+      "category": "Dark Web Apps",
+      "paths": [
+        "/etc/tor/torrc",
+        "/etc/tor/torrc.d/*",
+        "/**/.torrc",
+        "/**/Tor/torrc",
+        "/**/Tor/torrc-defaults"
+      ],
+      "parser": "app_tor",
+      "sources": [
+        "apps_tor"
+      ],
+      "notes": "Configuration or installation evidence does not prove execution or intent.",
+      "support": "structured"
+    },
+    {
+      "id": "apps_tor_state",
+      "category": "Dark Web Apps",
+      "paths": [
+        "/var/lib/tor/**",
+        "/**/Tor/state",
+        "/**/Tor/hidden_service/**",
+        "/**/.config/torbrowser/**"
+      ],
+      "parser": null,
+      "sources": [
+        "apps_tor"
+      ],
+      "notes": "Onion-service and router state are local artifacts; no onion sites contacted.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "apps_i2p_config",
+      "category": "Dark Web Apps",
+      "paths": [
+        "/**/.i2p/router.config",
+        "/**/.i2p/clients.config",
+        "/**/.i2p/i2ptunnel.config",
+        "/**/.i2p/*.properties"
+      ],
+      "parser": "app_pairs",
+      "sources": [
+        "apps_i2p"
+      ],
+      "notes": "Configuration or installation evidence does not prove execution or intent.",
+      "support": "structured"
+    },
+    {
+      "id": "apps_i2pd_config",
+      "category": "Dark Web Apps",
+      "paths": [
+        "/etc/i2pd/*.conf",
+        "/etc/i2pd/tunnels.conf.d/*.conf",
+        "/**/.i2pd/*.conf"
+      ],
+      "parser": "app_ini",
+      "sources": [
+        "apps_i2pd"
+      ],
+      "notes": "Configuration or installation evidence does not prove execution or intent.",
+      "support": "structured"
+    },
+    {
+      "id": "apps_i2p_state",
+      "category": "Dark Web Apps",
+      "paths": [
+        "/**/.i2p/**",
+        "/**/.i2pd/**",
+        "/var/lib/i2pd/**"
+      ],
+      "parser": null,
+      "sources": [
+        "apps_i2pd"
+      ],
+      "notes": "Configuration or installation evidence does not prove execution or intent.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "apps_onionshare",
+      "category": "Dark Web Apps",
+      "paths": [
+        "/**/.config/onionshare/onionshare.json",
+        "/**/.config/onionshare/persistent/*.json"
+      ],
+      "parser": "app_json",
+      "sources": [
+        "apps_onionshare"
+      ],
+      "notes": "Configuration or installation evidence does not prove execution or intent.",
+      "support": "structured"
+    },
+    {
+      "id": "apps_onionshare_state",
+      "category": "Dark Web Apps",
+      "paths": [
+        "/**/.config/onionshare/**"
+      ],
+      "parser": null,
+      "sources": [
+        "apps_onionshare"
+      ],
+      "notes": "Configuration or installation evidence does not prove execution or intent.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "apps_hyphanet",
+      "category": "Dark Web Apps",
+      "paths": [
+        "/**/freenet.ini"
+      ],
+      "parser": "app_pairs",
+      "sources": [
+        "apps_hyphanet"
+      ],
+      "notes": "Configuration or installation evidence does not prove execution or intent.",
+      "support": "structured"
+    },
+    {
+      "id": "apps_tor_profile_raw",
+      "category": "Dark Web Apps",
+      "paths": [
+        "/**/tor-browser/**/profile.default/**"
+      ],
+      "parser": null,
+      "sources": [
+        "apps_tor_browser"
+      ],
+      "notes": "Other Tor Browser profile artifacts retained raw; specialized browser definitions take priority.",
+      "support": "raw_collection",
+      "fallback_only": true
+    }
+  ]
+}

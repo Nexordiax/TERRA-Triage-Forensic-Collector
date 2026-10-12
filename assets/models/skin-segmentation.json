@@ -1,0 +1,15 @@
+{
+  "name": "MediaPipe Selfie Multiclass 256 (ONNX conversion)",
+  "filename": "skin-segmentation.onnx",
+  "size": 16454560,
+  "sha256": "35ec1ecd9ee7f85073c99c00020b7f6751b69506eeacf683bc8665f6117f85b0",
+  "source": "https://huggingface.co/senty-au/selfie_multiclass_256x256-ONNX",
+  "revision": "6db8421a7150ac20558f2c24675078eb3a1a04d0",
+  "original_source": "https://storage.googleapis.com/mediapipe-models/image_segmenter/selfie_multiclass_256x256/float32/1/selfie_multiclass_256x256.tflite",
+  "original_sha256": "c6748b1253a99067ef71f7e26ca71096cd449baefa8f101900ea23016507e0e0",
+  "model_card": "https://storage.googleapis.com/mediapipe-assets/Model%20Card%20Multiclass%20Segmentation.pdf",
+  "license": "Apache-2.0",
+  "copyright": "Google LLC; ONNX conversion by senty-au",
+  "labels": ["background", "hair", "body_skin", "face_skin", "clothes", "others"],
+  "validation": "Experimental manual-review screening. Model developed for selfie/person segmentation, not forensic or legal classification. Lighting, occlusion, small subjects and image domain affect accuracy. Conversion parity is reported by the publisher, not independently established by TERRA."
+}

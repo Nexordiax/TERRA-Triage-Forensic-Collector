@@ -1,0 +1,12 @@
+{
+  "version": "7.3.1",
+  "dll_version": 10,
+  "platform": "Linux",
+  "architecture": "x86_64",
+  "filename": "libunrar-linux-x86_64.so",
+  "sha256": "12277e75808c07819d544795116a7e27bca3078356dc9d78fa94f075ff68f51d",
+  "source_sha256": "634900842a3737d9cc15bbcc71d4c74cc713437e0bca296a573424fe5f2660ab",
+  "source_url": "https://www.rarlab.com/rar/unrarsrc-7.3.1.tar.gz",
+  "license": "LicenseRef-UnRAR",
+  "build": "make -j2 lib; GCC on the development Linux host; rebuild on the minimum supported release for distribution"
+}

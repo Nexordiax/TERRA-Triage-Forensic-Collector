@@ -1,0 +1,8 @@
+MediaPipe Selfie Multiclass 256 skin segmentation weights
+Copyright Google LLC. Licensed under Apache License 2.0.
+Original versioned model: https://storage.googleapis.com/mediapipe-models/image_segmenter/selfie_multiclass_256x256/float32/1/selfie_multiclass_256x256.tflite
+Model card: https://storage.googleapis.com/mediapipe-assets/Model%20Card%20Multiclass%20Segmentation.pdf
+ONNX format conversion distributed by senty-au:
+https://huggingface.co/senty-au/selfie_multiclass_256x256-ONNX/tree/6db8421a7150ac20558f2c24675078eb3a1a04d0
+TERRA does not alter the downloaded weights. Source, revision and checksum are recorded in skin-segmentation.json.
+This model supplies experimental skin-area review leads, not forensic, age, identity or legal classification.

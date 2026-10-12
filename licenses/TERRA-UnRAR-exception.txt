@@ -1,0 +1,30 @@
+TERRA — Additional permission for linking with UnRAR
+
+Copyright (c) 2026 Gersi Hajrullahi.
+
+As an additional permission under section 7 of the GNU General Public
+License, version 3, the copyright holder of the TERRA-owned code grants
+permission to combine or link that code with the UnRAR library solely
+for reading, listing, testing and extracting RAR archives, and to convey
+the resulting combined work under the terms applicable to each part.
+
+This permission applies only to TERRA code for which the granting
+copyright holder has authority to give this exception. It does not
+modify the GNU GPL version 3 itself, relicense UnRAR, or grant rights
+for third-party GPL-covered code whose copyright holders have not
+authorized this exception.
+
+UnRAR remains governed by its own license, including its prohibition
+on using UnRAR to develop a RAR-compatible archiver or to recreate
+the proprietary RAR compression algorithm. Redistributors must retain
+all notices and comply with the UnRAR license and with the GPLv3
+obligations applicable to TERRA.
+
+If you modify TERRA-owned files covered by this permission, you may
+extend this exception to your version, but you are not obligated to
+do so. If you do not wish to extend it, remove this exception notice
+from the relevant modified files or distribution as appropriate.
+
+This additional permission is intended to permit the stated
+combination only. It does not exempt any other component or library
+from its own license conditions.

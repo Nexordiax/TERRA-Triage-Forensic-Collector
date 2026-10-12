@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "researched_on": "2026-10-10",
+  "sources": {
+    "apps_virtualbox": {
+      "title": "virtualbox",
+      "url": "https://docs.oracle.com/en/virtualization/virtualbox/7.0/user/TechnicalBackground.html"
+    },
+    "apps_kape_vmware": {
+      "title": "kape vmware",
+      "url": "https://github.com/EricZimmerman/KapeFiles/blob/master/Targets/Apps/VMwareInventory.tkape"
+    },
+    "apps_libvirt": {
+      "title": "libvirt",
+      "url": "https://libvirt.org/formatdomain.html"
+    },
+    "apps_vmware_linux": {
+      "title": "VMware Workstation Linux inventory",
+      "url": "https://knowledge.broadcom.com/external/article?legacyId=57224"
+    }
+  },
+  "artifacts": [
+    {
+      "id": "apps_vbox",
+      "category": "Virtual Machines",
+      "paths": [
+        "/**/VirtualBox.xml",
+        "/**/VirtualBox.xml-prev",
+        "/**/*.vbox",
+        "/**/*.vbox-prev"
+      ],
+      "parser": "app_xml",
+      "sources": [
+        "apps_virtualbox"
+      ],
+      "notes": "Configuration references are recorded without following paths outside selected targets or starting guests.",
+      "support": "structured"
+    },
+    {
+      "id": "apps_vmware_config",
+      "category": "Virtual Machines",
+      "paths": [
+        "/**/*.vmx",
+        "/**/*.vmsd",
+        "/**/.vmware/preferences",
+        "/**/.vmware/config",
+        "/**/.vmware/inventory.vmls"
+      ],
+      "parser": "app_pairs",
+      "sources": [
+        "apps_kape_vmware",
+        "apps_vmware_linux"
+      ],
+      "notes": "Configuration or installation evidence does not prove execution or intent.",
+      "support": "structured"
+    },
+    {
+      "id": "apps_libvirt",
+      "category": "Virtual Machines",
+      "paths": [
+        "/etc/libvirt/qemu/*.xml",
+        "/etc/libvirt/storage/*.xml",
+        "/**/.config/libvirt/qemu/*.xml",
+        "/**/.config/libvirt/storage/*.xml"
+      ],
+      "parser": "app_xml",
+      "sources": [
+        "apps_libvirt"
+      ],
+      "notes": "Configuration or installation evidence does not prove execution or intent.",
+      "support": "structured"
+    },
+    {
+      "id": "apps_vm_payload",
+      "category": "Virtual Machines",
+      "paths": [
+        "/**/*.vdi",
+        "/**/*.vmdk",
+        "/**/*.qcow",
+        "/**/*.qcow2",
+        "/**/*.vhd",
+        "/**/*.vhdx",
+        "/**/*.vmem",
+        "/**/*.vmsn",
+        "/**/*.vmss",
+        "/**/*.nvram",
+        "/**/VirtualBox VMs/**/Logs/*",
+        "/var/log/libvirt/qemu/*",
+        "/**/.local/share/gnome-boxes/images/**",
+        "/**/VirtualBox VMs/**/*.sav",
+        "/**/.config/VirtualBox/**/*.sav"
+      ],
+      "parser": null,
+      "sources": [
+        "apps_virtualbox"
+      ],
+      "notes": "Disk/memory/log candidates retained under existing evidence limits; guest filesystems are not mounted or decoded. Extension/path recognition is not format validation.",
+      "support": "raw_collection"
+    }
+  ]
+}

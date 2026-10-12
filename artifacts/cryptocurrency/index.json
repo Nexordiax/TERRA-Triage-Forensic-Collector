@@ -1,0 +1,326 @@
+{
+  "version": 1,
+  "researched_on": "2026-10-10",
+  "sources": {
+    "crypto_bitcoin": {
+      "title": "Bitcoin Core filesystem",
+      "url": "https://github.com/bitcoin/bitcoin/blob/master/doc/files.md"
+    },
+    "crypto_electrum": {
+      "title": "Electrum data directory and encryption",
+      "url": "https://electrum.readthedocs.io/en/latest/faq.html"
+    },
+    "crypto_electrum_schema": {
+      "title": "Electrum wallet database schema",
+      "url": "https://github.com/spesmilo/electrum/blob/master/electrum/wallet_db.py"
+    },
+    "crypto_electron_cash": {
+      "title": "Electron Cash data directory",
+      "url": "https://github.com/Electron-Cash/Electron-Cash/blob/master/electroncash/simple_config.py"
+    },
+    "crypto_ethereum": {
+      "title": "Geth backup and keystore locations",
+      "url": "https://geth.ethereum.org/docs/fundamentals/backup-restore"
+    },
+    "crypto_web3": {
+      "title": "Ethereum V3 keyfile schema",
+      "url": "https://github.com/ethereum/go-ethereum/blob/master/accounts/keystore/key.go"
+    },
+    "crypto_monero": {
+      "title": "Monero wallet-file option and encrypted wallet files",
+      "url": "https://docs.getmonero.org/interacting/monero-wallet-cli-reference/"
+    },
+    "crypto_exodus": {
+      "title": "Exodus Linux data and backup location",
+      "url": "https://www.exodus.com/support/en/articles/8598708-how-do-i-rescue-an-overwritten-wallet"
+    },
+    "crypto_wasabi": {
+      "title": "Wasabi Linux data folder and wallet backups",
+      "url": "https://docs.wasabiwallet.io/FAQ/FAQ-UseWasabi.html"
+    },
+    "crypto_sparrow": {
+      "title": "Sparrow wallet data directory",
+      "url": "https://sparrowwallet.com/docs/faq.html"
+    },
+    "crypto_metamask": {
+      "title": "MetaMask official Chrome extension",
+      "url": "https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn"
+    },
+    "crypto_kape": {
+      "title": "KAPE Bitcoin wallet keyword module (reference only)",
+      "url": "https://github.com/EricZimmerman/KapeFiles/blob/master/Modules/EZTools/bstrings/bstrings_BitCoinWallet.mkape"
+    },
+    "crypto_sans": {
+      "title": "SANS Litecoin forensic research (historical context)",
+      "url": "https://www.sans.org/white-papers/34595"
+    },
+    "crypto_litecoin": {
+      "title": "Litecoin Core filesystem",
+      "url": "https://github.com/litecoin-project/litecoin/blob/master/doc/files.md"
+    }
+  },
+  "artifacts": [
+    {
+      "id": "cryptocurrency_bitcoin_wallets",
+      "category": "Cryptocurrency",
+      "paths": [
+        "/**/.bitcoin/**/wallet.dat",
+        "/**/.bitcoin/**/wallet.dat.*"
+      ],
+      "parser": "crypto_wallet",
+      "sources": [
+        "crypto_bitcoin"
+      ],
+      "notes": "Known Bitcoin Core wallet/backup path. SQLite/BDB container identification only; key and transaction bodies remain raw.",
+      "support": "structured"
+    },
+    {
+      "id": "cryptocurrency_bitcoin_config",
+      "category": "Cryptocurrency",
+      "paths": [
+        "/**/.bitcoin/bitcoin.conf",
+        "/**/bitcoin.conf"
+      ],
+      "parser": "crypto_config",
+      "sources": [
+        "crypto_bitcoin"
+      ],
+      "notes": "Read only selected configuration; custom data/wallet paths are reported, never automatically added to target scope.",
+      "support": "structured"
+    },
+    {
+      "id": "cryptocurrency_bitcoin_state",
+      "category": "Cryptocurrency",
+      "paths": [
+        "/**/.bitcoin/**/debug.log",
+        "/**/.bitcoin/**/db.log",
+        "/**/.bitcoin/**/settings.json",
+        "/**/.bitcoin/**/peers.dat",
+        "/**/.bitcoin/**/banlist.json",
+        "/**/.bitcoin/**/database/log.*",
+        "/**/.bitcoin/**/wallet.dat-journal",
+        "/**/.bitcoin/**/wallet.dat-wal",
+        "/**/.bitcoin/**/wallet.dat-shm"
+      ],
+      "parser": null,
+      "sources": [
+        "crypto_bitcoin"
+      ],
+      "notes": "Raw node/wallet diagnostic and database companions; node data is not proof of ownership or funds. Blockchain block stores are not classified as wallet evidence.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "cryptocurrency_electrum_wallets",
+      "category": "Cryptocurrency",
+      "paths": [
+        "/**/.electrum/wallets/*",
+        "/**/.var/app/org.electrum.electrum/**/.electrum/wallets/*",
+        "/**/.electrum/*/wallets/*"
+      ],
+      "parser": "crypto_electrum",
+      "sources": [
+        "crypto_electrum",
+        "crypto_electrum_schema"
+      ],
+      "notes": "JSON public wallet metadata and stored address/transaction references. Encrypted/unknown wallets remain partial; no private-key recovery.",
+      "support": "structured"
+    },
+    {
+      "id": "cryptocurrency_electrum_state",
+      "category": "Cryptocurrency",
+      "paths": [
+        "/**/.electrum/config",
+        "/**/.electrum/logs/*",
+        "/**/.electrum/recent_servers",
+        "/**/.electrum/certs/*"
+      ],
+      "parser": null,
+      "sources": [
+        "crypto_electrum"
+      ],
+      "notes": "Raw configuration, logs and server certificates; no network access.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "cryptocurrency_electron_cash_wallets",
+      "category": "Cryptocurrency",
+      "paths": [
+        "/**/.electron-cash/wallets/*",
+        "/**/.electron-cash/*/wallets/*"
+      ],
+      "parser": "crypto_electrum",
+      "sources": [
+        "crypto_electron_cash",
+        "crypto_electrum_schema"
+      ],
+      "notes": "Electrum-family schema recognition only; Bitcoin Cash network/ownership not inferred from an address alone.",
+      "support": "structured"
+    },
+    {
+      "id": "cryptocurrency_ethereum_keystores",
+      "category": "Cryptocurrency",
+      "paths": [
+        "/**/.ethereum/**/keystore/*"
+      ],
+      "parser": "crypto_ethereum",
+      "sources": [
+        "crypto_ethereum",
+        "crypto_web3"
+      ],
+      "notes": "Ethereum V3 public address/cipher/KDF metadata; MAC and balances are not verified and private keys are not unlocked.",
+      "support": "structured"
+    },
+    {
+      "id": "cryptocurrency_monero_files",
+      "category": "Cryptocurrency",
+      "paths": [
+        "/**/.bitmonero/**/wallets/*",
+        "/**/Monero/wallets/**",
+        "/**/.bitmonero/monero-wallet-cli.log",
+        "/**/.bitmonero/monero-wallet-gui.log"
+      ],
+      "parser": null,
+      "sources": [
+        "crypto_monero"
+      ],
+      "notes": "Known wallet/log path candidates only. Monero wallets may be saved at arbitrary --wallet-file paths; generic .keys files are not all assumed to be wallets.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "cryptocurrency_exodus_files",
+      "category": "Cryptocurrency",
+      "paths": [
+        "/**/.config/Exodus/exodus.wallet/**",
+        "/**/.config/Exodus/Backups/**",
+        "/**/.config/Exodus/Wallet/**",
+        "/**/.config/Exodus/exodus.conf.json",
+        "/**/.config/Exodus/*.log"
+      ],
+      "parser": null,
+      "sources": [
+        "crypto_exodus"
+      ],
+      "notes": "Raw known wallet/backup/configuration paths; encrypted wallet and transaction formats are not decoded.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "cryptocurrency_wasabi_files",
+      "category": "Cryptocurrency",
+      "paths": [
+        "/**/.walletwasabi/client/Wallets/*",
+        "/**/.walletwasabi/client/WalletBackups/*",
+        "/**/.walletwasabi/client/Config.json",
+        "/**/.walletwasabi/client/Logs.txt"
+      ],
+      "parser": "crypto_wallet",
+      "sources": [
+        "crypto_wasabi"
+      ],
+      "notes": "Known Wasabi wallet/configuration candidates; proprietary encrypted values remain raw.",
+      "support": "structured"
+    },
+    {
+      "id": "cryptocurrency_sparrow_files",
+      "category": "Cryptocurrency",
+      "paths": [
+        "/**/.sparrow/wallets/**",
+        "/**/.sparrow/config",
+        "/**/.sparrow/sparrow.log",
+        "/**/.sparrow/*/wallets/**",
+        "/**/.local/share/sparrow/wallets/**",
+        "/**/.config/sparrow/config",
+        "/**/.local/state/sparrow/sparrow.log"
+      ],
+      "parser": null,
+      "sources": [
+        "crypto_sparrow"
+      ],
+      "notes": "Raw Sparrow wallet/configuration paths; wallet encryption and transaction decoding are not implemented.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "cryptocurrency_metamask_leveldb",
+      "category": "Cryptocurrency",
+      "paths": [
+        "/**/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn/*.log",
+        "/**/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn/*.ldb",
+        "/**/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn/*.sst"
+      ],
+      "parser": "leveldb",
+      "sources": [
+        "crypto_metamask",
+        "leveldb_log",
+        "leveldb_table"
+      ],
+      "notes": "Physical MetaMask extension storage observations; vaults remain encrypted and installation does not prove use or funds.",
+      "support": "structured"
+    },
+    {
+      "id": "cryptocurrency_metamask_companions",
+      "category": "Cryptocurrency",
+      "paths": [
+        "/**/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn/CURRENT",
+        "/**/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn/MANIFEST-*",
+        "/**/Extensions/nkbihfbeogaeaoehlefnkodbefgpgknn/*/manifest.json"
+      ],
+      "parser": null,
+      "sources": [
+        "crypto_metamask"
+      ],
+      "notes": "Raw MetaMask storage/installation metadata. Browser extension IDs are path indicators, not integrity verification.",
+      "support": "raw_collection"
+    },
+    {
+      "id": "cryptocurrency_litecoin_wallets",
+      "category": "Cryptocurrency",
+      "paths": [
+        "/**/.litecoin/**/wallet.dat",
+        "/**/.litecoin/**/wallet.dat.*"
+      ],
+      "parser": "crypto_wallet",
+      "sources": [
+        "crypto_litecoin",
+        "crypto_sans"
+      ],
+      "notes": "Known Litecoin Core wallet/backup path. SQLite/BDB container identification only; key and transaction bodies remain raw.",
+      "support": "structured"
+    },
+    {
+      "id": "cryptocurrency_litecoin_config",
+      "category": "Cryptocurrency",
+      "paths": [
+        "/**/.litecoin/litecoin.conf",
+        "/**/litecoin.conf"
+      ],
+      "parser": "crypto_config",
+      "sources": [
+        "crypto_litecoin",
+        "crypto_sans"
+      ],
+      "notes": "Read only selected configuration; custom data/wallet paths are reported, never automatically added to target scope.",
+      "support": "structured"
+    },
+    {
+      "id": "cryptocurrency_litecoin_state",
+      "category": "Cryptocurrency",
+      "paths": [
+        "/**/.litecoin/**/debug.log",
+        "/**/.litecoin/**/db.log",
+        "/**/.litecoin/**/settings.json",
+        "/**/.litecoin/**/peers.dat",
+        "/**/.litecoin/**/banlist.json",
+        "/**/.litecoin/**/database/log.*",
+        "/**/.litecoin/**/wallet.dat-journal",
+        "/**/.litecoin/**/wallet.dat-wal",
+        "/**/.litecoin/**/wallet.dat-shm"
+      ],
+      "parser": null,
+      "sources": [
+        "crypto_litecoin",
+        "crypto_sans"
+      ],
+      "notes": "Raw node/wallet diagnostic and database companions; node data is not proof of ownership or funds. Blockchain block stores are not classified as wallet evidence.",
+      "support": "raw_collection"
+    }
+  ]
+}

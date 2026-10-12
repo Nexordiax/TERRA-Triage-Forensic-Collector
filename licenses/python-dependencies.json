@@ -1,0 +1,280 @@
+[
+  {
+    "distribution": "PySide6",
+    "version": "6.12.0",
+    "declared_license": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+    "project_urls": [
+      "Homepage, https://pyside.org",
+      "Documentation, https://doc.qt.io/qtforpython",
+      "Repository, https://code.qt.io/cgit/pyside/pyside-setup.git/",
+      "Changelog, https://code.qt.io/cgit/pyside/pyside-setup.git/tree/doc/changelogs",
+      "Tracker, https://qt-project.atlassian.net/browse/PYSIDE"
+    ],
+    "license_files": [
+      "licenses/python/PySide6-6.12.0/LGPL-3.0-only.txt"
+    ]
+  },
+  {
+    "distribution": "libpff-python",
+    "version": "20260926",
+    "declared_license": "LGPL-3.0-or-later",
+    "project_urls": [
+      "Documentation, https://github.com/libyal/libpff/wiki/Home",
+      "Homepage, https://github.com/libyal/libpff",
+      "Repository, https://github.com/libyal/libpff"
+    ],
+    "license_files": [
+      "licenses/python/libpff-python-20260926/licenses/COPYING",
+      "licenses/python/libpff-python-20260926/licenses/COPYING.LESSER"
+    ]
+  },
+  {
+    "distribution": "cryptography",
+    "version": "46.0.7",
+    "declared_license": "Apache-2.0 OR BSD-3-Clause",
+    "project_urls": [
+      "homepage, https://github.com/pyca/cryptography",
+      "documentation, https://cryptography.io/",
+      "source, https://github.com/pyca/cryptography/",
+      "issues, https://github.com/pyca/cryptography/issues",
+      "changelog, https://cryptography.io/en/latest/changelog/"
+    ],
+    "license_files": [
+      "licenses/python/cryptography-46.0.7/licenses/LICENSE",
+      "licenses/python/cryptography-46.0.7/licenses/LICENSE.APACHE",
+      "licenses/python/cryptography-46.0.7/licenses/LICENSE.BSD"
+    ]
+  },
+  {
+    "distribution": "pyasn1",
+    "version": "0.6.4",
+    "declared_license": "BSD-2-Clause",
+    "project_urls": [
+      "Homepage, https://github.com/pyasn1/pyasn1",
+      "Documentation, https://pyasn1.readthedocs.io",
+      "Source, https://github.com/pyasn1/pyasn1",
+      "Issues, https://github.com/pyasn1/pyasn1/issues",
+      "Changelog, https://pyasn1.readthedocs.io/en/latest/changelog.html"
+    ],
+    "license_files": [
+      "licenses/python/pyasn1-0.6.4/licenses/LICENSE.rst"
+    ]
+  },
+  {
+    "distribution": "dissect.database",
+    "version": "1.1",
+    "declared_license": "Apache-2.0",
+    "project_urls": [
+      "homepage, https://dissect.tools",
+      "documentation, https://docs.dissect.tools/en/latest/projects/dissect.database",
+      "repository, https://github.com/fox-it/dissect.database"
+    ],
+    "license_files": [
+      "licenses/python/dissect.database-1.1/licenses/COPYRIGHT",
+      "licenses/python/dissect.database-1.1/licenses/LICENSE"
+    ]
+  },
+  {
+    "distribution": "dfindexeddb",
+    "version": "20260210",
+    "declared_license": "Apache-2.0",
+    "project_urls": [
+      "Homepage, https://github.com/google/dfindexeddb",
+      "Documentation, https://github.com/google/dfindexeddb/tree/main/docs",
+      "Repository, https://github.com/google/dfindexeddb",
+      "Bug Tracker, https://github.com/google/dfindexeddb/issues"
+    ],
+    "license_files": [
+      "licenses/python/dfindexeddb-20260210/licenses/LICENSE"
+    ]
+  },
+  {
+    "distribution": "pillow",
+    "version": "12.3.0",
+    "declared_license": "MIT-CMU",
+    "project_urls": [
+      "Release notes, https://pillow.readthedocs.io/en/stable/releasenotes/index.html",
+      "Changelog, https://github.com/python-pillow/Pillow/releases",
+      "Documentation, https://pillow.readthedocs.io",
+      "Funding, https://tidelift.com/subscription/pkg/pypi-pillow?utm_source=pypi-pillow&utm_medium=pypi",
+      "Homepage, https://python-pillow.github.io",
+      "Mastodon, https://fosstodon.org/@pillow",
+      "Source, https://github.com/python-pillow/Pillow"
+    ],
+    "license_files": [
+      "licenses/python/pillow-12.3.0/licenses/LICENSE"
+    ]
+  },
+  {
+    "distribution": "pillow_heif",
+    "version": "1.8.0",
+    "declared_license": "BSD-3-Clause",
+    "project_urls": [
+      "Documentation, https://pillow-heif.readthedocs.io",
+      "Source, https://github.com/bigcat88/pillow_heif",
+      "Changelog, https://github.com/bigcat88/pillow_heif/blob/master/CHANGELOG.md"
+    ],
+    "license_files": [
+      "licenses/python/pillow_heif-1.8.0/licenses/LICENSE.txt",
+      "licenses/python/pillow_heif-1.8.0/licenses/LICENSES_bundled.txt"
+    ]
+  },
+  {
+    "distribution": "rawpy",
+    "version": "0.27.1",
+    "declared_license": "MIT",
+    "project_urls": [
+      "Homepage, https://github.com/letmaik/rawpy",
+      "Documentation, https://letmaik.github.io/rawpy/",
+      "Repository, https://github.com/letmaik/rawpy.git",
+      "Issues, https://github.com/letmaik/rawpy/issues",
+      "Changelog, https://github.com/letmaik/rawpy/releases"
+    ],
+    "license_files": [
+      "licenses/python/rawpy-0.27.1/licenses/LICENSE",
+      "licenses/python/rawpy-0.27.1/licenses/LICENSE.LibRaw"
+    ]
+  },
+  {
+    "distribution": "olefile",
+    "version": "0.47",
+    "declared_license": "BSD",
+    "project_urls": [],
+    "license_files": [
+      "licenses/python/olefile-0.47/LICENSE.txt"
+    ]
+  },
+  {
+    "distribution": "xlrd",
+    "version": "2.0.2",
+    "declared_license": "BSD",
+    "project_urls": [],
+    "license_files": [
+      "licenses/python/xlrd-2.0.2/LICENSE"
+    ]
+  },
+  {
+    "distribution": "pypdfium2",
+    "version": "5.14.0",
+    "declared_license": "BSD-3-Clause, Apache-2.0, dependency licenses",
+    "project_urls": [
+      "Source, https://github.com/pypdfium2-team/pypdfium2",
+      "Tracker, https://github.com/pypdfium2-team/pypdfium2/issues",
+      "Documentation, https://pypdfium2.readthedocs.io",
+      "Changelog, https://pypdfium2.readthedocs.io/en/stable/changelog.html"
+    ],
+    "license_files": [
+      "licenses/python/pypdfium2-5.14.0/licenses/LICENSES/Apache-2.0.txt",
+      "licenses/python/pypdfium2-5.14.0/licenses/LICENSES/BSD-3-Clause.txt",
+      "licenses/python/pypdfium2-5.14.0/licenses/LICENSES/CC-BY-4.0.txt",
+      "licenses/python/pypdfium2-5.14.0/licenses/data/linux_x64/BUILD_LICENSES/abseil.txt",
+      "licenses/python/pypdfium2-5.14.0/licenses/data/linux_x64/BUILD_LICENSES/agg23.txt",
+      "licenses/python/pypdfium2-5.14.0/licenses/data/linux_x64/BUILD_LICENSES/fast_float.txt",
+      "licenses/python/pypdfium2-5.14.0/licenses/data/linux_x64/BUILD_LICENSES/freetype.txt",
+      "licenses/python/pypdfium2-5.14.0/licenses/data/linux_x64/BUILD_LICENSES/icu.txt",
+      "licenses/python/pypdfium2-5.14.0/licenses/data/linux_x64/BUILD_LICENSES/lcms.txt",
+      "licenses/python/pypdfium2-5.14.0/licenses/data/linux_x64/BUILD_LICENSES/libjpeg_turbo.ijg",
+      "licenses/python/pypdfium2-5.14.0/licenses/data/linux_x64/BUILD_LICENSES/libjpeg_turbo.md",
+      "licenses/python/pypdfium2-5.14.0/licenses/data/linux_x64/BUILD_LICENSES/libopenjpeg.txt",
+      "licenses/python/pypdfium2-5.14.0/licenses/data/linux_x64/BUILD_LICENSES/libpng.txt",
+      "licenses/python/pypdfium2-5.14.0/licenses/data/linux_x64/BUILD_LICENSES/llvm-libc.txt",
+      "licenses/python/pypdfium2-5.14.0/licenses/data/linux_x64/BUILD_LICENSES/pdfium-binaries.txt",
+      "licenses/python/pypdfium2-5.14.0/licenses/data/linux_x64/BUILD_LICENSES/pdfium.txt",
+      "licenses/python/pypdfium2-5.14.0/licenses/data/linux_x64/BUILD_LICENSES/simdutf.txt",
+      "licenses/python/pypdfium2-5.14.0/licenses/data/linux_x64/BUILD_LICENSES/zlib.txt"
+    ]
+  },
+  {
+    "distribution": "onnxruntime",
+    "version": "1.31.0",
+    "declared_license": "MIT License",
+    "project_urls": [],
+    "license_files": [
+      "licenses/python/onnxruntime-1.31.0/LICENSE",
+      "licenses/python/onnxruntime-1.31.0/ThirdPartyNotices.txt"
+    ]
+  },
+  {
+    "distribution": "numpy",
+    "version": "2.5.3",
+    "declared_license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "project_urls": [
+      "homepage, https://numpy.org",
+      "documentation, https://numpy.org/doc/",
+      "source, https://github.com/numpy/numpy",
+      "download, https://pypi.org/project/numpy/#files",
+      "tracker, https://github.com/numpy/numpy/issues",
+      "release notes, https://numpy.org/doc/stable/release"
+    ],
+    "license_files": [
+      "licenses/python/numpy-2.5.3/licenses/LICENSE.txt",
+      "licenses/python/numpy-2.5.3/licenses/numpy/_core/include/numpy/libdivide/LICENSE.txt",
+      "licenses/python/numpy-2.5.3/licenses/numpy/_core/src/common/pythoncapi-compat/COPYING",
+      "licenses/python/numpy-2.5.3/licenses/numpy/_core/src/highway/LICENSE",
+      "licenses/python/numpy-2.5.3/licenses/numpy/_core/src/multiarray/dragon4_LICENSE.txt",
+      "licenses/python/numpy-2.5.3/licenses/numpy/_core/src/npysort/x86-simd-sort/LICENSE.md",
+      "licenses/python/numpy-2.5.3/licenses/numpy/_core/src/umath/svml/LICENSE",
+      "licenses/python/numpy-2.5.3/licenses/numpy/fft/pocketfft/LICENSE.md",
+      "licenses/python/numpy-2.5.3/licenses/numpy/linalg/lapack_lite/LICENSE.txt",
+      "licenses/python/numpy-2.5.3/licenses/numpy/ma/LICENSE",
+      "licenses/python/numpy-2.5.3/licenses/numpy/random/LICENSE.md",
+      "licenses/python/numpy-2.5.3/licenses/numpy/random/src/distributions/LICENSE.md",
+      "licenses/python/numpy-2.5.3/licenses/numpy/random/src/mt19937/LICENSE.md",
+      "licenses/python/numpy-2.5.3/licenses/numpy/random/src/pcg64/LICENSE.md",
+      "licenses/python/numpy-2.5.3/licenses/numpy/random/src/philox/LICENSE.md",
+      "licenses/python/numpy-2.5.3/licenses/numpy/random/src/sfc64/LICENSE.md",
+      "licenses/python/numpy-2.5.3/licenses/numpy/random/src/splitmix64/LICENSE.md"
+    ]
+  },
+  {
+    "distribution": "av",
+    "version": "16.1.0",
+    "declared_license": "BSD-3-Clause",
+    "project_urls": [
+      "Bug Tracker, https://github.com/PyAV-Org/PyAV/issues",
+      "Source Code, https://github.com/PyAV-Org/PyAV",
+      "homepage, https://pyav.basswood-io.com"
+    ],
+    "license_files": [
+      "licenses/python/av-16.1.0/licenses/AUTHORS.rst",
+      "licenses/python/av-16.1.0/licenses/LICENSE.txt"
+    ]
+  },
+  {
+    "distribution": "libarchive-c",
+    "version": "5.3",
+    "declared_license": "CC0",
+    "project_urls": [],
+    "license_files": [
+      "licenses/python/libarchive-c-5.3/licenses/LICENSE.md"
+    ]
+  },
+  {
+    "distribution": "py7zr",
+    "version": "1.1.3",
+    "declared_license": "LGPL-2.1-or-later",
+    "project_urls": [
+      "Homepage, https://py7zr.readthedocs.io/",
+      "Documentation, https://py7zr.readthedocs.io/en/stable/",
+      "Bug Tracker, https://github.com/miurahr/py7zr/issues",
+      "Source, https://github.com/miurahr/py7zr",
+      "Changelog, https://py7zr.readthedocs.io/en/latest/Changelog.html"
+    ],
+    "license_files": [
+      "licenses/python/py7zr-1.1.3/licenses/LICENSE"
+    ]
+  },
+  {
+    "distribution": "pyzipper",
+    "version": "0.4.0",
+    "declared_license": "MIT",
+    "project_urls": [
+      "Homepage, https://github.com/danifus/pyzipper"
+    ],
+    "license_files": [
+      "licenses/python/pyzipper-0.4.0/licenses/AUTHORS.rst",
+      "licenses/python/pyzipper-0.4.0/licenses/LICENSE",
+      "licenses/python/pyzipper-0.4.0/licenses/LICENSE.python"
+    ]
+  }
+]

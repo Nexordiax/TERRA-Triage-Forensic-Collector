@@ -1,0 +1,5 @@
+# Automatic container searching and export logs
+
+Container support has been expanded to streaming large archives, supported RAR/7z and automatic discovered-credential decryption, with direct contained-picture previews. Persistent recovery and exported coverage summaries are also implemented. See [archive-preview-recovery.md](archive-preview-recovery.md) for current limits, supported formats, recovery workflow, implementation files and API references.
+
+Triage exports contain logs/diagnostics.jsonl and logs/diagnostics.log. The manifest records diagnostic_count and diagnostics_saved: the RAM-first store retains the first 10,000 diagnostics. Physical RAM ZIPs retain backend.log, acquisition.json and logs/acquisition.log (including acquisition metadata); process-memory ZIPs contain manifest diagnostics plus logs/diagnostics.jsonl and logs/acquisition.log. These logs describe recorded errors, warnings and collection context, not every successful file operation. Packaging failures cannot be logged inside a ZIP that failed to be created; existing recovery/error handling remains applicable.
