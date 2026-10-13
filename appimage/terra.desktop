@@ -1,8 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=T3RRA Triage Forensic Collector
-Comment=Offline Linux forensic triage and memory acquisition
-Exec=AppRun
-Icon=terra
-Terminal=false
-Categories=Utility;
